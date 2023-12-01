@@ -33,8 +33,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -62,19 +62,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlTittleBar = new Panel();
             btnExit = new Guna.UI2.WinForms.Guna2Button();
             btnMinimize = new Guna.UI2.WinForms.Guna2Button();
@@ -92,9 +88,7 @@
             btnExport = new Guna.UI2.WinForms.Guna2Button();
             btnImport = new Guna.UI2.WinForms.Guna2Button();
             btnProduct = new Guna.UI2.WinForms.Guna2Button();
-            btnPromotion = new Guna.UI2.WinForms.Guna2Button();
             btnSupplier = new Guna.UI2.WinForms.Guna2Button();
-            btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             btnStaff = new Guna.UI2.WinForms.Guna2Button();
             btnAccount = new Guna.UI2.WinForms.Guna2Button();
             btnDecentralization = new Guna.UI2.WinForms.Guna2Button();
@@ -123,15 +117,17 @@
             // 
             // pnlTittleBar
             // 
-            pnlTittleBar.BackColor = Color.FromArgb(1, 137, 71);
+            pnlTittleBar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            pnlTittleBar.BackColor = Color.FromArgb(142, 188, 218);
             pnlTittleBar.Controls.Add(btnExit);
             pnlTittleBar.Controls.Add(btnMinimize);
             pnlTittleBar.Controls.Add(lbDateTime);
             pnlTittleBar.Dock = DockStyle.Top;
             pnlTittleBar.Location = new Point(0, 0);
             pnlTittleBar.Name = "pnlTittleBar";
-            pnlTittleBar.Size = new Size(1430, 46);
+            pnlTittleBar.Size = new Size(1800, 46);
             pnlTittleBar.TabIndex = 0;
+            pnlTittleBar.Paint += pnlTittleBar_Paint;
             // 
             // btnExit
             // 
@@ -140,12 +136,12 @@
             btnExit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnExit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExit.FillColor = Color.FromArgb(1, 137, 71);
+            btnExit.FillColor = Color.FromArgb(145, 174, 196);
             btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnExit.ForeColor = Color.White;
             btnExit.Image = Properties.Resources.button;
             btnExit.ImageSize = new Size(56, 39);
-            btnExit.Location = new Point(1371, 4);
+            btnExit.Location = new Point(1738, 3);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnExit.Size = new Size(56, 39);
@@ -159,12 +155,12 @@
             btnMinimize.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMinimize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnMinimize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMinimize.FillColor = Color.FromArgb(1, 137, 71);
+            btnMinimize.FillColor = Color.FromArgb(145, 174, 196);
             btnMinimize.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnMinimize.ForeColor = Color.White;
             btnMinimize.Image = Properties.Resources.minimize__2;
             btnMinimize.ImageSize = new Size(54, 39);
-            btnMinimize.Location = new Point(1313, 4);
+            btnMinimize.Location = new Point(1677, 3);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnMinimize.Size = new Size(54, 39);
@@ -185,6 +181,7 @@
             splitContainer1.BackColor = Color.White;
             splitContainer1.BorderStyle = BorderStyle.Fixed3D;
             splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.IsSplitterFixed = true;
             splitContainer1.Location = new Point(0, 46);
             splitContainer1.Name = "splitContainer1";
             // 
@@ -196,8 +193,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pnlContent);
-            splitContainer1.Size = new Size(1430, 824);
-            splitContainer1.SplitterDistance = 374;
+            splitContainer1.Size = new Size(1800, 954);
+            splitContainer1.SplitterDistance = 413;
             splitContainer1.TabIndex = 2;
             // 
             // pnlLeftMenu
@@ -207,7 +204,7 @@
             pnlLeftMenu.Dock = DockStyle.Left;
             pnlLeftMenu.Location = new Point(0, 0);
             pnlLeftMenu.Name = "pnlLeftMenu";
-            pnlLeftMenu.Size = new Size(379, 820);
+            pnlLeftMenu.Size = new Size(411, 950);
             pnlLeftMenu.TabIndex = 0;
             // 
             // pnlFill
@@ -215,19 +212,19 @@
             pnlFill.BorderRadius = 20;
             pnlFill.Controls.Add(flowLayoutPanel2);
             pnlFill.Controls.Add(guna2GradientPanel3);
-            pnlFill.CustomizableEdges = customizableEdges39;
-            pnlFill.FillColor = Color.FromArgb(215, 215, 215);
-            pnlFill.FillColor2 = Color.FromArgb(215, 215, 215);
+            pnlFill.CustomizableEdges = customizableEdges35;
+            pnlFill.FillColor = Color.FromArgb(142, 188, 218);
+            pnlFill.FillColor2 = Color.FromArgb(142, 188, 218);
             pnlFill.Location = new Point(10, 124);
             pnlFill.Name = "pnlFill";
-            pnlFill.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            pnlFill.Size = new Size(357, 698);
+            pnlFill.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            pnlFill.Size = new Size(401, 826);
             pnlFill.TabIndex = 6;
             // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.AutoScroll = true;
-            flowLayoutPanel2.BackColor = Color.FromArgb(215, 215, 215);
+            flowLayoutPanel2.BackColor = Color.FromArgb(142, 188, 218);
             flowLayoutPanel2.Controls.Add(btnHomePage);
             flowLayoutPanel2.Controls.Add(btnSell);
             flowLayoutPanel2.Controls.Add(btnWareHouse);
@@ -237,25 +234,23 @@
             flowLayoutPanel2.Controls.Add(btnExport);
             flowLayoutPanel2.Controls.Add(btnImport);
             flowLayoutPanel2.Controls.Add(btnProduct);
-            flowLayoutPanel2.Controls.Add(btnPromotion);
             flowLayoutPanel2.Controls.Add(btnSupplier);
-            flowLayoutPanel2.Controls.Add(btnCustomer);
             flowLayoutPanel2.Controls.Add(btnStaff);
             flowLayoutPanel2.Controls.Add(btnAccount);
             flowLayoutPanel2.Controls.Add(btnDecentralization);
             flowLayoutPanel2.Location = new Point(3, 10);
             flowLayoutPanel2.Margin = new Padding(10, 10, 3, 3);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(349, 556);
+            flowLayoutPanel2.Size = new Size(390, 680);
             flowLayoutPanel2.TabIndex = 4;
             // 
             // btnHomePage
             // 
-            btnHomePage.BackColor = Color.FromArgb(215, 215, 215);
+            btnHomePage.BackColor = Color.FromArgb(142, 188, 218);
             btnHomePage.BorderRadius = 20;
             btnHomePage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnHomePage.Checked = true;
-            btnHomePage.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnHomePage.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnHomePage.CheckedState.ForeColor = Color.White;
             btnHomePage.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnHomePage.CustomizableEdges = customizableEdges5;
@@ -266,7 +261,7 @@
             btnHomePage.FillColor = Color.White;
             btnHomePage.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnHomePage.ForeColor = Color.Black;
-            btnHomePage.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnHomePage.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnHomePage.HoverState.FillColor = Color.White;
             btnHomePage.Image = (Image)resources.GetObject("btnHomePage.Image");
             btnHomePage.ImageAlign = HorizontalAlignment.Left;
@@ -275,17 +270,17 @@
             btnHomePage.Margin = new Padding(10, 20, 3, 3);
             btnHomePage.Name = "btnHomePage";
             btnHomePage.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnHomePage.Size = new Size(314, 56);
+            btnHomePage.Size = new Size(348, 56);
             btnHomePage.TabIndex = 1;
             btnHomePage.Text = "Trang chủ";
             btnHomePage.Click += btnHomePage_Click;
             // 
             // btnSell
             // 
-            btnSell.BackColor = Color.FromArgb(215, 215, 215);
+            btnSell.BackColor = Color.FromArgb(142, 188, 218);
             btnSell.BorderRadius = 20;
             btnSell.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnSell.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnSell.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnSell.CheckedState.ForeColor = Color.White;
             btnSell.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnSell.CustomizableEdges = customizableEdges7;
@@ -296,7 +291,7 @@
             btnSell.FillColor = Color.White;
             btnSell.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSell.ForeColor = Color.Black;
-            btnSell.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnSell.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnSell.HoverState.FillColor = Color.White;
             btnSell.Image = (Image)resources.GetObject("btnSell.Image");
             btnSell.ImageAlign = HorizontalAlignment.Left;
@@ -305,17 +300,17 @@
             btnSell.Margin = new Padding(10, 20, 3, 3);
             btnSell.Name = "btnSell";
             btnSell.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSell.Size = new Size(314, 56);
+            btnSell.Size = new Size(348, 56);
             btnSell.TabIndex = 0;
             btnSell.Text = "Bán hàng";
             btnSell.Click += btnSell_Click;
             // 
             // btnWareHouse
             // 
-            btnWareHouse.BackColor = Color.FromArgb(215, 215, 215);
+            btnWareHouse.BackColor = Color.FromArgb(142, 188, 218);
             btnWareHouse.BorderRadius = 20;
             btnWareHouse.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnWareHouse.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnWareHouse.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnWareHouse.CheckedState.ForeColor = Color.White;
             btnWareHouse.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnWareHouse.CustomizableEdges = customizableEdges9;
@@ -326,7 +321,7 @@
             btnWareHouse.FillColor = Color.White;
             btnWareHouse.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnWareHouse.ForeColor = Color.Black;
-            btnWareHouse.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnWareHouse.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnWareHouse.HoverState.FillColor = Color.White;
             btnWareHouse.Image = (Image)resources.GetObject("btnWareHouse.Image");
             btnWareHouse.ImageAlign = HorizontalAlignment.Left;
@@ -335,17 +330,17 @@
             btnWareHouse.Margin = new Padding(10, 20, 3, 3);
             btnWareHouse.Name = "btnWareHouse";
             btnWareHouse.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnWareHouse.Size = new Size(314, 56);
+            btnWareHouse.Size = new Size(348, 56);
             btnWareHouse.TabIndex = 1;
             btnWareHouse.Text = "Nhà kho";
             btnWareHouse.Click += btnWarehouse_Click;
             // 
             // btnStatistics
             // 
-            btnStatistics.BackColor = Color.FromArgb(215, 215, 215);
+            btnStatistics.BackColor = Color.FromArgb(142, 188, 218);
             btnStatistics.BorderRadius = 20;
             btnStatistics.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnStatistics.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnStatistics.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnStatistics.CheckedState.ForeColor = Color.White;
             btnStatistics.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnStatistics.CustomizableEdges = customizableEdges11;
@@ -356,7 +351,7 @@
             btnStatistics.FillColor = Color.White;
             btnStatistics.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnStatistics.ForeColor = Color.Black;
-            btnStatistics.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnStatistics.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnStatistics.HoverState.FillColor = Color.White;
             btnStatistics.Image = (Image)resources.GetObject("btnStatistics.Image");
             btnStatistics.ImageAlign = HorizontalAlignment.Left;
@@ -365,17 +360,17 @@
             btnStatistics.Margin = new Padding(10, 20, 3, 3);
             btnStatistics.Name = "btnStatistics";
             btnStatistics.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnStatistics.Size = new Size(314, 56);
+            btnStatistics.Size = new Size(348, 56);
             btnStatistics.TabIndex = 4;
             btnStatistics.Text = "Thống kê";
             btnStatistics.Click += btnStatistics_Click;
             // 
             // btnDiscount
             // 
-            btnDiscount.BackColor = Color.FromArgb(215, 215, 215);
+            btnDiscount.BackColor = Color.FromArgb(142, 188, 218);
             btnDiscount.BorderRadius = 20;
             btnDiscount.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnDiscount.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnDiscount.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnDiscount.CheckedState.ForeColor = Color.White;
             btnDiscount.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnDiscount.CustomizableEdges = customizableEdges13;
@@ -386,7 +381,7 @@
             btnDiscount.FillColor = Color.White;
             btnDiscount.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnDiscount.ForeColor = Color.Black;
-            btnDiscount.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnDiscount.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnDiscount.HoverState.FillColor = Color.White;
             btnDiscount.Image = (Image)resources.GetObject("btnDiscount.Image");
             btnDiscount.ImageAlign = HorizontalAlignment.Left;
@@ -395,17 +390,17 @@
             btnDiscount.Margin = new Padding(10, 20, 3, 3);
             btnDiscount.Name = "btnDiscount";
             btnDiscount.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnDiscount.Size = new Size(314, 56);
+            btnDiscount.Size = new Size(348, 56);
             btnDiscount.TabIndex = 5;
             btnDiscount.Text = "Giảm giá";
             btnDiscount.Click += btnDiscount_Click;
             // 
             // btnBill
             // 
-            btnBill.BackColor = Color.FromArgb(215, 215, 215);
+            btnBill.BackColor = Color.FromArgb(142, 188, 218);
             btnBill.BorderRadius = 20;
             btnBill.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnBill.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnBill.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnBill.CheckedState.ForeColor = Color.White;
             btnBill.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnBill.CustomizableEdges = customizableEdges15;
@@ -416,7 +411,7 @@
             btnBill.FillColor = Color.White;
             btnBill.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnBill.ForeColor = Color.Black;
-            btnBill.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnBill.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnBill.HoverState.FillColor = Color.White;
             btnBill.Image = (Image)resources.GetObject("btnBill.Image");
             btnBill.ImageAlign = HorizontalAlignment.Left;
@@ -425,17 +420,17 @@
             btnBill.Margin = new Padding(10, 20, 3, 3);
             btnBill.Name = "btnBill";
             btnBill.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnBill.Size = new Size(314, 56);
+            btnBill.Size = new Size(348, 56);
             btnBill.TabIndex = 6;
             btnBill.Text = "Hóa đơn";
             btnBill.Click += btnBill_Click;
             // 
             // btnExport
             // 
-            btnExport.BackColor = Color.FromArgb(215, 215, 215);
+            btnExport.BackColor = Color.FromArgb(142, 188, 218);
             btnExport.BorderRadius = 20;
             btnExport.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnExport.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnExport.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnExport.CheckedState.ForeColor = Color.White;
             btnExport.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnExport.CustomizableEdges = customizableEdges17;
@@ -446,7 +441,7 @@
             btnExport.FillColor = Color.White;
             btnExport.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnExport.ForeColor = Color.Black;
-            btnExport.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnExport.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnExport.HoverState.FillColor = Color.White;
             btnExport.Image = (Image)resources.GetObject("btnExport.Image");
             btnExport.ImageAlign = HorizontalAlignment.Left;
@@ -455,17 +450,17 @@
             btnExport.Margin = new Padding(10, 20, 3, 3);
             btnExport.Name = "btnExport";
             btnExport.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnExport.Size = new Size(314, 56);
+            btnExport.Size = new Size(348, 56);
             btnExport.TabIndex = 7;
             btnExport.Text = "Phiếu xuất";
             btnExport.Click += btnExport_Click;
             // 
             // btnImport
             // 
-            btnImport.BackColor = Color.FromArgb(215, 215, 215);
+            btnImport.BackColor = Color.FromArgb(142, 188, 218);
             btnImport.BorderRadius = 20;
             btnImport.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnImport.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnImport.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnImport.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnImport.CustomizableEdges = customizableEdges19;
             btnImport.DisabledState.BorderColor = Color.DarkGray;
@@ -475,7 +470,7 @@
             btnImport.FillColor = Color.White;
             btnImport.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnImport.ForeColor = Color.Black;
-            btnImport.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnImport.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnImport.HoverState.FillColor = Color.White;
             btnImport.Image = (Image)resources.GetObject("btnImport.Image");
             btnImport.ImageAlign = HorizontalAlignment.Left;
@@ -484,17 +479,17 @@
             btnImport.Margin = new Padding(10, 20, 3, 3);
             btnImport.Name = "btnImport";
             btnImport.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnImport.Size = new Size(314, 56);
+            btnImport.Size = new Size(348, 56);
             btnImport.TabIndex = 8;
             btnImport.Text = "Phiếu nhập";
             btnImport.Click += btnImport_Click;
             // 
             // btnProduct
             // 
-            btnProduct.BackColor = Color.FromArgb(215, 215, 215);
+            btnProduct.BackColor = Color.FromArgb(142, 188, 218);
             btnProduct.BorderRadius = 20;
             btnProduct.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnProduct.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnProduct.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnProduct.CustomBorderThickness = new Padding(0, 0, 0, 6);
             btnProduct.CustomizableEdges = customizableEdges21;
             btnProduct.DisabledState.BorderColor = Color.DarkGray;
@@ -504,7 +499,7 @@
             btnProduct.FillColor = Color.White;
             btnProduct.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnProduct.ForeColor = Color.Black;
-            btnProduct.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnProduct.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnProduct.HoverState.FillColor = Color.White;
             btnProduct.Image = (Image)resources.GetObject("btnProduct.Image");
             btnProduct.ImageAlign = HorizontalAlignment.Left;
@@ -513,48 +508,19 @@
             btnProduct.Margin = new Padding(10, 20, 3, 3);
             btnProduct.Name = "btnProduct";
             btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btnProduct.Size = new Size(314, 56);
+            btnProduct.Size = new Size(348, 56);
             btnProduct.TabIndex = 9;
             btnProduct.Text = "Sản phẩm";
             btnProduct.Click += btnProduct_Click;
             // 
-            // btnPromotion
-            // 
-            btnPromotion.BackColor = Color.FromArgb(215, 215, 215);
-            btnPromotion.BorderRadius = 20;
-            btnPromotion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnPromotion.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
-            btnPromotion.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnPromotion.CustomizableEdges = customizableEdges23;
-            btnPromotion.DisabledState.BorderColor = Color.DarkGray;
-            btnPromotion.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPromotion.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPromotion.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPromotion.FillColor = Color.White;
-            btnPromotion.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPromotion.ForeColor = Color.Black;
-            btnPromotion.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
-            btnPromotion.HoverState.FillColor = Color.White;
-            btnPromotion.Image = (Image)resources.GetObject("btnPromotion.Image");
-            btnPromotion.ImageAlign = HorizontalAlignment.Left;
-            btnPromotion.ImageSize = new Size(40, 40);
-            btnPromotion.Location = new Point(10, 731);
-            btnPromotion.Margin = new Padding(10, 20, 3, 3);
-            btnPromotion.Name = "btnPromotion";
-            btnPromotion.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            btnPromotion.Size = new Size(314, 56);
-            btnPromotion.TabIndex = 10;
-            btnPromotion.Text = "Khuyến mãi";
-            btnPromotion.Click += btnCategory_Click;
-            // 
             // btnSupplier
             // 
-            btnSupplier.BackColor = Color.FromArgb(215, 215, 215);
+            btnSupplier.BackColor = Color.FromArgb(142, 188, 218);
             btnSupplier.BorderRadius = 20;
             btnSupplier.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnSupplier.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnSupplier.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnSupplier.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnSupplier.CustomizableEdges = customizableEdges25;
+            btnSupplier.CustomizableEdges = customizableEdges23;
             btnSupplier.DisabledState.BorderColor = Color.DarkGray;
             btnSupplier.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSupplier.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -562,57 +528,28 @@
             btnSupplier.FillColor = Color.White;
             btnSupplier.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSupplier.ForeColor = Color.Black;
-            btnSupplier.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnSupplier.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnSupplier.HoverState.FillColor = Color.White;
             btnSupplier.Image = (Image)resources.GetObject("btnSupplier.Image");
             btnSupplier.ImageAlign = HorizontalAlignment.Left;
             btnSupplier.ImageSize = new Size(40, 40);
-            btnSupplier.Location = new Point(10, 810);
+            btnSupplier.Location = new Point(10, 731);
             btnSupplier.Margin = new Padding(10, 20, 3, 3);
             btnSupplier.Name = "btnSupplier";
-            btnSupplier.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btnSupplier.Size = new Size(314, 56);
+            btnSupplier.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnSupplier.Size = new Size(348, 56);
             btnSupplier.TabIndex = 12;
             btnSupplier.Text = "Nhà cung cấp";
             btnSupplier.Click += btnSupplier_Click;
             // 
-            // btnCustomer
-            // 
-            btnCustomer.BackColor = Color.FromArgb(215, 215, 215);
-            btnCustomer.BorderRadius = 20;
-            btnCustomer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnCustomer.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
-            btnCustomer.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnCustomer.CustomizableEdges = customizableEdges27;
-            btnCustomer.DisabledState.BorderColor = Color.DarkGray;
-            btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCustomer.FillColor = Color.White;
-            btnCustomer.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCustomer.ForeColor = Color.Black;
-            btnCustomer.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
-            btnCustomer.HoverState.FillColor = Color.White;
-            btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
-            btnCustomer.ImageAlign = HorizontalAlignment.Left;
-            btnCustomer.ImageSize = new Size(40, 40);
-            btnCustomer.Location = new Point(10, 889);
-            btnCustomer.Margin = new Padding(10, 20, 3, 3);
-            btnCustomer.Name = "btnCustomer";
-            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            btnCustomer.Size = new Size(314, 56);
-            btnCustomer.TabIndex = 13;
-            btnCustomer.Text = "Khách hàng";
-            btnCustomer.Click += btnCustomer_Click;
-            // 
             // btnStaff
             // 
-            btnStaff.BackColor = Color.FromArgb(215, 215, 215);
+            btnStaff.BackColor = Color.FromArgb(142, 188, 218);
             btnStaff.BorderRadius = 20;
             btnStaff.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnStaff.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnStaff.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnStaff.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnStaff.CustomizableEdges = customizableEdges29;
+            btnStaff.CustomizableEdges = customizableEdges25;
             btnStaff.DisabledState.BorderColor = Color.DarkGray;
             btnStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -620,28 +557,28 @@
             btnStaff.FillColor = Color.White;
             btnStaff.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnStaff.ForeColor = Color.Black;
-            btnStaff.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnStaff.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnStaff.HoverState.FillColor = Color.White;
             btnStaff.Image = (Image)resources.GetObject("btnStaff.Image");
             btnStaff.ImageAlign = HorizontalAlignment.Left;
             btnStaff.ImageSize = new Size(40, 40);
-            btnStaff.Location = new Point(10, 968);
+            btnStaff.Location = new Point(10, 810);
             btnStaff.Margin = new Padding(10, 20, 3, 3);
             btnStaff.Name = "btnStaff";
-            btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            btnStaff.Size = new Size(314, 56);
+            btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnStaff.Size = new Size(348, 56);
             btnStaff.TabIndex = 14;
             btnStaff.Text = "Nhân viên";
             btnStaff.Click += btnStaff_Click;
             // 
             // btnAccount
             // 
-            btnAccount.BackColor = Color.FromArgb(215, 215, 215);
+            btnAccount.BackColor = Color.FromArgb(142, 188, 218);
             btnAccount.BorderRadius = 20;
             btnAccount.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnAccount.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnAccount.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnAccount.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnAccount.CustomizableEdges = customizableEdges31;
+            btnAccount.CustomizableEdges = customizableEdges27;
             btnAccount.DisabledState.BorderColor = Color.DarkGray;
             btnAccount.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAccount.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -649,28 +586,28 @@
             btnAccount.FillColor = Color.White;
             btnAccount.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnAccount.ForeColor = Color.Black;
-            btnAccount.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnAccount.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnAccount.HoverState.FillColor = Color.White;
             btnAccount.Image = (Image)resources.GetObject("btnAccount.Image");
             btnAccount.ImageAlign = HorizontalAlignment.Left;
             btnAccount.ImageSize = new Size(40, 40);
-            btnAccount.Location = new Point(10, 1047);
+            btnAccount.Location = new Point(10, 889);
             btnAccount.Margin = new Padding(10, 20, 3, 3);
             btnAccount.Name = "btnAccount";
-            btnAccount.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            btnAccount.Size = new Size(314, 56);
+            btnAccount.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnAccount.Size = new Size(348, 56);
             btnAccount.TabIndex = 15;
             btnAccount.Text = "Tài khoản";
             btnAccount.Click += btnAccount_Click;
             // 
             // btnDecentralization
             // 
-            btnDecentralization.BackColor = Color.FromArgb(215, 215, 215);
+            btnDecentralization.BackColor = Color.FromArgb(142, 188, 218);
             btnDecentralization.BorderRadius = 20;
             btnDecentralization.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnDecentralization.CheckedState.FillColor = Color.FromArgb(1, 137, 71);
+            btnDecentralization.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
             btnDecentralization.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnDecentralization.CustomizableEdges = customizableEdges33;
+            btnDecentralization.CustomizableEdges = customizableEdges29;
             btnDecentralization.DisabledState.BorderColor = Color.DarkGray;
             btnDecentralization.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDecentralization.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -678,40 +615,40 @@
             btnDecentralization.FillColor = Color.White;
             btnDecentralization.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnDecentralization.ForeColor = Color.Black;
-            btnDecentralization.HoverState.CustomBorderColor = Color.FromArgb(1, 137, 71);
+            btnDecentralization.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
             btnDecentralization.HoverState.FillColor = Color.White;
             btnDecentralization.Image = (Image)resources.GetObject("btnDecentralization.Image");
             btnDecentralization.ImageAlign = HorizontalAlignment.Left;
             btnDecentralization.ImageSize = new Size(40, 40);
-            btnDecentralization.Location = new Point(10, 1126);
+            btnDecentralization.Location = new Point(10, 968);
             btnDecentralization.Margin = new Padding(10, 20, 3, 3);
             btnDecentralization.Name = "btnDecentralization";
-            btnDecentralization.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            btnDecentralization.Size = new Size(314, 56);
+            btnDecentralization.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnDecentralization.Size = new Size(348, 56);
             btnDecentralization.TabIndex = 16;
             btnDecentralization.Text = "Phân quyền";
             btnDecentralization.Click += btnDecentralization_Click;
             // 
             // guna2GradientPanel3
             // 
-            guna2GradientPanel3.BackColor = Color.FromArgb(215, 215, 215);
+            guna2GradientPanel3.BackColor = Color.FromArgb(142, 188, 218);
             guna2GradientPanel3.BorderRadius = 20;
             guna2GradientPanel3.Controls.Add(btnLogout);
-            guna2GradientPanel3.CustomizableEdges = customizableEdges37;
-            guna2GradientPanel3.FillColor = Color.FromArgb(215, 215, 215);
-            guna2GradientPanel3.FillColor2 = Color.FromArgb(215, 215, 215);
+            guna2GradientPanel3.CustomizableEdges = customizableEdges33;
+            guna2GradientPanel3.FillColor = Color.FromArgb(142, 188, 218);
+            guna2GradientPanel3.FillColor2 = Color.FromArgb(142, 188, 218);
             guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            guna2GradientPanel3.Location = new Point(3, 572);
+            guna2GradientPanel3.Location = new Point(3, 696);
             guna2GradientPanel3.Name = "guna2GradientPanel3";
-            guna2GradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            guna2GradientPanel3.Size = new Size(352, 114);
+            guna2GradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2GradientPanel3.Size = new Size(390, 114);
             guna2GradientPanel3.TabIndex = 5;
             // 
             // btnLogout
             // 
-            btnLogout.BackColor = Color.FromArgb(215, 215, 215);
+            btnLogout.BackColor = Color.FromArgb(142, 188, 218);
             btnLogout.BorderRadius = 20;
-            btnLogout.CustomizableEdges = customizableEdges35;
+            btnLogout.CustomizableEdges = customizableEdges31;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -719,14 +656,15 @@
             btnLogout.FillColor = Color.White;
             btnLogout.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogout.ForeColor = Color.Black;
+            btnLogout.HoverState.FillColor = Color.FromArgb(95, 132, 162);
             btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
             btnLogout.ImageAlign = HorizontalAlignment.Left;
             btnLogout.ImageSize = new Size(40, 40);
             btnLogout.Location = new Point(10, 31);
             btnLogout.Margin = new Padding(10, 20, 3, 3);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            btnLogout.Size = new Size(314, 56);
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnLogout.Size = new Size(348, 56);
             btnLogout.TabIndex = 8;
             btnLogout.Text = "Đăng xuất";
             btnLogout.Click += btnLogout_Click;
@@ -737,23 +675,23 @@
             panelTop.Controls.Add(imgInfoStaff);
             panelTop.Controls.Add(lbInfoStaffPosition);
             panelTop.Controls.Add(lbInfoStaffName);
-            panelTop.CustomizableEdges = customizableEdges42;
-            panelTop.FillColor = Color.FromArgb(215, 215, 215);
-            panelTop.FillColor2 = Color.FromArgb(215, 215, 215);
+            panelTop.CustomizableEdges = customizableEdges38;
+            panelTop.FillColor = Color.FromArgb(142, 188, 218);
+            panelTop.FillColor2 = Color.FromArgb(142, 188, 218);
             panelTop.Location = new Point(10, 12);
             panelTop.Name = "panelTop";
-            panelTop.ShadowDecoration.CustomizableEdges = customizableEdges43;
-            panelTop.Size = new Size(357, 93);
+            panelTop.ShadowDecoration.CustomizableEdges = customizableEdges39;
+            panelTop.Size = new Size(396, 93);
             panelTop.TabIndex = 0;
             // 
             // imgInfoStaff
             // 
-            imgInfoStaff.BackColor = Color.FromArgb(215, 215, 215);
+            imgInfoStaff.BackColor = Color.FromArgb(142, 188, 218);
             imgInfoStaff.Image = Properties.Resources.imgInfoStaffAvatar;
             imgInfoStaff.ImageRotate = 0F;
             imgInfoStaff.Location = new Point(33, 8);
             imgInfoStaff.Name = "imgInfoStaff";
-            imgInfoStaff.ShadowDecoration.CustomizableEdges = customizableEdges41;
+            imgInfoStaff.ShadowDecoration.CustomizableEdges = customizableEdges37;
             imgInfoStaff.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             imgInfoStaff.Size = new Size(80, 82);
             imgInfoStaff.TabIndex = 3;
@@ -762,7 +700,7 @@
             // lbInfoStaffPosition
             // 
             lbInfoStaffPosition.AutoSize = true;
-            lbInfoStaffPosition.BackColor = Color.FromArgb(215, 215, 215);
+            lbInfoStaffPosition.BackColor = Color.FromArgb(142, 188, 218);
             lbInfoStaffPosition.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lbInfoStaffPosition.Location = new Point(131, 50);
             lbInfoStaffPosition.Name = "lbInfoStaffPosition";
@@ -773,7 +711,7 @@
             // lbInfoStaffName
             // 
             lbInfoStaffName.AutoSize = true;
-            lbInfoStaffName.BackColor = Color.FromArgb(215, 215, 215);
+            lbInfoStaffName.BackColor = Color.FromArgb(142, 188, 218);
             lbInfoStaffName.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lbInfoStaffName.Location = new Point(128, 20);
             lbInfoStaffName.Name = "lbInfoStaffName";
@@ -788,14 +726,14 @@
             pnlContent.Dock = DockStyle.Fill;
             pnlContent.Location = new Point(0, 0);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(1048, 820);
+            pnlContent.Size = new Size(1379, 950);
             pnlContent.TabIndex = 0;
             // 
             // guna2Button1
             // 
             guna2Button1.BackColor = Color.FromArgb(215, 215, 215);
             guna2Button1.BorderRadius = 20;
-            guna2Button1.CustomizableEdges = customizableEdges44;
+            guna2Button1.CustomizableEdges = customizableEdges40;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -809,7 +747,7 @@
             guna2Button1.Location = new Point(10, 1349);
             guna2Button1.Margin = new Padding(10, 20, 3, 3);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges41;
             guna2Button1.Size = new Size(314, 56);
             guna2Button1.TabIndex = 2;
             guna2Button1.Text = "Nhà kho";
@@ -818,7 +756,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1430, 870);
+            ClientSize = new Size(1800, 1000);
             Controls.Add(splitContainer1);
             Controls.Add(pnlTittleBar);
             FormBorderStyle = FormBorderStyle.None;
@@ -869,9 +807,7 @@
         private Guna.UI2.WinForms.Guna2Button btnExport;
         private Guna.UI2.WinForms.Guna2Button btnImport;
         private Guna.UI2.WinForms.Guna2Button btnProduct;
-        private Guna.UI2.WinForms.Guna2Button btnPromotion;
         private Guna.UI2.WinForms.Guna2Button btnSupplier;
-        private Guna.UI2.WinForms.Guna2Button btnCustomer;
         private Guna.UI2.WinForms.Guna2Button btnStaff;
         private Guna.UI2.WinForms.Guna2Button btnAccount;
         private Guna.UI2.WinForms.Guna2Button btnDecentralization;

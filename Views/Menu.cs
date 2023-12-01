@@ -2,6 +2,7 @@
 using BachHoaXanh.Models;
 using BachHoaXanh.Presenters;
 using BachHoaXanh.User_Control;
+using BachHoaXanh.Views;
 using BachHoaXanh.Views.InterfaceView;
 using System;
 using System.Collections.Generic;
@@ -46,10 +47,8 @@ namespace BachHoaXanh
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
-            IShipmentView view = new WareHouseControl();
-            IShipmentRepository repository = new ShipmentRepository();
-            new ShipmentPresenter(view, repository);
-            addUserControl((UserControl)view);
+            WareHouseControl wareHouse = new WareHouseControl();
+            addUserControl(wareHouse);
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)
@@ -88,38 +87,16 @@ namespace BachHoaXanh
             addUserControl(productControl);
         }
 
-        private void btnCategory_Click(object sender, EventArgs e)
-        {
-            CategoryControl categoryControl = new CategoryControl();
-            addUserControl(categoryControl);
-        }
-
-        private void btnBrand_Click(object sender, EventArgs e)
-        {
-            BrandControl brandControl = new BrandControl();
-            addUserControl(brandControl);
-        }
-
         private void btnSupplier_Click(object sender, EventArgs e)
         {
-            ISupplierView view = new SupplierControl();
-            ISupplierRepository repository = new SupplierRepository();
-            new SupplierPresenter(view, repository);
-            addUserControl((UserControl)view);
-        }
-
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            CustomerControl customerControl = new CustomerControl();
-            addUserControl(customerControl);
+            SupplierControl supplierControl = new SupplierControl();
+            addUserControl(supplierControl);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            IStaffView view = new StaffControl();
-            IStaffRepository repository = new StaffRepository();
-            new StaffPresenter(view, repository);
-            addUserControl((UserControl)view);
+            StaffControl staffControl = new StaffControl();
+            addUserControl(staffControl);
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
@@ -127,6 +104,7 @@ namespace BachHoaXanh
             IAccountView view = new AccountControl();
             IAccountRepository repository = new AccountRepository();
             new AccountPresenter(view, repository);
+            //AccountControl accountControl = new AccountControl();
             addUserControl((UserControl)view);
         }
 
@@ -149,6 +127,11 @@ namespace BachHoaXanh
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pnlTittleBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

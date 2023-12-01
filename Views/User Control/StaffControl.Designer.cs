@@ -49,8 +49,8 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             splitContainer1 = new SplitContainer();
             pnlFunction = new Guna.UI2.WinForms.Guna2GradientPanel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            cbbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             lbDelete = new Label();
             btnDelete = new Guna.UI2.WinForms.Guna2CircleButton();
             lbEdit = new Label();
@@ -97,16 +97,16 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pnlCenter);
-            splitContainer1.Size = new Size(1053, 820);
-            splitContainer1.SplitterDistance = 111;
+            splitContainer1.Size = new Size(1379, 950);
+            splitContainer1.SplitterDistance = 128;
             splitContainer1.SplitterWidth = 12;
             splitContainer1.TabIndex = 0;
             // 
             // pnlFunction
             // 
             pnlFunction.BorderRadius = 20;
-            pnlFunction.Controls.Add(guna2TextBox1);
-            pnlFunction.Controls.Add(guna2ComboBox1);
+            pnlFunction.Controls.Add(txtSearch);
+            pnlFunction.Controls.Add(cbbSearch);
             pnlFunction.Controls.Add(lbDelete);
             pnlFunction.Controls.Add(btnDelete);
             pnlFunction.Controls.Add(lbEdit);
@@ -128,56 +128,55 @@
             pnlFunction.Location = new Point(0, 0);
             pnlFunction.Name = "pnlFunction";
             pnlFunction.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            pnlFunction.Size = new Size(1053, 111);
-            pnlFunction.TabIndex = 5;
+            pnlFunction.Size = new Size(1379, 128);
+            pnlFunction.TabIndex = 6;
             // 
-            // guna2TextBox1
+            // txtSearch
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges1;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(674, 37);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "Nhập nội dung tìm kiếm";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox1.Size = new Size(250, 36);
-            guna2TextBox1.TabIndex = 25;
+            txtSearch.CustomizableEdges = customizableEdges1;
+            txtSearch.DefaultText = "";
+            txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.Location = new Point(998, 37);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PasswordChar = '\0';
+            txtSearch.PlaceholderText = "Nhập nội dung tìm kiếm";
+            txtSearch.SelectedText = "";
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtSearch.Size = new Size(250, 36);
+            txtSearch.TabIndex = 21;
             // 
-            // guna2ComboBox1
+            // cbbSearch
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.CustomizableEdges = customizableEdges3;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox1.ImeMode = ImeMode.NoControl;
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Items.AddRange(new object[] { "Tên nhân viên", "SĐT", "Email" });
-            guna2ComboBox1.SelectedIndex = 0;
-            guna2ComboBox1.Location = new Point(493, 37);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.RightToLeft = RightToLeft.No;
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ComboBox1.Size = new Size(175, 36);
-            guna2ComboBox1.TabIndex = 24;
+            cbbSearch.BackColor = Color.Transparent;
+            cbbSearch.CustomizableEdges = customizableEdges3;
+            cbbSearch.DrawMode = DrawMode.OwnerDrawFixed;
+            cbbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbSearch.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbbSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbbSearch.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbSearch.ForeColor = Color.FromArgb(68, 88, 112);
+            cbbSearch.ImeMode = ImeMode.NoControl;
+            cbbSearch.ItemHeight = 30;
+            cbbSearch.Items.AddRange(new object[] { "Tên tài khoản", "Tên chức vụ", "Tên nhân viên" });
+            cbbSearch.Location = new Point(817, 37);
+            cbbSearch.Name = "cbbSearch";
+            cbbSearch.RightToLeft = RightToLeft.No;
+            cbbSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cbbSearch.Size = new Size(175, 36);
+            cbbSearch.TabIndex = 1;
             // 
             // lbDelete
             // 
             lbDelete.AutoSize = true;
             lbDelete.BackColor = Color.FromArgb(215, 215, 215);
             lbDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDelete.Location = new Point(172, 76);
+            lbDelete.Location = new Point(216, 76);
             lbDelete.Name = "lbDelete";
             lbDelete.Size = new Size(36, 20);
             lbDelete.TabIndex = 19;
@@ -195,7 +194,7 @@
             btnDelete.ForeColor = Color.Black;
             btnDelete.Image = Properties.Resources.Delete;
             btnDelete.ImageSize = new Size(60, 60);
-            btnDelete.Location = new Point(166, 23);
+            btnDelete.Location = new Point(210, 23);
             btnDelete.Name = "btnDelete";
             btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges5;
             btnDelete.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -207,7 +206,7 @@
             lbEdit.AutoSize = true;
             lbEdit.BackColor = Color.FromArgb(215, 215, 215);
             lbEdit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbEdit.Location = new Point(97, 76);
+            lbEdit.Location = new Point(130, 76);
             lbEdit.Name = "lbEdit";
             lbEdit.Size = new Size(35, 20);
             lbEdit.TabIndex = 17;
@@ -225,7 +224,7 @@
             btnEdit.ForeColor = Color.Black;
             btnEdit.Image = Properties.Resources.Edit;
             btnEdit.ImageSize = new Size(60, 60);
-            btnEdit.Location = new Point(91, 23);
+            btnEdit.Location = new Point(124, 23);
             btnEdit.Name = "btnEdit";
             btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnEdit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -237,7 +236,7 @@
             lbAdd.AutoSize = true;
             lbAdd.BackColor = Color.FromArgb(215, 215, 215);
             lbAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbAdd.Location = new Point(16, 76);
+            lbAdd.Location = new Point(35, 76);
             lbAdd.Name = "lbAdd";
             lbAdd.Size = new Size(49, 20);
             lbAdd.TabIndex = 15;
@@ -255,7 +254,7 @@
             btnAdd.ForeColor = Color.Black;
             btnAdd.Image = Properties.Resources.Add;
             btnAdd.ImageSize = new Size(60, 60);
-            btnAdd.Location = new Point(16, 23);
+            btnAdd.Location = new Point(35, 23);
             btnAdd.Name = "btnAdd";
             btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges7;
             btnAdd.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -267,7 +266,7 @@
             lbExportPDF.AutoSize = true;
             lbExportPDF.BackColor = Color.FromArgb(215, 215, 215);
             lbExportPDF.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbExportPDF.Location = new Point(393, 76);
+            lbExportPDF.Location = new Point(473, 76);
             lbExportPDF.Name = "lbExportPDF";
             lbExportPDF.Size = new Size(74, 20);
             lbExportPDF.TabIndex = 13;
@@ -285,7 +284,7 @@
             btnExportPDF.ForeColor = Color.Black;
             btnExportPDF.Image = Properties.Resources.PDF;
             btnExportPDF.ImageSize = new Size(60, 60);
-            btnExportPDF.Location = new Point(401, 23);
+            btnExportPDF.Location = new Point(483, 23);
             btnExportPDF.Name = "btnExportPDF";
             btnExportPDF.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnExportPDF.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -297,7 +296,7 @@
             lbRefresh.AutoSize = true;
             lbRefresh.BackColor = Color.FromArgb(215, 215, 215);
             lbRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbRefresh.Location = new Point(950, 76);
+            lbRefresh.Location = new Point(1282, 76);
             lbRefresh.Name = "lbRefresh";
             lbRefresh.Size = new Size(70, 20);
             lbRefresh.TabIndex = 9;
@@ -315,7 +314,7 @@
             btnRefresh.ForeColor = Color.Black;
             btnRefresh.Image = Properties.Resources.Refresh;
             btnRefresh.ImageSize = new Size(60, 60);
-            btnRefresh.Location = new Point(960, 23);
+            btnRefresh.Location = new Point(1292, 23);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnRefresh.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -327,7 +326,7 @@
             lbImportExcel.AutoSize = true;
             lbImportExcel.BackColor = Color.FromArgb(215, 215, 215);
             lbImportExcel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbImportExcel.Location = new Point(303, 76);
+            lbImportExcel.Location = new Point(368, 76);
             lbImportExcel.Name = "lbImportExcel";
             lbImportExcel.Size = new Size(86, 20);
             lbImportExcel.TabIndex = 5;
@@ -345,7 +344,7 @@
             btnImportExcel.ForeColor = Color.Black;
             btnImportExcel.Image = Properties.Resources.Excel;
             btnImportExcel.ImageSize = new Size(60, 60);
-            btnImportExcel.Location = new Point(322, 23);
+            btnImportExcel.Location = new Point(387, 23);
             btnImportExcel.Name = "btnImportExcel";
             btnImportExcel.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnImportExcel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -357,7 +356,7 @@
             lbDetail.AutoSize = true;
             lbDetail.BackColor = Color.FromArgb(215, 215, 215);
             lbDetail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDetail.Location = new Point(236, 76);
+            lbDetail.Location = new Point(292, 76);
             lbDetail.Name = "lbDetail";
             lbDetail.Size = new Size(59, 20);
             lbDetail.TabIndex = 3;
@@ -375,7 +374,7 @@
             btnDetail.ForeColor = Color.Black;
             btnDetail.Image = Properties.Resources.Detail;
             btnDetail.ImageSize = new Size(60, 60);
-            btnDetail.Location = new Point(242, 23);
+            btnDetail.Location = new Point(298, 23);
             btnDetail.Name = "btnDetail";
             btnDetail.ShadowDecoration.CustomizableEdges = customizableEdges11;
             btnDetail.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -393,7 +392,7 @@
             pnlCenter.Location = new Point(0, 0);
             pnlCenter.Name = "pnlCenter";
             pnlCenter.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            pnlCenter.Size = new Size(1053, 697);
+            pnlCenter.Size = new Size(1379, 810);
             pnlCenter.TabIndex = 0;
             // 
             // guna2DataGridView1
@@ -423,14 +422,14 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             guna2DataGridView1.GridColor = Color.Black;
-            guna2DataGridView1.Location = new Point(0, 0);
+            guna2DataGridView1.Location = new Point(24, 16);
             guna2DataGridView1.MultiSelect = false;
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.ReadOnly = true;
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
             guna2DataGridView1.RowTemplate.Height = 29;
-            guna2DataGridView1.Size = new Size(1053, 697);
+            guna2DataGridView1.Size = new Size(1328, 775);
             guna2DataGridView1.TabIndex = 2;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.RosyBrown;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -453,7 +452,6 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.Transparent;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            guna2DataGridView1.CurrentCell = null;
             // 
             // Column1
             // 
@@ -523,7 +521,7 @@
             Controls.Add(splitContainer1);
             Name = "StaffControl";
             RightToLeft = RightToLeft.No;
-            Size = new Size(1053, 820);
+            Size = new Size(1379, 950);
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
@@ -538,7 +536,18 @@
         #endregion
 
         private SplitContainer splitContainer1;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnlCenter;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewCheckBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlFunction;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbSearch;
         private Label lbDelete;
         private Guna.UI2.WinForms.Guna2CircleButton btnDelete;
         private Label lbEdit;
@@ -553,16 +562,5 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnImportExcel;
         private Label lbDetail;
         private Guna.UI2.WinForms.Guna2CircleButton btnDetail;
-        private Guna.UI2.WinForms.Guna2GradientPanel pnlCenter;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewCheckBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
     }
 }

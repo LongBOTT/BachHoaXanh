@@ -23,8 +23,8 @@ namespace BachHoaXanh.User_Control
 
         private void AssociateAndRaiseViewEvents()
         {
-            guna2TextBox1.TextChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            guna2ComboBox1.SelectedValueChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            txtSearch.TextChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            cbbSearch.SelectedValueChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
         }
 
         //public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -40,14 +40,14 @@ namespace BachHoaXanh.User_Control
 
         public string SearchValue
         {
-            get { return guna2TextBox1.Text; }
-            set { guna2TextBox1.Text = value; }
+            get { return txtSearch.Text; }
+            set { txtSearch.Text = value; }
         }
 
         public string Attribute
         {
-            get { return guna2ComboBox1.SelectedItem.ToString(); }
-            set { guna2ComboBox1.SelectedItem = value; }
+            get { return cbbSearch.SelectedItem.ToString(); }
+            set { cbbSearch.SelectedItem = value; }
         }
         //public bool IsEdit { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         //public bool IsSuccessful { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
