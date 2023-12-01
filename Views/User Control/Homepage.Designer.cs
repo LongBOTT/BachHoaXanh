@@ -36,7 +36,7 @@
             label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(353, 366);
+            label1.Location = new Point(353, 431);
             label1.Name = "label1";
             label1.Size = new Size(134, 31);
             label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             BackColor = Color.White;
             Controls.Add(label1);
             Name = "Homepage";
-            Size = new Size(1053, 820);
+            Size = new Size(1379, 950);
             ResumeLayout(false);
             PerformLayout();
         }

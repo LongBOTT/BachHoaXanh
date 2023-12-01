@@ -108,8 +108,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pnlForm);
-            splitContainer1.Size = new Size(1053, 820);
-            splitContainer1.SplitterDistance = 692;
+            splitContainer1.Size = new Size(1379, 950);
+            splitContainer1.SplitterDistance = 906;
             splitContainer1.SplitterWidth = 8;
             splitContainer1.TabIndex = 0;
             // 
@@ -127,8 +127,8 @@
             // splitContainer2.Panel2
             // 
             splitContainer2.Panel2.Controls.Add(panel2);
-            splitContainer2.Size = new Size(692, 820);
-            splitContainer2.SplitterDistance = 581;
+            splitContainer2.Size = new Size(906, 950);
+            splitContainer2.SplitterDistance = 673;
             splitContainer2.SplitterWidth = 8;
             splitContainer2.TabIndex = 0;
             // 
@@ -145,8 +145,8 @@
             // splitContainer3.Panel2
             // 
             splitContainer3.Panel2.Controls.Add(panel1);
-            splitContainer3.Size = new Size(692, 581);
-            splitContainer3.SplitterDistance = 318;
+            splitContainer3.Size = new Size(906, 673);
+            splitContainer3.SplitterDistance = 416;
             splitContainer3.SplitterWidth = 8;
             splitContainer3.TabIndex = 0;
             // 
@@ -162,7 +162,7 @@
             pnlCenter.Location = new Point(0, 0);
             pnlCenter.Name = "pnlCenter";
             pnlCenter.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            pnlCenter.Size = new Size(318, 581);
+            pnlCenter.Size = new Size(416, 673);
             pnlCenter.TabIndex = 14;
             // 
             // pnlFindProduct
@@ -239,7 +239,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(366, 581);
+            panel1.Size = new Size(482, 673);
             panel1.TabIndex = 0;
             // 
             // txtProduct_Name
@@ -314,7 +314,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(692, 231);
+            panel2.Size = new Size(906, 269);
             panel2.TabIndex = 1;
             // 
             // pnlForm
@@ -334,7 +334,7 @@
             pnlForm.Dock = DockStyle.Fill;
             pnlForm.Location = new Point(0, 0);
             pnlForm.Name = "pnlForm";
-            pnlForm.Size = new Size(353, 820);
+            pnlForm.Size = new Size(465, 950);
             pnlForm.TabIndex = 0;
             // 
             // btnCancel
@@ -526,7 +526,7 @@
             BackColor = Color.White;
             Controls.Add(splitContainer1);
             Name = "SaleControl";
-            Size = new Size(1053, 820);
+            Size = new Size(1379, 950);
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();

@@ -47,7 +47,7 @@
             guna2TabControl1.Location = new Point(0, 0);
             guna2TabControl1.Name = "guna2TabControl1";
             guna2TabControl1.SelectedIndex = 0;
-            guna2TabControl1.Size = new Size(1053, 820);
+            guna2TabControl1.Size = new Size(1379, 950);
             guna2TabControl1.TabButtonHoverState.BorderColor = Color.Empty;
             guna2TabControl1.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
             guna2TabControl1.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point);
@@ -73,7 +73,7 @@
             tabPage1.Location = new Point(4, 44);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1045, 772);
+            tabPage1.Size = new Size(1371, 902);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2TabControl1);
             Name = "StatisticsControl";
-            Size = new Size(1053, 820);
+            Size = new Size(1379, 950);
             guna2TabControl1.ResumeLayout(false);
             ResumeLayout(false);
         }

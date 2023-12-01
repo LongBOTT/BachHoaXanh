@@ -48,8 +48,8 @@
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             splitContainer1 = new SplitContainer();
             pnlFunction = new Guna.UI2.WinForms.Guna2GradientPanel();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            cbbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             lbRefresh = new Label();
             btnRefresh = new Guna.UI2.WinForms.Guna2CircleButton();
             lbDetail = new Label();
@@ -87,8 +87,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pnlCenter);
-            splitContainer1.Size = new Size(1053, 820);
-            splitContainer1.SplitterDistance = 103;
+            splitContainer1.Size = new Size(1379, 950);
+            splitContainer1.SplitterDistance = 119;
             splitContainer1.SplitterWidth = 8;
             splitContainer1.TabIndex = 0;
             // 
@@ -96,8 +96,8 @@
             // 
             pnlFunction.BackColor = Color.White;
             pnlFunction.BorderRadius = 20;
-            pnlFunction.Controls.Add(guna2ComboBox1);
-            pnlFunction.Controls.Add(guna2TextBox1);
+            pnlFunction.Controls.Add(cbbSearch);
+            pnlFunction.Controls.Add(txtSearch);
             pnlFunction.Controls.Add(lbRefresh);
             pnlFunction.Controls.Add(btnRefresh);
             pnlFunction.Controls.Add(lbDetail);
@@ -109,56 +109,55 @@
             pnlFunction.Location = new Point(0, 0);
             pnlFunction.Name = "pnlFunction";
             pnlFunction.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            pnlFunction.Size = new Size(1053, 103);
+            pnlFunction.Size = new Size(1379, 119);
             pnlFunction.TabIndex = 0;
             // 
-            // guna2ComboBox1
+            // cbbSearch
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.CustomizableEdges = customizableEdges1;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox1.ImeMode = ImeMode.NoControl;
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Items.AddRange(new object[] { "Tên sản phẩm", "Sắp hết hạn", "Sắp hết hàng" });
-            guna2ComboBox1.SelectedIndex = 0;
-            guna2ComboBox1.Location = new Point(493, 37);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.RightToLeft = RightToLeft.No;
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ComboBox1.Size = new Size(175, 36);
-            guna2ComboBox1.TabIndex = 25;
+            cbbSearch.BackColor = Color.Transparent;
+            cbbSearch.CustomizableEdges = customizableEdges1;
+            cbbSearch.DrawMode = DrawMode.OwnerDrawFixed;
+            cbbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbSearch.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbbSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbbSearch.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbSearch.ForeColor = Color.FromArgb(68, 88, 112);
+            cbbSearch.ImeMode = ImeMode.NoControl;
+            cbbSearch.ItemHeight = 30;
+            cbbSearch.Items.AddRange(new object[] { "Tên sản phẩm", "Sắp hết hạn", "Sắp hết hàng" });
+            cbbSearch.Location = new Point(789, 35);
+            cbbSearch.Name = "cbbSearch";
+            cbbSearch.RightToLeft = RightToLeft.No;
+            cbbSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cbbSearch.Size = new Size(163, 36);
+            cbbSearch.TabIndex = 25;
             // 
-            // guna2TextBox1
+            // txtSearch
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges3;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(674, 37);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "Nhập nội dung tìm kiếm";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox1.Size = new Size(250, 36);
-            guna2TextBox1.TabIndex = 24;
+            txtSearch.CustomizableEdges = customizableEdges3;
+            txtSearch.DefaultText = "";
+            txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.Location = new Point(969, 34);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PasswordChar = '\0';
+            txtSearch.PlaceholderText = "Nhập nội dung tìm kiếm";
+            txtSearch.SelectedText = "";
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtSearch.Size = new Size(250, 38);
+            txtSearch.TabIndex = 24;
             // 
             // lbRefresh
             // 
             lbRefresh.AutoSize = true;
             lbRefresh.BackColor = Color.FromArgb(215, 215, 215);
             lbRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbRefresh.Location = new Point(949, 75);
+            lbRefresh.Location = new Point(1271, 75);
             lbRefresh.Name = "lbRefresh";
             lbRefresh.Size = new Size(70, 20);
             lbRefresh.TabIndex = 1;
@@ -176,7 +175,7 @@
             btnRefresh.ForeColor = Color.Black;
             btnRefresh.Image = Properties.Resources.Refresh;
             btnRefresh.ImageSize = new Size(60, 60);
-            btnRefresh.Location = new Point(958, 22);
+            btnRefresh.Location = new Point(1280, 22);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.ShadowDecoration.CustomizableEdges = customizableEdges5;
             btnRefresh.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -188,7 +187,7 @@
             lbDetail.AutoSize = true;
             lbDetail.BackColor = Color.FromArgb(215, 215, 215);
             lbDetail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDetail.Location = new Point(33, 75);
+            lbDetail.Location = new Point(43, 75);
             lbDetail.Name = "lbDetail";
             lbDetail.Size = new Size(59, 20);
             lbDetail.TabIndex = 0;
@@ -206,7 +205,7 @@
             btnDetail.ForeColor = Color.Black;
             btnDetail.Image = Properties.Resources.Detail;
             btnDetail.ImageSize = new Size(60, 60);
-            btnDetail.Location = new Point(37, 22);
+            btnDetail.Location = new Point(47, 22);
             btnDetail.Name = "btnDetail";
             btnDetail.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnDetail.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -225,7 +224,7 @@
             pnlCenter.Location = new Point(0, 0);
             pnlCenter.Name = "pnlCenter";
             pnlCenter.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            pnlCenter.Size = new Size(1053, 709);
+            pnlCenter.Size = new Size(1379, 823);
             pnlCenter.TabIndex = 0;
             // 
             // guna2DataGridView1
@@ -255,14 +254,14 @@
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             guna2DataGridView1.GridColor = Color.Black;
-            guna2DataGridView1.Location = new Point(0, 0);
+            guna2DataGridView1.Location = new Point(21, 18);
             guna2DataGridView1.MultiSelect = false;
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.ReadOnly = true;
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
             guna2DataGridView1.RowTemplate.Height = 29;
-            guna2DataGridView1.Size = new Size(1053, 709);
+            guna2DataGridView1.Size = new Size(1337, 787);
             guna2DataGridView1.TabIndex = 26;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.RosyBrown;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -285,7 +284,6 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.Transparent;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            guna2DataGridView1.CurrentCell = null;
             // 
             // Column1
             // 
@@ -368,7 +366,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainer1);
             Name = "WareHouseControl";
-            Size = new Size(1053, 820);
+            Size = new Size(1379, 950);
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
@@ -387,10 +385,10 @@
         private Guna.UI2.WinForms.Guna2GradientPanel pnlCenter;
         private Label lbDetail;
         private Guna.UI2.WinForms.Guna2CircleButton btnDetail;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbSearch;
         private Label lbRefresh;
         private Guna.UI2.WinForms.Guna2CircleButton btnRefresh;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
