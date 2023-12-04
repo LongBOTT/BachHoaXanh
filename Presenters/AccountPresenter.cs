@@ -80,7 +80,9 @@ namespace BachHoaXanh.Presenters
             List<Account> result = new List<Account>();
             foreach (Staff staff in staffs)
             {
-                result.Add(repository.FindAccountsBy(new Dictionary<string, object>() { { "staff_id", staff.Id } })[0]);
+                List<Account> accounts = repository.FindAccountsBy(new Dictionary<string, object>() { { "staff_id", staff.Id } });
+                if (accounts.Count > 0)
+                    result.Add(accounts[0]);
             }
             LoadAccountList(result);
         }
@@ -92,7 +94,9 @@ namespace BachHoaXanh.Presenters
             List<Account> result = new List<Account>();
             foreach (Role role in roles)
             {
-                result.Add(repository.FindAccountsBy(new Dictionary<string, object>() { {"role_id", role.Id } })[0]);
+                List<Account> accounts = repository.FindAccountsBy(new Dictionary<string, object>() { { "role_id", role.Id } });
+                if (accounts.Count > 0)
+                    result.Add(accounts[0]);
             }
             LoadAccountList(result);
         }
@@ -135,7 +139,19 @@ namespace BachHoaXanh.Presenters
 
         private void DeleteEvent(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
+            int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
+            if (repository.Delete(new List<string> { " id = " + id}) == 1)
+            {
+                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá tài khoản thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                repository = new AccountRepository();
+                accountList = repository.GetAll();
+                LoadAccountList(accountList);
+            }
+            else
+            {
+                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá tài khoản không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+            }
         }
     }
 }

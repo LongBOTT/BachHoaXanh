@@ -8,10 +8,12 @@ namespace BachHoaXanh.Models
 {
     public interface ICategoryRepository
     {
-        void Add(Category category);
-        void Edit(Category category);
-        void Delete(int id);
+        int Add(Category category);
+        int Update(Category category);
+        int Delete(List<string> conditions);
+        int GetAutoID();
+        List<Category> FindCategorysBy(Dictionary<string, Object> conditions);
+        List<Category> FindCategorys(string key, string value);
         IEnumerable<Category> GetAll();
-        IEnumerable<Category> GetByValue();
     }
 }

@@ -9,12 +9,6 @@ namespace BachHoaXanh.Views.InterfaceView
 {
     public interface ISupplierView
     {
-        //int Id { get; set; }
-        //string Name { get; set; }
-        //string Phone { get; set; }
-        //string Address { get; set; }
-        //string Email { get; set; }
-        //Boolean Deleted { get; set; }
 
         Guna2DataGridView Guna2DataGridView { get; set; }
 
@@ -23,11 +17,10 @@ namespace BachHoaXanh.Views.InterfaceView
 
 
         event EventHandler SearchEvent;
-        //event EventHandler AddNewEvent;
-        //event EventHandler EditEvent;
-        //event EventHandler DeleteEvent;
-        //event EventHandler SaveEvent;
-        //event EventHandler CancelEvent;
+        event EventHandler ShowDetail;
+        event EventHandler AddNewEvent;
+        event EventHandler UpdateEvent;
+        event EventHandler DeleteEvent;
 
     }
 }

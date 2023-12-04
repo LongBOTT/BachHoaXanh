@@ -1,4 +1,5 @@
 ﻿using BachHoaXanh.Utils;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,7 @@ namespace BachHoaXanh._Repositories
             }
             int numOfRows;
             String formattedQuery = formatQuery(query, values);
+            Console.WriteLine(formattedQuery);
             MySqlCommand cmd = new MySqlCommand(formattedQuery, conn);
             numOfRows = cmd.ExecuteNonQuery();
             conn.Close();
@@ -70,7 +72,7 @@ namespace BachHoaXanh._Repositories
                 {
                     stringValue = (bool)value ? "1" : "0";
                 }
-                else if (value.GetType() == typeof(int))
+                else if (value.GetType() == typeof(int) || value.GetType() == typeof(double))
                 {
                     stringValue = value.ToString();
                 }

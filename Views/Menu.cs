@@ -18,9 +18,13 @@ namespace BachHoaXanh
 {
     public partial class Menu : Form
     {
+        public static Account Account;
         public Menu()
         {
+            IAccountRepository accountRepository = new AccountRepository();
+            Account = accountRepository.GetAll().ElementAt(0);
             InitializeComponent();
+            RenderTime();
             Homepage homepage = new Homepage();
             addUserControl(homepage);
         }
@@ -41,20 +45,26 @@ namespace BachHoaXanh
 
         private void btnSell_Click(object sender, EventArgs e)
         {
-            SaleControl saleControl = new SaleControl();
-            addUserControl(saleControl);
+            ISaleView view = new SaleControl();
+            IProductRepository repository = new ProductRepository();
+            new SalePresenter(view, repository);
+            addUserControl((UserControl) view);
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
-            WareHouseControl wareHouse = new WareHouseControl();
-            addUserControl(wareHouse);
+            IShipmentView view = new WareHouseControl();
+            IShipmentRepository repository = new ShipmentRepository();
+            new ShipmentPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)
         {
-            StatisticsControl statisticControl = new StatisticsControl();
-            addUserControl(statisticControl);
+            IStatisticsView view = new StatisticsControl();
+            IProductRepository repository = new ProductRepository();
+            new StatisticsPresenter(view);
+            addUserControl((UserControl)view);
         }
 
         private void btnDiscount_Click(object sender, EventArgs e)
@@ -89,14 +99,18 @@ namespace BachHoaXanh
 
         private void btnSupplier_Click(object sender, EventArgs e)
         {
-            SupplierControl supplierControl = new SupplierControl();
-            addUserControl(supplierControl);
+            ISupplierView view = new SupplierControl();
+            ISupplierRepository repository = new SupplierRepository();
+            new SupplierPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            StaffControl staffControl = new StaffControl();
-            addUserControl(staffControl);
+            IStaffView view = new StaffControl();
+            IStaffRepository repository = new StaffRepository();
+            new StaffPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
@@ -104,7 +118,6 @@ namespace BachHoaXanh
             IAccountView view = new AccountControl();
             IAccountRepository repository = new AccountRepository();
             new AccountPresenter(view, repository);
-            //AccountControl accountControl = new AccountControl();
             addUserControl((UserControl)view);
         }
 
@@ -132,6 +145,11 @@ namespace BachHoaXanh
         private void pnlTittleBar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnMinimize_MouseHover(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.FromArgb(142, 188, 218);
         }
     }
 }

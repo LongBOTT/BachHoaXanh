@@ -1,4 +1,5 @@
-﻿using BachHoaXanh.Models;
+﻿using BachHoaXanh.Main;
+using BachHoaXanh.Models;
 using BachHoaXanh.Views.InterfaceView;
 using Guna.UI2.WinForms;
 using System;
@@ -34,7 +35,7 @@ namespace BachHoaXanh.Views
             btnUpdate.Click += delegate
             {
                 UpdateAccount?.Invoke(this, EventArgs.Empty);
-                MessageDialog.Show(Message, "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                MessageDialog.Show(MiniSupermarketApp.menu, Message, "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
             };
             btnCancel.Click += delegate { Refresh?.Invoke(this, EventArgs.Empty); };
         }

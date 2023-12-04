@@ -12,19 +12,17 @@ namespace BachHoaXanh.Models
         int product_id;
         double quantity;
         double total;
-        double percent;
 
         public Receipt_detail()
         {
         }
 
-        public Receipt_detail(int receipt_id, int product_id, double quantity, double total, double percent)
+        public Receipt_detail(int receipt_id, int product_id, double quantity, double total)
         {
             this.receipt_id = receipt_id;
             this.product_id = product_id;
             this.quantity = quantity;
             this.total = total;
-            this.percent = percent;
         }
 
         public int Receipt_id
@@ -51,19 +49,12 @@ namespace BachHoaXanh.Models
             set { total = value; }
         }
 
-        public double Percent
-        {
-            get { return percent; }
-            set { percent = value; }
-        }
-
         public override string ToString()
         {
             return receipt_id + " | " +
                 product_id + " | " +
                 quantity + " | " +
-                total + " | " +
-                percent;
+                total;
         }
     }
 }

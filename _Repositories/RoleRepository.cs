@@ -54,7 +54,7 @@ namespace BachHoaXanh._Repositories
 
         public int GetAutoID()
         {
-            return GetAutoID(_roles);
+            return GetAutoID(SearchRole(new List<string> { }));
         }
 
         public Object GetValueByKey(Role role, string key)

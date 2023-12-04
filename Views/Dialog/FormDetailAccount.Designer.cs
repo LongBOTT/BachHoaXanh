@@ -174,6 +174,7 @@
             guna2TextBox6.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox6.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox6.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox6.Enabled = false;
             guna2TextBox6.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox6.ForeColor = Color.Black;
@@ -199,6 +200,7 @@
             guna2TextBox7.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox7.Enabled = false;
             guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox7.ForeColor = Color.Black;
@@ -224,6 +226,7 @@
             guna2TextBox8.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox8.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox8.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox8.Enabled = false;
             guna2TextBox8.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox8.ForeColor = Color.Black;
@@ -249,6 +252,7 @@
             guna2TextBox9.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox9.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox9.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox9.Enabled = false;
             guna2TextBox9.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox9.ForeColor = Color.Black;
@@ -274,6 +278,7 @@
             guna2TextBox10.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox10.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox10.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox10.Enabled = false;
             guna2TextBox10.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox10.ForeColor = Color.Black;
@@ -299,6 +304,7 @@
             guna2TextBox11.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox11.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox11.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox11.Enabled = false;
             guna2TextBox11.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox11.ForeColor = Color.Black;
@@ -435,7 +441,6 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.Transparent;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            guna2DataGridView1.CurrentCell = null;
             guna2DataGridView1.Visible = false;
             // 
             // FormDetailAccount

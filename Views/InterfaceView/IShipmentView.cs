@@ -13,8 +13,10 @@ namespace BachHoaXanh.Views.InterfaceView
 
         string SearchValue { get; set; }
         string Attribute { get; set; }
-
+        Guna2TextBox Guna2TextBox { get; set; }
 
         event EventHandler SearchEvent;
+        event EventHandler ShowDetail;
+
     }
 }

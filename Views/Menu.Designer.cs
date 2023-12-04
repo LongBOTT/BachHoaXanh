@@ -26,6 +26,18 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+        private void RenderTime()
+        {
+            Thread thread = new Thread(() =>
+            {
+                while (true)
+                {
+                    lbDateTime.Text = DateTime.Now.ToString();
+                }
+            });
+            thread.Start();
+        }
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
@@ -131,18 +143,24 @@
             // 
             // btnExit
             // 
+            btnExit.BackColor = Color.Transparent;
+            btnExit.BorderColor = Color.Transparent;
+            btnExit.BorderRadius = 20;
+            btnExit.BorderThickness = 20;
             btnExit.CustomizableEdges = customizableEdges1;
             btnExit.DisabledState.BorderColor = Color.DarkGray;
             btnExit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnExit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExit.FillColor = Color.FromArgb(145, 174, 196);
+            btnExit.FillColor = Color.Transparent;
+            btnExit.FocusedColor = Color.Transparent;
             btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnExit.ForeColor = Color.White;
             btnExit.Image = Properties.Resources.button;
             btnExit.ImageSize = new Size(56, 39);
             btnExit.Location = new Point(1738, 3);
             btnExit.Name = "btnExit";
+            btnExit.PressedColor = Color.Transparent;
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnExit.Size = new Size(56, 39);
             btnExit.TabIndex = 4;
@@ -150,31 +168,40 @@
             // 
             // btnMinimize
             // 
+            btnMinimize.BackColor = Color.Transparent;
+            btnMinimize.BorderColor = Color.Transparent;
+            btnMinimize.BorderRadius = 50;
+            btnMinimize.BorderThickness = 50;
             btnMinimize.CustomizableEdges = customizableEdges3;
             btnMinimize.DisabledState.BorderColor = Color.DarkGray;
             btnMinimize.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMinimize.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnMinimize.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMinimize.FillColor = Color.FromArgb(145, 174, 196);
+            btnMinimize.FillColor = Color.Transparent;
+            btnMinimize.FocusedColor = Color.Transparent;
             btnMinimize.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnMinimize.ForeColor = Color.White;
             btnMinimize.Image = Properties.Resources.minimize__2;
             btnMinimize.ImageSize = new Size(54, 39);
             btnMinimize.Location = new Point(1677, 3);
             btnMinimize.Name = "btnMinimize";
+            btnMinimize.PressedColor = Color.Transparent;
             btnMinimize.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnMinimize.Size = new Size(54, 39);
             btnMinimize.TabIndex = 3;
             btnMinimize.Click += btnMinimize_Click;
+            btnMinimize.MouseHover += btnMinimize_MouseHover;
             // 
             // lbDateTime
             // 
             lbDateTime.BackColor = Color.Transparent;
+            lbDateTime.Enabled = false;
+            lbDateTime.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbDateTime.Location = new Point(87, 12);
             lbDateTime.Name = "lbDateTime";
-            lbDateTime.Size = new Size(68, 22);
+            lbDateTime.Size = new Size(37, 25);
             lbDateTime.TabIndex = 2;
-            lbDateTime.Text = "DateTime";
+            lbDateTime.Text = "time";
             // 
             // splitContainer1
             // 

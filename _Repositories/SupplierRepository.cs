@@ -59,19 +59,44 @@ namespace BachHoaXanh._Repositories
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error occurred in SupplierRepository.addMon(): " + e.Message);
+                Console.WriteLine("Error occurred in SupplierRepository.addSupplier(): " + e.Message);
             }
             return 0;
         }
 
-        public int Delete(int id)
+        public int Delete(List<string> conditions)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Object> updateValues = new List<object>();
+                updateValues.Add(true);
+                return update(updateValues, conditions);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error occurred in SupplierRepository.deleteSupplier(): " + e.Message);
+            }
+            return 0;
         }
 
-        public int Edit(Supplier supplier)
+        public int Update(Supplier supplier)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Object> updateValues = new List<object>();
+                updateValues.Add(supplier.Id);
+                updateValues.Add(supplier.Name);
+                updateValues.Add(supplier.Phone);
+                updateValues.Add(supplier.Address);
+                updateValues.Add(supplier.Email);
+                updateValues.Add(supplier.Deleted);
+                return update(updateValues, new List<string> { "id = " + supplier.Id });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error occurred in SupplierRepository.updateSupplier(): " + e.Message);
+            }
+            return 0;
         }
 
         public List<Supplier> SearchSupplier(List<string> conditions)
@@ -89,7 +114,7 @@ namespace BachHoaXanh._Repositories
 
         public int GetAutoID()
         {
-            return GetAutoID(_suppliers);
+            return GetAutoID(SearchSupplier(new List<string> { }));
         }
 
         public Object GetValueByKey(Supplier supplier, string key)

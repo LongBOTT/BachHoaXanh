@@ -63,7 +63,7 @@ namespace BachHoaXanh._Repositories
             string setClause;
             if (updateValues.Count() == 1)
             {
-                setClause = "Xoa = ?";
+                setClause = "Deleted = ?";
             }
             else
             {
@@ -83,15 +83,12 @@ namespace BachHoaXanh._Repositories
         public int delete(List<string> conditions)
         {
             string query = "DELETE FROM `" + tableName + "`";
-            List<object> values = new List<object>();
-
             if (conditions != null && conditions.Count > 0)
             {
                 query += " WHERE " + string.Join(" AND ", conditions);
-                values = conditions.Select(s => (object)s).ToList();
             }
             query += ";";
-            return executeUpdate(query, values);
+            return executeUpdate(query, new List<object> { });
         }
 
         public List<T> convert<T>(List<List<string>> data, Func<List<string>, T> converter)

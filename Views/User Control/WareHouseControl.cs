@@ -1,4 +1,5 @@
-﻿using BachHoaXanh.Views.InterfaceView;
+﻿using BachHoaXanh.Main;
+using BachHoaXanh.Views.InterfaceView;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -17,13 +18,25 @@ namespace BachHoaXanh
         public WareHouseControl()
         {
             InitializeComponent();
+            guna2ComboBox1.SelectedIndex = 0;
             AssociateAndRaiseViewEvents();
         }
 
         private void AssociateAndRaiseViewEvents()
         {
-            txtSearch.TextChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            cbbSearch.SelectedValueChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            guna2TextBox1.TextChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            guna2ComboBox1.SelectedValueChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            btnDetail.Click += delegate
+            {
+                if (Guna2DataGridView.SelectedRows[0].Index != -1)
+                {
+                    ShowDetail?.Invoke(this, EventArgs.Empty);
+                }
+                else
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Vui lòng chọn lô hàng cần xem chi tiết!", "Lỗi", MessageDialogButtons.OK, MessageDialogIcon.Error);
+                }
+            };
         }
 
         public Guna2DataGridView Guna2DataGridView
@@ -34,16 +47,24 @@ namespace BachHoaXanh
 
         public string SearchValue
         {
-            get { return txtSearch.Text; }
-            set { txtSearch.Text = value; }
+            get { return guna2TextBox1.Text; }
+            set { guna2TextBox1.Text = value; }
         }
 
         public string Attribute
         {
-            get { return cbbSearch.SelectedItem.ToString(); }
-            set { cbbSearch.SelectedItem = value; }
+            get { return guna2ComboBox1.SelectedItem.ToString(); }
+            set { guna2ComboBox1.SelectedItem = value; }
+        }
+
+        public Guna2TextBox Guna2TextBox
+        {
+            get { return guna2TextBox1; }
+            set { guna2TextBox1 = value; }
+
         }
 
         public event EventHandler SearchEvent;
+        public event EventHandler ShowDetail;
     }
 }

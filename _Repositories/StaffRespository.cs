@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,19 +52,64 @@ namespace BachHoaXanh._Repositories
                 return new Staff();
             });
         }
-        public void Add()
+        public int Add(Staff staff)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return create(new List<object> {staff.Id,
+                    staff.Name,
+                    staff.Gender,
+                    staff.Birthday,
+                    staff.Phone,
+                    staff.Address,
+                    staff.Email,
+                    staff.Entry_DateTime,
+                    false }
+                );
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error occurred in StaffRepository.addStaff(): " + e.Message);
+            }
+            return 0;
         }
 
-        public int Delete(Staff staff)
+        public int Delete(List<string> conditions)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Object> updateValues = new List<object>();
+                updateValues.Add(true);
+                return update(updateValues, conditions);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error occurred in StaffRepository.deleteStaff(): " + e.Message);
+            }
+            return 0;
         }
 
-        public void Edit(Staff staff)
+        public int Update(Staff staff)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Object> updateValues = new List<object>();
+                updateValues.Add(staff.Id);
+                updateValues.Add(staff.Name);
+                updateValues.Add(staff.Gender);
+                updateValues.Add(staff.Birthday);
+                updateValues.Add(staff.Phone);
+                updateValues.Add(staff.Address);
+                updateValues.Add(staff.Email);
+                updateValues.Add(staff.Entry_DateTime);
+                updateValues.Add(staff.Deleted);
+                return update(updateValues, new List<string> { "id = " + staff.Id });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error occurred in StaffRepository.updateStaff(): " + e.Message);
+            }
+            return 0;
         }
 
 
@@ -82,7 +128,7 @@ namespace BachHoaXanh._Repositories
 
         public int GetAutoID()
         {
-            return GetAutoID(_staffs);
+            return GetAutoID(SearchStaff(new List<string> { }));
         }
 
         public Object GetValueByKey(Staff staff, string key)
@@ -137,5 +183,6 @@ namespace BachHoaXanh._Repositories
         {
             return _staffs;
         }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using BachHoaXanh.Views.InterfaceView;
+﻿using BachHoaXanh.Main;
+using BachHoaXanh.Views.InterfaceView;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -17,13 +18,53 @@ namespace BachHoaXanh.User_Control
         public StaffControl()
         {
             InitializeComponent();
+            guna2ComboBox1.SelectedIndex = 0;
             AssociateAndRaiseViewEvents();
         }
 
         private void AssociateAndRaiseViewEvents()
         {
-            txtSearch.TextChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            cbbSearch.SelectedValueChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            guna2TextBox1.TextChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            guna2ComboBox1.SelectedValueChanged += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            btnDetail.Click += delegate
+            {
+                if (Guna2DataGridView.SelectedRows[0].Index != -1)
+                {
+                    ShowDetail?.Invoke(this, EventArgs.Empty);
+                }
+                else
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Vui lòng chọn nhân viên cần xem chi tiết!", "Lỗi", MessageDialogButtons.OK, MessageDialogIcon.Error);
+                }
+            };
+            btnAdd.Click += delegate { AddNewEvent?.Invoke(this, EventArgs.Empty); };
+            btnEdit.Click += delegate
+            {
+                if (Guna2DataGridView.SelectedRows[0].Index != -1)
+                {
+                    UpdateEvent?.Invoke(this, EventArgs.Empty);
+                }
+                else
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Vui lòng chọn nhân viên cần sửa!", "Lỗi", MessageDialogButtons.OK, MessageDialogIcon.Error);
+                }
+            };
+            btnDelete.Click += delegate
+            {
+                if (Guna2DataGridView.SelectedRows[0].Index != -1)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                }
+                else
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Vui lòng chọn nhân viên cần xoá!", "Lỗi", MessageDialogButtons.OK, MessageDialogIcon.Error);
+                }
+            };
+        }
+
+        private void StaffControl_Load(object sender, EventArgs e)
+        {
+            
         }
 
         public Guna2DataGridView Guna2DataGridView
@@ -34,16 +75,20 @@ namespace BachHoaXanh.User_Control
 
         public string SearchValue
         {
-            get { return txtSearch.Text; }
-            set { txtSearch.Text = value; }
+            get { return guna2TextBox1.Text; }
+            set { guna2TextBox1.Text = value; }
         }
 
         public string Attribute
         {
-            get { return cbbSearch.SelectedItem.ToString(); }
-            set { cbbSearch.SelectedItem = value; }
+            get { return guna2ComboBox1.SelectedItem.ToString(); }
+            set { guna2ComboBox1.SelectedItem = value; }
         }
 
         public event EventHandler SearchEvent;
+        public event EventHandler ShowDetail;
+        public event EventHandler AddNewEvent;
+        public event EventHandler UpdateEvent;
+        public event EventHandler DeleteEvent;
     }
 }

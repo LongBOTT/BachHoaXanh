@@ -8,9 +8,9 @@ namespace BachHoaXanh.Models
 {
     public interface IStaffRepository
     {
-        void Add();
-        void Edit(Staff staff);
-        int Delete(Staff staff);
+        int Add(Staff staff);
+        int Update(Staff staff);
+        int Delete(List<string> conditions);
         int GetAutoID();
         List<Staff> FindStaffsBy(Dictionary<string, Object> conditions);
         List<Staff> FindStaffs(string key, string value);

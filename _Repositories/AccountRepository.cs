@@ -58,7 +58,7 @@ namespace BachHoaXanh._Repositories
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error occurred in AccountRepository.addMon(): " + e.Message);
+                Console.WriteLine("Error occurred in AccountRepository.addAccount(): " + e.Message);
             }
             return 0;
         }
@@ -67,9 +67,7 @@ namespace BachHoaXanh._Repositories
         {
             try
             {
-                List<Object> updateValues = new List<object>();
-                updateValues.Add(true);
-                return update(updateValues, conditions);
+                return delete(conditions);
             }
             catch (Exception e)
             {
@@ -113,7 +111,7 @@ namespace BachHoaXanh._Repositories
 
         public int GetAutoID()
         {
-            return GetAutoID(_accounts);
+            return GetAutoID(SearchAccount(new List<string> { }));
         }
 
         public Object GetValueByKey(Account account, string key)

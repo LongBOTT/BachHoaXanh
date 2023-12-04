@@ -166,6 +166,42 @@
   <data name="PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon\PDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pro9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img\product\Pro9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon\Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -1,5 +1,9 @@
-﻿using BachHoaXanh.Models;
+﻿using BachHoaXanh._Repositories;
+using BachHoaXanh.Dialog;
+using BachHoaXanh.Main;
+using BachHoaXanh.Models;
 using BachHoaXanh.Views.InterfaceView;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,30 +15,32 @@ namespace BachHoaXanh.Presenters
     public class SupplierPresenter
     {
         private ISupplierView view;
-        private ISupplierRepository repository;
-        private IEnumerable<Supplier> supplierList;
+        public static ISupplierRepository repository;
+        public static IEnumerable<Supplier> supplierList;
+        private static Guna2DataGridView Guna2DataGridView;
 
         public SupplierPresenter(ISupplierView view, ISupplierRepository repository)
         {
             this.view = view;
-            this.repository = repository;
+            SupplierPresenter.repository = repository;
+            SupplierPresenter.Guna2DataGridView = view.Guna2DataGridView;
+            SupplierPresenter.supplierList = SupplierPresenter.repository.GetAll();
             supplierList = repository.GetAll();
             LoadSupplierList(supplierList);
 
             this.view.SearchEvent += SearchSupplier;
-            //this.view.AddNewEvent += AddNewSupplier;
-            //this.view.EditEvent += LoadSelectedSupplierToEdit;
-            //this.view.DeleteEvent += DeleteSelectedSupplier;
-            //this.view.SaveEvent += SaveSupplier;
-            //this.view.CancelEvent += CancelAction;
+            this.view.ShowDetail += ShowDetail;
+            this.view.AddNewEvent += AddNewStaff;
+            this.view.UpdateEvent += UpdateEvent;
+            this.view.DeleteEvent += DeleteEvent;
         }
 
-        private void LoadSupplierList(IEnumerable<Supplier> suppliers)
+        public static void LoadSupplierList(IEnumerable<Supplier> suppliers)
         {
-            view.Guna2DataGridView.Rows.Clear();
+            Guna2DataGridView.Rows.Clear();
             foreach (Supplier supplier in suppliers)
             {
-                view.Guna2DataGridView.Rows.Add(supplier.Id, supplier.Name, supplier.Phone, supplier.Address, supplier.Email);
+                Guna2DataGridView.Rows.Add(supplier.Id, supplier.Name, supplier.Phone, supplier.Address, supplier.Email);
             }
         }
 
@@ -59,21 +65,69 @@ namespace BachHoaXanh.Presenters
 
         private void SearchByPhoneSupplier(string searchValue)
         {
-            List<Supplier> result = this.repository.FindSuppliers("phone", searchValue);
+            List<Supplier> result = repository.FindSuppliers("phone", searchValue);
             LoadSupplierList(result);
         }
 
         private void SearchByEmailSupplier(string searchValue)
         {
-            List<Supplier> result = this.repository.FindSuppliers("email", searchValue);
+            List<Supplier> result = repository.FindSuppliers("email", searchValue);
             LoadSupplierList(result);
         }
 
         private void SearchByNameSupplier(string searchValue)
         {
-            List<Supplier> result = this.repository.FindSuppliers("name", searchValue);
+            List<Supplier> result = repository.FindSuppliers("name", searchValue);
             LoadSupplierList(result);
         }
 
+        private void ShowDetail(object? sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
+            int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
+            Supplier supplier = repository.FindSuppliersBy(new Dictionary<string, object>() { { "id", id } })[0];
+            IShowDetailSupplierView view = new FormDetailSupplier(supplier);
+            ISupplierRepository supplierRepository = new SupplierRepository();
+            new ShowDetailSupplierPresenter(view, supplierRepository);
+            view.show();
+        }
+
+        private void AddNewStaff(object? sender, EventArgs e)
+        {
+            IAddSupplierView view = new FormAddSupplier();
+            ISupplierRepository supplierRepository = new SupplierRepository();
+            AddSupplierPresenter addSupplierPresenter = new AddSupplierPresenter(view, supplierRepository);
+            view.show();
+        }
+
+        private void UpdateEvent(object? sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
+            int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
+            Supplier supplier = repository.FindSuppliersBy(new Dictionary<string, object>() { { "id", id } })[0];
+            IUpdateSupplierView view = new FormUpdateSupplier(supplier);
+            ISupplierRepository supplierRepository = new SupplierRepository();
+            new UpdateSupplierPresenter(view, supplierRepository);
+            view.show();
+        }
+
+
+
+        private void DeleteEvent(object? sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
+            int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
+            if (repository.Delete(new List<string> { " id = " + id }) == 1)
+            {
+                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhà cung cấp thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                repository = new SupplierRepository();
+                supplierList = repository.GetAll();
+                LoadSupplierList(supplierList);
+            }
+            else
+            {
+                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhà cung cấp không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+            }
+        }
     }
 }

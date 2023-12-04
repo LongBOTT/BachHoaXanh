@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace BachHoaXanh.Main
 {
-    internal static class BachHoaXanh
+    internal static class MiniSupermarketApp
     {
+        public static Menu menu = new Menu();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -28,7 +29,7 @@ namespace BachHoaXanh.Main
             //    Console.WriteLine(account.ToString());
             //}
             ApplicationConfiguration.Initialize();
-            Application.Run(new Menu());
+            Application.Run(menu);
 
         }
         [DllImport("kernel32.dll", SetLastError = true)]

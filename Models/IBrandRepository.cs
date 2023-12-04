@@ -8,9 +8,12 @@ namespace BachHoaXanh.Models
 {
     public interface IBrandRepository
     {
-        void Add(Brand brand);
-        void Edit(Brand brand);
-        void Delete(int id);
+        int Add(Brand brand);
+        int Update(Brand brand);
+        int Delete(List<string> conditions);
+        int GetAutoID();
+        List<Brand> FindBrandsBy(Dictionary<string, Object> conditions);
+        List<Brand> FindBrands(string key, string value);
         IEnumerable<Brand> GetAll();
     }
 }

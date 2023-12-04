@@ -9,8 +9,8 @@ namespace BachHoaXanh.Models
     public interface ISupplierRepository
     {
         int Add(Supplier supplier);
-        int Edit(Supplier supplier);
-        int Delete(int id);
+        int Update(Supplier supplier);
+        int Delete(List<string> conditions);
         int GetAutoID();
         List<Supplier> FindSuppliersBy(Dictionary<string, Object> conditions);
         List<Supplier> FindSuppliers(string key, string value);

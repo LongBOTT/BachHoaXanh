@@ -16,5 +16,9 @@ namespace BachHoaXanh.Views.InterfaceView
 
 
         event EventHandler SearchEvent;
+        event EventHandler ShowDetail;
+        event EventHandler AddNewEvent;
+        event EventHandler UpdateEvent;
+        event EventHandler DeleteEvent;
     }
 }
