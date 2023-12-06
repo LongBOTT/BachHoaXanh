@@ -33,7 +33,8 @@ namespace BachHoaXanh._Repositories
                 List<string> row = new List<string>(columnCount);
                 for (int i = 0; i < columnCount; i++)
                 {
-                    row.Add(reader.GetString(i));
+                    if (!reader.IsDBNull(i))
+                        row.Add(reader.GetString(i));
                 }
                 result.Add(row);
             }

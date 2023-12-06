@@ -8,9 +8,10 @@ namespace BachHoaXanh.Models
 {
     public interface IDiscountRepository
     {
-        void Add(Discount discount);
-        void Edit(Discount discount);
+        int Add(Discount discount);
+        int GetAutoID();
+        List<Discount> FindDiscountsBy(Dictionary<string, Object> conditions);
+        List<Discount> FindDiscounts(string key, string value);
         IEnumerable<Discount> GetAll();
-        IEnumerable<Discount> GetByValue();
     }
 }

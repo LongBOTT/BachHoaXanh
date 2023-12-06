@@ -26,5 +26,37 @@ namespace BachHoaXanh
         public TabPage TabPageByQuater { get { return tabPage3; } }
 
         public TabPage TabPageByMonth { get { return tabPage4; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelNumofStaff { get { return labelNumofStaff; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelBestSeller { get { return labelBestSeller; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelNameBestSeller { get { return labelBestSellerName; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelBadSeller { get { return labelBadSeller; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelNameBadSeller { get { return labelBadSellerName; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelBillOfBestStaff { get { return lablelBillOfStaff; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelNameBestStaff { get { return labelBestStaffName; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelQuantityShipment { get { return labelQuantityShipment; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelNameProduct { get { return labelNamePoduct; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelExpenses { get { return labelExpenses; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelAmount { get { return labelAmount; } }
+
+        public Guna2HtmlLabel guna2HtmlLabelProfit { get { return labelBenefit; } }
+
+        public Guna2PictureBox guna2PictureBoxBestSeller { get { return imageBestSeller; } }
+
+        public Guna2PictureBox guna2PictureBoxBadSeller { get { return imageBadSeller; } }
+
+        public Guna2PictureBox guna2PictureBoxPoduct { get { return imageShipment; } }
+
+        public Guna2TabControl guna2TabControl { get { return guna2TabControl1; } }
     }
 }

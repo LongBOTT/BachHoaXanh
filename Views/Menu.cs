@@ -24,9 +24,19 @@ namespace BachHoaXanh
             IAccountRepository accountRepository = new AccountRepository();
             Account = accountRepository.GetAll().ElementAt(0);
             InitializeComponent();
-            RenderTime();
+            Thread thread = new Thread(() => RenderTime());
+            thread.Start();
             Homepage homepage = new Homepage();
             addUserControl(homepage);
+        }
+
+        private void RenderTime()
+        {
+            while (true)
+            {
+                Thread.Sleep(1000);
+                lbDateTime.Text = DateTime.Now.ToString();
+            }
         }
 
         private void addUserControl(UserControl userControl)
@@ -48,7 +58,7 @@ namespace BachHoaXanh
             ISaleView view = new SaleControl();
             IProductRepository repository = new ProductRepository();
             new SalePresenter(view, repository);
-            addUserControl((UserControl) view);
+            addUserControl((UserControl)view);
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
@@ -62,15 +72,17 @@ namespace BachHoaXanh
         private void btnStatistics_Click(object sender, EventArgs e)
         {
             IStatisticsView view = new StatisticsControl();
-            IProductRepository repository = new ProductRepository();
-            new StatisticsPresenter(view);
+            IStatisticsRepository repository = new StatisticRepository();
+            new StatisticsPresenter(view, repository);
             addUserControl((UserControl)view);
         }
 
         private void btnDiscount_Click(object sender, EventArgs e)
         {
-            DiscountControl discount = new DiscountControl();
-            addUserControl(discount);
+            IDiscountView view = new DiscountControl();
+            IDiscountRepository repository = new DiscountRepository();
+            new DiscountPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnBill_Click(object sender, EventArgs e)

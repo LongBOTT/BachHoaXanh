@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,24 +10,25 @@ namespace BachHoaXanh.Views.InterfaceView
 {
     public interface IDiscountView
     {
-        int Id { get; set; }
-        double Percent { get; set; }
-        DateTime Start_Date { get; set; }
-        DateTime End_Date { get; set; }
-        bool Status { get; set; }
+        Guna2DataGridView guna2DataGridDiscount {  get; }
+        Guna2DataGridView guna2DataGridProduct {  get; }
 
-        string SearchValue { get; set; }
-        bool IsEdit { get; set; }
-        bool IsSuccessful { get; set; }
-        string Message { get; set; }
+        Guna2DateTimePicker DateTimePickerSearch1 { get; }
+        Guna2DateTimePicker DateTimePickerSearch2 { get; }
+        Guna2DateTimePicker DateTimePickerStart { get; }
+        Guna2DateTimePicker DateTimePickerEnd { get; }
 
-        event EventHandler SearchEvent;
+        Guna2TextBox guna2TextBoxID { get; }
+        Guna2TextBox guna2TextPerent { get; }
+
+        Guna2GradientButton guna2ButtonAdd { get; }
+        Guna2GradientButton guna2ButtonCancel { get; }
+
+        event EventHandler SearchDiscountEvent;
+        event EventHandler SearchProductEvent;
+        event EventHandler ShowDetail;
+        event EventHandler AddProduct;
         event EventHandler AddNewEvent;
-        event EventHandler EditEvent;
-        event EventHandler SaveEvent;
         event EventHandler CancelEvent;
-
-        void SetPetListBindingSource(BindingSource petList);
-        void Show();
     }
 }

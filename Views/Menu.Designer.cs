@@ -27,17 +27,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         /// 
-        private void RenderTime()
-        {
-            Thread thread = new Thread(() =>
-            {
-                while (true)
-                {
-                    lbDateTime.Text = DateTime.Now.ToString();
-                }
-            });
-            thread.Start();
-        }
+
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
@@ -199,9 +189,8 @@
             lbDateTime.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbDateTime.Location = new Point(87, 12);
             lbDateTime.Name = "lbDateTime";
-            lbDateTime.Size = new Size(37, 25);
+            lbDateTime.Size = new Size(3, 2);
             lbDateTime.TabIndex = 2;
-            lbDateTime.Text = "time";
             // 
             // splitContainer1
             // 
