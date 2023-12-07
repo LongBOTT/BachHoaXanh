@@ -15,6 +15,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Text.RegularExpressions;
 
 namespace BachHoaXanh.Presenters
 {
@@ -144,34 +145,41 @@ namespace BachHoaXanh.Presenters
 
         private void UpdateProduct(object? sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Xác nhận sửa sản phẩm?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (result == DialogResult.OK)
+            try
             {
-                int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
-                string name = view.Guna2TextBoxname.Text;
-                int brandID = Convert.ToInt16(view.Guna2TextBoxBrand.Text);
-                int categoryID = Convert.ToInt16(view.Guna2TextBoxCategory.Text);
-                string unit = view.Guna2ComboBoxUnit.SelectedItem.ToString();
-                double cost = Convert.ToDouble(view.Guna2TextBoxCost.Text);
-                double quantity = Convert.ToDouble(view.Guna2TextBoxQuantity.Text);
-                string barcode = view.Guna2TextBoxBarcode.Text;
-                string image = "Pro1";
-
-                // check input o day khong hop le thi thong bao va return
-
-                Product product = new Product(id, name, brandID, categoryID, unit, cost, quantity, image, barcode, false);
-                if (repository.Update(product) == 1)
+                DialogResult result = MessageBox.Show("Xác nhận sửa sản phẩm?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
                 {
-                    view.Message = "Cập nhật sản phẩm thành công!";
-                    view.close();
-                    ProductPresenter.repository = new ProductRepository();
-                    ProductPresenter.productList = ProductPresenter.repository.GetAll();
-                    ProductPresenter.LoadProductList(ProductPresenter.productList);
-                    return;
+                    int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
+                    string name = view.Guna2TextBoxname.Text;
+                    int brandID = Convert.ToInt16(view.Guna2TextBoxBrand.Text);
+                    int categoryID = Convert.ToInt16(view.Guna2TextBoxCategory.Text);
+                    string unit = view.Guna2ComboBoxUnit.SelectedItem.ToString();
+                    double cost = Convert.ToDouble(view.Guna2TextBoxCost.Text);
+                    double quantity = Convert.ToDouble(view.Guna2TextBoxQuantity.Text);
+                    string barcode = view.Guna2TextBoxBarcode.Text;
+                    string image = "Pro1";
+
+                    // check input o day khong hop le thi thong bao va return
+                    if (checkInput())
+                    {
+                        Product product = new Product(id, name, brandID, categoryID, unit, cost, quantity, image, barcode, false);
+                        if (repository.Update(product) == 1)
+                        {
+                            view.Message = "Cập nhật sản phẩm thành công!";
+                            view.close();
+                            ProductPresenter.repository = new ProductRepository();
+                            ProductPresenter.productList = ProductPresenter.repository.GetAll();
+                            ProductPresenter.LoadProductList(ProductPresenter.productList);
+                            return;
+                        }
+                        view.Message = "Cập nhật sản phẩm không thành công";
+                    }
                 }
+            } catch (Exception ex)
+            {
+                view.Message = "Vui lòng nhập đầy đủ thông tin";
             }
-            view.Message = "Cập nhật sản phẩm không thành công";
-            return;
         }
 
         private void Refresh(object? sender, EventArgs e)
@@ -184,6 +192,22 @@ namespace BachHoaXanh.Presenters
             view.Guna2TextBoxCost.Text = null;
             view.Guna2TextBoxQuantity.Text = null;
             view.Guna2TextBoxBarcode.Text = null;
+        }
+
+        public Boolean checkInput()
+        {
+            string name = view.Guna2TextBoxname.Text;
+            double cost = Convert.ToDouble(view.Guna2TextBoxCost.Text);
+            double quantity = Convert.ToDouble(view.Guna2TextBoxQuantity.Text);
+            string barcode = view.Guna2TextBoxBarcode.Text;
+
+            if (string.IsNullOrEmpty(name) || !Regex.IsMatch(name, @"^[a-zA-ZÀ-ỹẠ-ỵĂăÂâĐđÊêÔôƠơƯư/0-9\s]*[a-zA-ZÀ-ỹẠ-ỵĂăÂâĐđÊêÔôƠơƯư][a-zA-ZÀ-ỹẠ-ỵĂăÂâĐđÊêÔôƠơƯư/0-9\s]*$"))
+            {
+                view.Message = "Tên sản phẩm không hợp lệ!";
+                view.Guna2TextBoxname.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }

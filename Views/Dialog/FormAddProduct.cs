@@ -100,5 +100,12 @@ namespace BachHoaXanh.Dialog
         {
             Close();
         }
+
+        private void guna2TextBox6_TextChanged(object sender, EventArgs e)
+        {
+            string input = Guna2TextBoxCost.Text;
+            string numericInput = new string(input.Where(char.IsDigit).ToArray());
+            Guna2TextBoxCost.Text = numericInput;
+        }
     }
 }
