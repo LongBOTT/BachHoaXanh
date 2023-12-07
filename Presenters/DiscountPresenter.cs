@@ -104,6 +104,11 @@ namespace BachHoaXanh.Presenters
                     MessageDialog.Show(MiniSupermarketApp.menu, "Phàn trăm giảm giá không hợp lệ!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
                     return;
                 }
+                if (percent <= 0)
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Phần trăm giảm giá phải lớn hơn 0!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                    return;
+                }
                 DateTime startDate = view.DateTimePickerStart.Value;
                 DateTime endDate = view.DateTimePickerEnd.Value;
                 if (startDate > endDate)
