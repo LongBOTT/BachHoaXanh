@@ -159,7 +159,7 @@ namespace BachHoaXanh.Presenters
                     return;
                 }
             }
-            MessageDialog.Show(MiniSupermarketApp.menu, "Thêm sản phẩm không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+            view.Message = "Thêm sản phẩm không thành công";
             return;
             
         }
