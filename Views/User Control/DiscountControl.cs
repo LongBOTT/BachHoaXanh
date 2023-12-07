@@ -23,8 +23,8 @@ namespace BachHoaXanh.User_Control
 
         private void AssociateAndRaiseViewEvents()
         {
-            guna2DateTimePicker1.TextChanged += delegate { SearchDiscountEvent?.Invoke(this, EventArgs.Empty); };
-            guna2DateTimePicker2.TextChanged += delegate { SearchDiscountEvent?.Invoke(this, EventArgs.Empty); };
+            guna2DateTimePicker1.ValueChanged += delegate { SearchDiscountEvent?.Invoke(this, EventArgs.Empty); };
+            guna2DateTimePicker2.ValueChanged += delegate { SearchDiscountEvent?.Invoke(this, EventArgs.Empty); };
 
             guna2ComboBox1.SelectedValueChanged += delegate { SearchProductEvent?.Invoke(this, EventArgs.Empty); };
             guna2TextBox1.TextChanged += delegate { SearchProductEvent?.Invoke(this, EventArgs.Empty); };
@@ -40,13 +40,13 @@ namespace BachHoaXanh.User_Control
 
         public Guna2DataGridView guna2DataGridProduct { get { return guna2DataGridView2; } }
 
-        public Guna2DateTimePicker DateTimePickerSearch1 { get { return DateTimePickerSearch1; } }
+        public Guna2DateTimePicker DateTimePickerSearch1 { get { return guna2DateTimePicker1; } }
 
-        public Guna2DateTimePicker DateTimePickerSearch2 { get { return DateTimePickerSearch2; } }
+        public Guna2DateTimePicker DateTimePickerSearch2 { get { return guna2DateTimePicker2; } }
 
-        public Guna2DateTimePicker DateTimePickerStart { get { return DateTimePickerStart; } }
+        public Guna2DateTimePicker DateTimePickerStart { get { return guna2DateTimePicker3; } }
 
-        public Guna2DateTimePicker DateTimePickerEnd { get { return DateTimePickerEnd; } }
+        public Guna2DateTimePicker DateTimePickerEnd { get { return guna2DateTimePicker4; } }
 
         public Guna2TextBox guna2TextBoxID { get { return guna2TextBox11; } }
 
@@ -55,6 +55,10 @@ namespace BachHoaXanh.User_Control
         public Guna2GradientButton guna2ButtonAdd { get { return btnAddDiscount; } }
 
         public Guna2GradientButton guna2ButtonCancel { get { return btnCancel; } }
+
+        public Guna2ComboBox comboBoxSeacrchProduct { get { return guna2ComboBox1; } }
+
+        public Guna2TextBox guna2TextSearchProduct { get { return guna2TextBox1; } }
 
         public event EventHandler SearchDiscountEvent;
         public event EventHandler SearchProductEvent;

@@ -55,6 +55,23 @@ namespace BachHoaXanh._Repositories
             return 0;
         }
 
+        public int Update(Discount_detail discount_detail)
+        {
+            try
+            {
+                List<Object> updateValues = new List<object>();
+                updateValues.Add(discount_detail.Discount_id);
+                updateValues.Add(discount_detail.Product_id);
+                updateValues.Add(discount_detail.Status);
+                return update(updateValues, new List<string> { "discount_id = " + discount_detail.Discount_id, "product_id = " + discount_detail.Product_id  });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error occurred in Discount_detailRepository.updateDiscount_detail(): " + e.Message);
+            }
+            return 0;
+        }
+
         public List<Discount_detail> SearchDiscount_detail(List<string> conditions)
         {
             try

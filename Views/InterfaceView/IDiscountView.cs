@@ -20,10 +20,11 @@ namespace BachHoaXanh.Views.InterfaceView
 
         Guna2TextBox guna2TextBoxID { get; }
         Guna2TextBox guna2TextPerent { get; }
+        Guna2TextBox guna2TextSearchProduct { get; }
 
         Guna2GradientButton guna2ButtonAdd { get; }
         Guna2GradientButton guna2ButtonCancel { get; }
-
+        Guna2ComboBox comboBoxSeacrchProduct {  get; }
         event EventHandler SearchDiscountEvent;
         event EventHandler SearchProductEvent;
         event EventHandler ShowDetail;

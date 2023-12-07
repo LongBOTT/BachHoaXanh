@@ -105,8 +105,10 @@ namespace BachHoaXanh
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ProductControl productControl = new ProductControl();
-            addUserControl(productControl);
+            IProductView view = new ProductControl();
+            IProductRepository repository = new ProductRepository();
+            new ProductPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)

@@ -66,7 +66,7 @@ namespace BachHoaXanh.Presenters
             if (attribute == "Sắp hết hạn")
             {
                 view.Guna2TextBox.Visible = false;
-                searchByMfg();
+                searchByExp();
             }
             if (attribute == "Sắp hết hàng")
             {
@@ -83,9 +83,9 @@ namespace BachHoaXanh.Presenters
             LoadShipmentList(result);
         }
 
-        private void searchByMfg()
+        private void searchByExp()
         {
-            List<Shipment> result = repository.SearchShipment( new List<string> { "MONTH(`shipment`.exp) - MONTH(CURRENT_DATE()) = 1", "YEAR(`shipment`.exp) = YEAR(CURRENT_DATE())" });
+            List<Shipment> result = repository.SearchShipment( new List<string> { "CURRENT_DATE() <= DATE_SUB(`shipment`.exp, INTERVAL 30 DAY)" });
             LoadShipmentList(result);
         }
 

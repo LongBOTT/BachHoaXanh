@@ -1,0 +1,179 @@
+﻿using BachHoaXanh._Repositories;
+using BachHoaXanh.Main;
+using BachHoaXanh.Models;
+using BachHoaXanh.Properties;
+using BachHoaXanh.User_Control;
+using BachHoaXanh.Views;
+using BachHoaXanh.Views.InterfaceView;
+using Guna.UI2.WinForms;
+using System;
+using System.Resources;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace BachHoaXanh.Presenters
+{
+    public class AddProductPresenter
+    {
+        private IAddProductView view;
+        private IProductRepository repository;
+        private IBrandRepository brandRepository;
+        private ICategoryRepository categoryRepository;
+        private List<Category> categorys;
+        private List<Brand> brands;
+        private Boolean flag;
+        public AddProductPresenter(IAddProductView view, IProductRepository repository) 
+        {
+            this.view = view;
+            this.repository = repository;
+            brandRepository = new BrandRepository();
+            categoryRepository = new CategoryRepository();
+            categorys = (List<Category>)categoryRepository.GetAll();
+            brands = (List<Brand>)brandRepository.GetAll();
+            this.view.ShowDetail += ShowDetail;
+            this.view.LoadListBrand += LoadListBrand;
+            this.view.LoadListCategory += LoadListCategory;
+            this.view.SelectedRow += SelectedRow;
+            this.view.AddProduct += AddProduct;
+            this.view.Refresh += Refresh;
+            this.view.pictureBox.Click += LoadImage;
+        }
+
+        private void LoadImage(object? sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = Application.StartupPath;
+            openFileDialog1.Filter = "PNG Files|*.png";
+
+            openFileDialog1.Title = "Select PNG File";
+            openFileDialog1.Multiselect = false;
+
+            if (openFileDialog1.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+
+            string selectedFileName = openFileDialog1.FileName;
+            view.pictureBox.Image = Image.FromFile(selectedFileName);
+        }
+
+        private void LoadListCategory(object? sender, EventArgs e)
+        {
+            flag = false;
+            DataGridViewColumn column1 = new DataGridViewTextBoxColumn();
+            DataGridViewColumn column2 = new DataGridViewTextBoxColumn();
+            DataGridViewColumn column3 = new DataGridViewTextBoxColumn();
+            column1.HeaderText = "Mã thể loại";
+            column2.HeaderText = "Tên thể loại";
+            column3.HeaderText = "Số lượng";
+            view.Guna2DataGridView.Columns.Clear();
+            view.Guna2DataGridView.Rows.Clear();
+            view.Guna2DataGridView.Columns.AddRange(column1, column2, column3);
+
+            foreach (Category category in categorys)
+            {
+                view.Guna2DataGridView.Rows.Add(category.Id, category.Name, category.Quantity);
+            }
+             view.Guna2DataGridView.Visible = true;
+            if (view.Guna2TextBoxCategory.PlaceholderText != "Chọn thể loại")
+            {
+                Category category = categoryRepository.FindCategorysBy(new Dictionary<string, object>() { { "id", Convert.ToInt16(view.Guna2TextBoxCategory.Text) } })[0];
+                int index = Repository.GetIndex(category, "id", categorys);
+                view.Guna2DataGridView.Rows[index].Selected = true;
+            }
+        }
+
+        private void LoadListBrand(object? sender, EventArgs e)
+        {
+            flag = true;
+            DataGridViewColumn column1 = new DataGridViewTextBoxColumn();
+            DataGridViewColumn column2 = new DataGridViewTextBoxColumn();
+            column1.HeaderText = "Mã thương hiệu";
+            column2.HeaderText = "Tên thương hiệu";
+            view.Guna2DataGridView.Columns.Clear();
+            view.Guna2DataGridView.Rows.Clear();
+            view.Guna2DataGridView.Columns.AddRange(column1, column2);
+
+            foreach (Brand brand in brands)
+            {
+                view.Guna2DataGridView.Rows.Add(brand.Id, brand.Name);
+            }
+            view.Guna2DataGridView.Visible = true;
+            if (view.Guna2TextBoxBrand.PlaceholderText != "Chọn thương hiệu")
+            {
+                Brand brand = brandRepository.FindBrandsBy(new Dictionary<string, object>() { { "id", Convert.ToInt16(view.Guna2TextBoxBrand.Text) } })[0];
+                int index = Repository.GetIndex(brand, "id", brands);
+                view.Guna2DataGridView.Rows[index].Selected = true;
+            }
+        }
+
+        private void ShowDetail(object? sender, EventArgs e)
+        {
+            view.Guna2TextBoxID.Text = repository.GetAutoID().ToString();
+        }
+
+        private void SelectedRow(object? sender, EventArgs e)
+        {
+            string id = "";
+            if (view.Guna2DataGridView.SelectedRows.Count > 0)
+            {
+                id = view.Guna2DataGridView.SelectedRows[0].Cells[0].Value.ToString();
+                if (flag)
+                    view.Guna2TextBoxBrand.Text = id;
+                else
+                    view.Guna2TextBoxCategory.Text = id;
+            }
+        }
+
+        private void AddProduct(object? sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Xác nhận thêm sản phẩm?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
+                string name = view.Guna2TextBoxname.Text;
+                int brandID = Convert.ToInt16(view.Guna2TextBoxBrand.Text);
+                int categoryID = Convert.ToInt16(view.Guna2TextBoxCategory.Text);
+                string unit = view.Guna2ComboBoxUnit.SelectedItem.ToString();
+                double cost = Convert.ToDouble(view.Guna2TextBoxCost.Text);
+                double quantity = Convert.ToDouble(view.Guna2TextBoxQuantity.Text);
+                string barcode = view.Guna2TextBoxBarcode.Text;
+                string image = "Pro1";
+
+                // check input o day khong hop le thi thong bao va return
+
+                Product product = new Product(id, name, brandID, categoryID, unit, cost, quantity, image, barcode, false);
+                if (repository.Add(product) == 1)
+                {
+                    view.Message = "Thêm sản phẩm thành công!";
+                    view.close();
+                    ProductPresenter.repository = new ProductRepository();
+                    ProductPresenter.productList = ProductPresenter.repository.GetAll();
+                    ProductPresenter.LoadProductList(ProductPresenter.productList);
+                    return;
+                }
+            }
+            MessageDialog.Show(MiniSupermarketApp.menu, "Thêm sản phẩm không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+            return;
+            
+        }
+
+        private void Refresh(object? sender, EventArgs e)
+        {
+            ShowDetail(sender, e);
+            view.Guna2TextBoxname.Text = null;
+            view.Guna2TextBoxBrand.Text = null;
+            view.Guna2TextBoxCategory.Text = null;
+            view.Guna2ComboBoxUnit.SelectedIndex = 0;
+            view.Guna2TextBoxCost.Text = null;
+            view.Guna2TextBoxQuantity.Text = null;
+            view.Guna2TextBoxBarcode.Text = null;
+        }
+    }
+}

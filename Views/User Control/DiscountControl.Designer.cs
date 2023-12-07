@@ -519,7 +519,7 @@
             guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
             guna2ComboBox1.ImeMode = ImeMode.NoControl;
             guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Items.AddRange(new object[] { "Tên sản phẩm", "Thể loại", "Thương hiệu" });
+            guna2ComboBox1.Items.AddRange(new object[] { "Tên sản phẩm" });
             guna2ComboBox1.Location = new Point(243, 12);
             guna2ComboBox1.Name = "guna2ComboBox1";
             guna2ComboBox1.RightToLeft = RightToLeft.No;
@@ -673,6 +673,7 @@
             guna2TextBox11.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox11.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox11.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox11.Enabled = false;
             guna2TextBox11.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox11.HoverState.BorderColor = Color.FromArgb(94, 148, 255);

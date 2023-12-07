@@ -23,6 +23,8 @@ namespace BachHoaXanh.Presenters
         private IProductRepository repository;
         private IBrandRepository brandRepository;
         private ICategoryRepository categoryRepository;
+        private IDiscountRepository discountRepository = new DiscountRepository();
+        private IDiscount_detailRepository discount_detailRepository = new Discount_detailRepository();
         private List<FlowLayoutPanel> listProduct;
         private List<Guna2HtmlLabel> listProductLabel;
         private List<Guna2PictureBox> listProductImage;
@@ -202,8 +204,7 @@ namespace BachHoaXanh.Presenters
 
         private void LoadDetail(Product product)
         {
-            // check discount
-
+            
             view.Guna2TextBoxId.Text = product.Id.ToString();
             view.Guna2TextBoxName.Text = product.Name.ToString();
             Brand brand = brandRepository.FindBrandsBy(new Dictionary<string, object>() { { "id", product.Brand_id } })[0];
@@ -217,6 +218,18 @@ namespace BachHoaXanh.Presenters
                 view.Guna2GradientButtonDeleteProduct.Visible = true;
             else
                 view.Guna2GradientButtonDeleteProduct.Visible = false;
+
+            Discount discount = discountRepository.FindDiscountsBy(new Dictionary<string, object>() { { "status", false } })[0];
+            foreach (Discount_detail discount_Detail in discount_detailRepository.FindDiscount_detailsBy(new Dictionary<string, object>()
+            { {
+                    "discount_id", discount.Id
+            } }))
+            {
+                if (discount_Detail.Product_id == product.Id)
+                {
+                    view.Guna2TextBoxCost.Text = (product.Cost - product.Cost * discount.Percent / 100).ToString();
+                }
+            }
         }
 
         private void AddProductToCart(object? sender, EventArgs e)
