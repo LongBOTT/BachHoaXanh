@@ -125,23 +125,18 @@ namespace BachHoaXanh.Presenters
                     DateTime lastSignIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
                     int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
 
+                  
+
                     // Kiểm tra đầu vào các trường dữ liệu
-                    if (string.IsNullOrWhiteSpace(username))
+                    if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) ||
+                        string.IsNullOrWhiteSpace(view.Guna2TextBoxRoleID.Text) || string.IsNullOrWhiteSpace(view.Guna2TextBoxStaffID.Text))
                     {
-                        view.Message = "Tên tài khoản không được bỏ trống.";
-                        view.Guna2TextBoxUsername.Focus();
-                        return;
+                        throw new ArgumentException("Vui lòng nhập đầy đủ thông tin.");
                     }
                     if (!Regex.IsMatch(username, "^[a-zA-Z0-9_]+$"))
                     {
-                        throw new ArgumentException("Tên tài khoản không được chứa ký tự đặc biệt.");
+                        view.Message = "Tên tài khoản không được chứa ký tự đặc biệt.";
                         view.Guna2TextBoxUsername.Focus();
-                    }
-                    if (string.IsNullOrWhiteSpace(password))
-                    {
-                        view.Message = "Mật khẩu không được bỏ trống.";
-                        view.Guna2TextBoxPassword.Focus();
-
                         return;
                     }
 
@@ -163,7 +158,11 @@ namespace BachHoaXanh.Presenters
                     }
                 }
             }
-            
+
+            catch (FormatException)
+            {
+                view.Message = "Định dạng không hợp lệ. Vui lòng kiểm tra lại các trường dữ liệu.";
+            }
             catch (ArgumentException ex)
             {
                 view.Message = ex.Message;

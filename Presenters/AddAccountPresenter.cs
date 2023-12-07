@@ -111,63 +111,58 @@ namespace BachHoaXanh.Presenters
 
         private void AddAccount(object? sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Xác nhận thêm tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (result == DialogResult.OK)
+            try
             {
-                try
+                int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
+
+                string username = view.Guna2TextBoxUsername.Text;
+                string password = view.Guna2TextBoxPassword.Text;
+                int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
+                DateTime lastSignIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
+                int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
+
+                // Kiểm tra đầu vào các trường dữ liệu
+                if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) ||
+                    string.IsNullOrWhiteSpace(view.Guna2TextBoxRoleID.Text) || string.IsNullOrWhiteSpace(view.Guna2TextBoxStaffID.Text))
                 {
-                    int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
-                    string username = view.Guna2TextBoxUsername.Text;
-                    string password = view.Guna2TextBoxPassword.Text;
-                    int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
-                    DateTime lastSignIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
-                    int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
-
-                    // Kiểm tra đầu vào các trường dữ liệu
-                    if (string.IsNullOrWhiteSpace(username))
-                    {
-                        view.Message = "Tên tài khoản không được bỏ trống.";
-                        view.Guna2TextBoxUsername.Focus();
-                        return;
-                    }
-                    if (!Regex.IsMatch(username, "^[a-zA-Z0-9_]+$"))
-                    {
-                        throw new ArgumentException("Tên tài khoản không được chứa ký tự đặc biệt.");
-                        view.Guna2TextBoxUsername.Focus();
-                    }
-                    if (string.IsNullOrWhiteSpace(password))
-                    {
-                        view.Message = "Mật khẩu không được bỏ trống.";
-                        view.Guna2TextBoxPassword.Focus();
-                        return;
-                    }
-
-                    // Tạo đối tượng Account
-                    Account account = new Account(id, username, password, roleID, staffID, lastSignIn);
-
-                    // Thêm vào repository
-                    if (repository.Add(account) == 1)
-                    {
-                        view.Message = "Thêm tài khoản thành công!";
-                        view.close();
-
-                        // Làm mới danh sách tài khoản
-                        AccountPresenter.repository = new AccountRepository();
-                        AccountPresenter.accountList = AccountPresenter.repository.GetAll();
-                        AccountPresenter.LoadAccountList(AccountPresenter.accountList);
-                    }
-                    else
-                    {
-                        view.Message = "Thêm tài khoản không thành công!";
-                    }
+                    throw new ArgumentException("Vui lòng nhập đầy đủ thông tin.");
+                }
+                if (!Regex.IsMatch(username, "^[a-zA-Z0-9_]+$"))
+                {
+                    view.Message = "Tên tài khoản không được chứa ký tự đặc biệt.";
+                    view.Guna2TextBoxUsername.Focus();
+                    return;
                 }
 
-                catch (Exception ex)
+                Account account = new Account(id, username, password, roleID, staffID, lastSignIn);
+
+                // Thực hiện thêm tài khoản
+                if (repository.Add(account) == 1)
                 {
-                    view.Message = $"Lỗi: {ex.Message}";
+                    view.Message = "Thêm tài khoản thành công!";
+                    view.close();
+                    // Làm mới danh sách tài khoản
+                    AccountPresenter.repository = new AccountRepository();
+                    AccountPresenter.accountList = AccountPresenter.repository.GetAll();
+                    AccountPresenter.LoadAccountList(AccountPresenter.accountList);
+                }
+                else
+                {
+                    view.Message = "Thêm tài khoản không thành công!";
                 }
             }
-            else { view.Message = "Không có tài khoản nào được thêm."; }
+            catch (FormatException)
+            {
+                view.Message = "Định dạng không hợp lệ. Vui lòng kiểm tra lại các trường dữ liệu.";
+            }
+            catch (ArgumentException ex)
+            {
+                view.Message = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                view.Message = $"Lỗi: {ex.Message}";
+            }
         }
 
 
