@@ -139,18 +139,27 @@ namespace BachHoaXanh.Presenters
 
         private void DeleteEvent(object? sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
-            int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
-            if (repository.Delete(new List<string> { " id = " + id}) == 1)
+            DialogResult result = MessageBox.Show("Xác nhận xóa tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            if (result == DialogResult.OK)
             {
-                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá tài khoản thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
-                repository = new AccountRepository();
-                accountList = repository.GetAll();
-                LoadAccountList(accountList);
+                DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
+                int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
+                if (repository.Delete(new List<string> { " id = " + id }) == 1)
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Xoá tài khoản thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                    repository = new AccountRepository();
+                    accountList = repository.GetAll();
+                    LoadAccountList(accountList);
+                }
+                else
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Xoá tài khoản không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                }
             }
             else
             {
-                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá tài khoản không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                MessageDialog.Show(MiniSupermarketApp.menu, "Tài khoản chưa được xóa", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
             }
         }
     }

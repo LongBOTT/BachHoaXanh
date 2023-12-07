@@ -9,6 +9,7 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -110,27 +111,60 @@ namespace BachHoaXanh.Presenters
 
         private void AddAccount(object? sender, EventArgs e)
         {
-            int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
-            string username = view.Guna2TextBoxUsername.Text;
-            string password = view.Guna2TextBoxPassword.Text;
-            int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
-            DateTime lastSigneIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
-            int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
-            Account account = new Account(id, username, password, roleID, staffID, lastSigneIn);
-            if (repository.Add(account) == 1)
+            try
             {
-                view.Message = "Thêm tài khoản thành công!";
-                view.close();
-                AccountPresenter.repository = new AccountRepository();
-                AccountPresenter.accountList = AccountPresenter.repository.GetAll();
-                AccountPresenter.LoadAccountList(AccountPresenter.accountList);
+                int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
+
+                string username = view.Guna2TextBoxUsername.Text;
+                string password = view.Guna2TextBoxPassword.Text;
+                int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
+                DateTime lastSignIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
+                int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
+
+                // Kiểm tra đầu vào các trường dữ liệu
+                if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) ||
+                    string.IsNullOrWhiteSpace(view.Guna2TextBoxRoleID.Text) || string.IsNullOrWhiteSpace(view.Guna2TextBoxStaffID.Text))
+                {
+                    throw new ArgumentException("Vui lòng nhập đầy đủ thông tin.");
+                }
+                if (!Regex.IsMatch(username, "^[a-zA-Z0-9_]+$"))
+                {
+                    view.Message = "Tên tài khoản không được chứa ký tự đặc biệt.";
+                    view.Guna2TextBoxUsername.Focus();
+                    return;
+                }
+
+                Account account = new Account(id, username, password, roleID, staffID, lastSignIn);
+
+                // Thực hiện thêm tài khoản
+                if (repository.Add(account) == 1)
+                {
+                    view.Message = "Thêm tài khoản thành công!";
+                    view.close();
+                    // Làm mới danh sách tài khoản
+                    AccountPresenter.repository = new AccountRepository();
+                    AccountPresenter.accountList = AccountPresenter.repository.GetAll();
+                    AccountPresenter.LoadAccountList(AccountPresenter.accountList);
+                }
+                else
+                {
+                    view.Message = "Thêm tài khoản không thành công!";
+                }
             }
-            else
+            catch (FormatException)
             {
-                view.Message = "Thêm tài khoản không thành công!";
+                view.Message = "Định dạng không hợp lệ. Vui lòng kiểm tra lại các trường dữ liệu.";
             }
-            
+            catch (ArgumentException ex)
+            {
+                view.Message = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                view.Message = $"Lỗi: {ex.Message}";
+            }
         }
+
 
         private void Refresh(object? sender, EventArgs e)
         {
