@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BachHoaXanh.Presenters
@@ -111,27 +112,68 @@ namespace BachHoaXanh.Presenters
 
         private void UpdateAccount(object? sender, EventArgs e)
         {
-            int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
-            string username = view.Guna2TextBoxUsername.Text;
-            string password = view.Guna2TextBoxPassword.Text;
-            int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
-            DateTime lastSigneIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
-            int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
-            Account account = new Account(id, username, password, roleID, staffID, lastSigneIn);
-            if (repository.Update(account) == 1)
+            try
             {
-                view.Message = "Sửa tài khoản thành công!";
-                view.close();
-                AccountPresenter.repository = new AccountRepository();
-                AccountPresenter.accountList = AccountPresenter.repository.GetAll();
-                AccountPresenter.LoadAccountList(AccountPresenter.accountList);
-            }
-            else
-            {
-                view.Message = "Sửa tài khoản không thành công!";
-            }
+                DialogResult result = MessageBox.Show("Xác nhận sửa tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
+                if (result == DialogResult.OK)
+                {
+                    int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
+                    string username = view.Guna2TextBoxUsername.Text;
+                    string password = view.Guna2TextBoxPassword.Text;
+                    int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
+                    DateTime lastSignIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
+                    int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
+
+                    // Kiểm tra đầu vào các trường dữ liệu
+                    if (string.IsNullOrWhiteSpace(username))
+                    {
+                        view.Message = "Tên tài khoản không được bỏ trống.";
+                        view.Guna2TextBoxUsername.Focus();
+                        return;
+                    }
+                    if (!Regex.IsMatch(username, "^[a-zA-Z0-9_]+$"))
+                    {
+                        throw new ArgumentException("Tên tài khoản không được chứa ký tự đặc biệt.");
+                        view.Guna2TextBoxUsername.Focus();
+                    }
+                    if (string.IsNullOrWhiteSpace(password))
+                    {
+                        view.Message = "Mật khẩu không được bỏ trống.";
+                        view.Guna2TextBoxPassword.Focus();
+
+                        return;
+                    }
+
+                    Account account = new Account(id, username, password, roleID, staffID, lastSignIn);
+
+                    // Thực hiện cập nhật
+                    if (repository.Update(account) == 1)
+                    {
+                        view.Message = "Sửa tài khoản thành công!";
+                        view.close();
+                        // Làm mới danh sách tài khoản
+                        AccountPresenter.repository = new AccountRepository();
+                        AccountPresenter.accountList = AccountPresenter.repository.GetAll();
+                        AccountPresenter.LoadAccountList(AccountPresenter.accountList);
+                    }
+                    else
+                    {
+                        view.Message = "Sửa tài khoản không thành công!";
+                    }
+                }
+            }
+            
+            catch (ArgumentException ex)
+            {
+                view.Message = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                view.Message = $"Lỗi: {ex.Message}";
+            }
         }
+
 
         private void Refresh(object? sender, EventArgs e)
         {

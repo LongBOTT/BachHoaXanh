@@ -9,6 +9,7 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -110,27 +111,65 @@ namespace BachHoaXanh.Presenters
 
         private void AddAccount(object? sender, EventArgs e)
         {
-            int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
-            string username = view.Guna2TextBoxUsername.Text;
-            string password = view.Guna2TextBoxPassword.Text;
-            int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
-            DateTime lastSigneIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
-            int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
-            Account account = new Account(id, username, password, roleID, staffID, lastSigneIn);
-            if (repository.Add(account) == 1)
+            DialogResult result = MessageBox.Show("Xác nhận thêm tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
             {
-                view.Message = "Thêm tài khoản thành công!";
-                view.close();
-                AccountPresenter.repository = new AccountRepository();
-                AccountPresenter.accountList = AccountPresenter.repository.GetAll();
-                AccountPresenter.LoadAccountList(AccountPresenter.accountList);
+                try
+                {
+                    int id = Convert.ToInt16(view.Guna2TextBoxID.Text);
+                    string username = view.Guna2TextBoxUsername.Text;
+                    string password = view.Guna2TextBoxPassword.Text;
+                    int roleID = Convert.ToInt16(view.Guna2TextBoxRoleID.Text);
+                    DateTime lastSignIn = Convert.ToDateTime(view.Guna2TextBoxLastSignedIn.Text);
+                    int staffID = Convert.ToInt16(view.Guna2TextBoxStaffID.Text);
+
+                    // Kiểm tra đầu vào các trường dữ liệu
+                    if (string.IsNullOrWhiteSpace(username))
+                    {
+                        view.Message = "Tên tài khoản không được bỏ trống.";
+                        view.Guna2TextBoxUsername.Focus();
+                        return;
+                    }
+                    if (!Regex.IsMatch(username, "^[a-zA-Z0-9_]+$"))
+                    {
+                        throw new ArgumentException("Tên tài khoản không được chứa ký tự đặc biệt.");
+                        view.Guna2TextBoxUsername.Focus();
+                    }
+                    if (string.IsNullOrWhiteSpace(password))
+                    {
+                        view.Message = "Mật khẩu không được bỏ trống.";
+                        view.Guna2TextBoxPassword.Focus();
+                        return;
+                    }
+
+                    // Tạo đối tượng Account
+                    Account account = new Account(id, username, password, roleID, staffID, lastSignIn);
+
+                    // Thêm vào repository
+                    if (repository.Add(account) == 1)
+                    {
+                        view.Message = "Thêm tài khoản thành công!";
+                        view.close();
+
+                        // Làm mới danh sách tài khoản
+                        AccountPresenter.repository = new AccountRepository();
+                        AccountPresenter.accountList = AccountPresenter.repository.GetAll();
+                        AccountPresenter.LoadAccountList(AccountPresenter.accountList);
+                    }
+                    else
+                    {
+                        view.Message = "Thêm tài khoản không thành công!";
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    view.Message = $"Lỗi: {ex.Message}";
+                }
             }
-            else
-            {
-                view.Message = "Thêm tài khoản không thành công!";
-            }
-            
+            else { view.Message = "Không có tài khoản nào được thêm."; }
         }
+
 
         private void Refresh(object? sender, EventArgs e)
         {
