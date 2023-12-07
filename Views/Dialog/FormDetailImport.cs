@@ -13,33 +13,34 @@ using System.Windows.Forms;
 
 namespace BachHoaXanh.Dialog
 {
-    public partial class FormDetailBill : Form, IShowDetailReceiptView
+    public partial class FormDetailImport : Form, IShowDetailImportView
     {
-        private Receipt receipt;
+        private Import import;
 
         public event EventHandler ShowDetail;
-        public event EventHandler LoadListReceiptDetail;
         public event EventHandler LoadListStaff;
+        public event EventHandler LoadListSupplier;
+        public event EventHandler LoadListShipmentDetail;
 
         public Guna2DataGridView Guna2DataGridView { get { return guna2DataGridView1; } }
 
-        public Guna2TextBox Guna2TextBoxID { get { return guna2TextBox11;} }
+        public Guna2TextBox Guna2TextBoxID { get { return guna2TextBox11; } }
 
-        public Guna2TextBox Guna2TextBoxStaffID { get { return guna2TextBox10;} }
+        public Guna2TextBox Guna2TextBoxStaffID { get { return guna2TextBox10; } }
 
-        public Guna2TextBox Guna2TextBoxInvoice { get { return guna2TextBox8;} }
+        public Guna2TextBox Guna2TextBoxReceived { get { return guna2TextBox9; } }
 
-        public Guna2TextBox Guna2TextBoxTotal { get { return guna2TextBox7;} }
+        public Guna2TextBox Guna2TextBoxTotal { get { return guna2TextBox8; } }
 
-        public Guna2TextBox Guna2TextBoxReceived { get { return guna2TextBox6;} }
+        public Guna2TextBox Guna2TextBoxSupplierID { get { return guna2TextBox7; } }
 
-        public Guna2TextBox Guna2TextBoxExcess { get { return guna2TextBox5;} }
 
-        public Receipt GetReceipt { get { return receipt;} }
+        public Import GetImport { get { return import; } }
 
-        public FormDetailBill(Receipt receipt)
+
+        public FormDetailImport(Import import)
         {
-            this.receipt = receipt;
+            this.import = import;
             InitializeComponent();
             AssociateAndRaiseViewEvents();
         }
@@ -48,7 +49,9 @@ namespace BachHoaXanh.Dialog
         {
             Load += delegate { ShowDetail?.Invoke(this, EventArgs.Empty); };
             guna2TextBox10.Click += delegate { LoadListStaff?.Invoke(this, EventArgs.Empty); };
-            guna2TextBox10.Leave += delegate { LoadListReceiptDetail?.Invoke(this, EventArgs.Empty); };
+            guna2TextBox10.Leave += delegate { LoadListShipmentDetail?.Invoke(this, EventArgs.Empty); };
+            guna2TextBox7.Click += delegate { LoadListSupplier?.Invoke(this, EventArgs.Empty); };
+            guna2TextBox7.Leave += delegate { LoadListShipmentDetail?.Invoke(this, EventArgs.Empty); };
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

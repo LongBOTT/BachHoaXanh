@@ -32,7 +32,6 @@ namespace BachHoaXanh.Dialog
         }
 
 
-
         private void AssociateAndRaiseViewEvents()
         {
             Load += delegate { ShowDetail?.Invoke(this, EventArgs.Empty); };

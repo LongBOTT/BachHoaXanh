@@ -9,8 +9,6 @@ namespace BachHoaXanh.Models
     public interface IShipmentRepository
     {
         int Add(Shipment shipment);
-        int Update(Shipment shipment);
-        int Delete(List<string> conditions);
         int GetAutoID();
         List<Shipment> FindShipmentsBy(Dictionary<string, Object> conditions);
         List<Shipment> FindShipments(string key, string value);

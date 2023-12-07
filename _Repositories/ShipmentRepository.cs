@@ -55,6 +55,7 @@ namespace BachHoaXanh._Repositories
             try
             {
                 return create(new List<object> {shipment.Id,
+                    shipment.Product_id,
                     shipment.Unit_price,
                     shipment.Quantity,
                     shipment.Remain,
@@ -72,43 +73,43 @@ namespace BachHoaXanh._Repositories
             return 0;
         }
 
-        public int Delete(List<string> conditions)
-        {
-            try
-            {
-                List<Object> updateValues = new List<object>();
-                updateValues.Add(true);
-                return update(updateValues, conditions);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error occurred in ShipmentRepository.deleteShipment(): " + e.Message);
-            }
-            return 0;
-        }
+        //public int Delete(List<string> conditions)
+        //{
+        //    try
+        //    {
+        //        List<Object> updateValues = new List<object>();
+        //        updateValues.Add(true);
+        //        return update(updateValues, conditions);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("Error occurred in ShipmentRepository.deleteShipment(): " + e.Message);
+        //    }
+        //    return 0;
+        //}
 
-        public int Update(Shipment shipment)
-        {
-            try
-            {
-                List<Object> updateValues = new List<object>();
-                updateValues.Add(shipment.Id);
-                updateValues.Add(shipment.Product_id);
-                updateValues.Add(shipment.Unit_price);
-                updateValues.Add(shipment.Quantity);
-                updateValues.Add(shipment.Remain);
-                updateValues.Add(shipment.Mfg);
-                updateValues.Add(shipment.Exp);
-                updateValues.Add(shipment.Sku);
-                updateValues.Add(shipment.Import_id);
-                return update(updateValues, new List<string> { "id = " + shipment.Id });
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error occurred in ShipmentRepository.updateShipment(): " + e.Message);
-            }
-            return 0;
-        }
+        //public int Update(Shipment shipment)
+        //{
+        //    try
+        //    {
+        //        List<Object> updateValues = new List<object>();
+        //        updateValues.Add(shipment.Id);
+        //        updateValues.Add(shipment.Product_id);
+        //        updateValues.Add(shipment.Unit_price);
+        //        updateValues.Add(shipment.Quantity);
+        //        updateValues.Add(shipment.Remain);
+        //        updateValues.Add(shipment.Mfg);
+        //        updateValues.Add(shipment.Exp);
+        //        updateValues.Add(shipment.Sku);
+        //        updateValues.Add(shipment.Import_id);
+        //        return update(updateValues, new List<string> { "id = " + shipment.Id });
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("Error occurred in ShipmentRepository.updateShipment(): " + e.Message);
+        //    }
+        //    return 0;
+        //}
 
         public List<Shipment> SearchShipment(List<string> conditions)
         {

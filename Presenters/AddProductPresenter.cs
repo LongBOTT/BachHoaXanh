@@ -27,6 +27,7 @@ namespace BachHoaXanh.Presenters
         private List<Category> categorys;
         private List<Brand> brands;
         private Boolean flag;
+
         public AddProductPresenter(IAddProductView view, IProductRepository repository) 
         {
             this.view = view;
@@ -35,6 +36,23 @@ namespace BachHoaXanh.Presenters
             categoryRepository = new CategoryRepository();
             categorys = (List<Category>)categoryRepository.GetAll();
             brands = (List<Brand>)brandRepository.GetAll();
+            this.view.ShowDetail += ShowDetail;
+            this.view.LoadListBrand += LoadListBrand;
+            this.view.LoadListCategory += LoadListCategory;
+            this.view.SelectedRow += SelectedRow;
+            this.view.AddProduct += AddProduct;
+            this.view.Refresh += Refresh;
+            this.view.pictureBox.Click += LoadImage;
+        }
+
+        public AddProductPresenter(IAddProductView view, IProductRepository repository, int supplierID)
+        {
+            this.view = view;
+            this.repository = repository;
+            brandRepository = new BrandRepository();
+            categoryRepository = new CategoryRepository();
+            categorys = (List<Category>)categoryRepository.GetAll();
+            brands = (List<Brand>)brandRepository.FindBrandsBy(new Dictionary<string, object>() { { "supplier_id", supplierID} });
             this.view.ShowDetail += ShowDetail;
             this.view.LoadListBrand += LoadListBrand;
             this.view.LoadListCategory += LoadListCategory;

@@ -34,8 +34,6 @@ namespace BachHoaXanh.Presenters
 
         private void LoadShipmentList(IEnumerable<Shipment> shipments)
         {
-            IProductRepository productRepository = new ProductRepository();
-            IImportRepository importRepository = new ImportRepository();
             view.Guna2DataGridView.Rows.Clear();
             foreach (Shipment shipment in shipments)
             {

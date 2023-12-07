@@ -87,8 +87,10 @@ namespace BachHoaXanh
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            BillControl billControl = new BillControl();
-            addUserControl(billControl);
+            IBillView view = new BillControl();
+            IReceiptRepository repository = new ReceiptRepository();
+            new BillPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -99,8 +101,10 @@ namespace BachHoaXanh
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            ImportControl importControl = new ImportControl();
-            addUserControl(importControl);
+            IImportView view = new ImportControl();
+            IImportRepository repository = new ImportRepository();
+            new ImportPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
