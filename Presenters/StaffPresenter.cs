@@ -116,17 +116,24 @@ namespace BachHoaXanh.Presenters
         {
             DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
             int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
-            if (repository.Delete(new List<string> { " id = " + id }) == 1)
+            string name = selectedRow.Cells["Column2"].Value.ToString();
+
+            DialogResult result = MessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
             {
-                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhân viên thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
-                repository = new StaffRepository();
-                staffList = repository.GetAll();
-                LoadStaffList(staffList);
+                if (repository.Delete(new List<string> { " id = " + id }) == 1)
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhân viên thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                    repository = new StaffRepository();
+                    staffList = repository.GetAll();
+                    LoadStaffList(staffList);
+                }
+                else
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhân viên không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                }
             }
-            else
-            {
-                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhân viên không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
-            }
+            //MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhân viên không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
         }
     }
 }

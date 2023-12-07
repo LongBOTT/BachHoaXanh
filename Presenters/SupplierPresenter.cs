@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BachHoaXanh.Presenters
 {
@@ -117,17 +118,24 @@ namespace BachHoaXanh.Presenters
         {
             DataGridViewRow selectedRow = this.view.Guna2DataGridView.SelectedRows[0];
             int id = Convert.ToInt16(selectedRow.Cells["Column1"].Value.ToString());
-            if (repository.Delete(new List<string> { " id = " + id }) == 1)
+            string name = selectedRow.Cells["Column2"].Value.ToString();
+
+            DialogResult result = MessageBox.Show("Xác nhận xóa nhân viên " + name + "?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
             {
-                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhà cung cấp thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
-                repository = new SupplierRepository();
-                supplierList = repository.GetAll();
-                LoadSupplierList(supplierList);
+                if (repository.Delete(new List<string> { " id = " + id }) == 1)
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhà cung cấp thành công!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                    repository = new SupplierRepository();
+                    supplierList = repository.GetAll();
+                    LoadSupplierList(supplierList);
+                }
+                else
+                {
+                    MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhà cung cấp không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
+                }
             }
-            else
-            {
-                MessageDialog.Show(MiniSupermarketApp.menu, "Xoá nhà cung cấp không thành công", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
-            }
+                
         }
     }
 }
