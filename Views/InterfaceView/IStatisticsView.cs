@@ -13,6 +13,9 @@ namespace BachHoaXanh.Views.InterfaceView
         TabPage TabPageByYear { get; }
         TabPage TabPageByQuater { get; }
         TabPage TabPageByMonth { get; }
+        BachHoaXanh.Views.Chart.Charts GetChart1 { get; }
+        BachHoaXanh.Views.Chart.Charts GetChart2 { get; }
+        BachHoaXanh.Views.Chart.Charts GetChart3 { get; }
         Guna2HtmlLabel guna2HtmlLabelNumofStaff { get; }
         Guna2HtmlLabel guna2HtmlLabelBestSeller { get; }
         Guna2HtmlLabel guna2HtmlLabelNameBestSeller { get; }

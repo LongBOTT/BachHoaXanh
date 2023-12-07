@@ -2,6 +2,7 @@
 using BachHoaXanh.Models;
 using BachHoaXanh.Properties;
 using BachHoaXanh.Views.InterfaceView;
+using BachHoaXanh.Views;
 using System;
 using System.Resources;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Org.BouncyCastle.Math.Field;
+using BachHoaXanh.Views.Chart;
 
 namespace BachHoaXanh.Presenters
 {
@@ -24,6 +26,15 @@ namespace BachHoaXanh.Presenters
             productRepository = new ProductRepository();
             view.guna2TabControl.SelectedIndexChanged += SelectTab;
             view.guna2TabControl.SelectedIndex = -1;
+            view.GetChart1.AddLegend("Vốn", ColorTranslator.FromHtml("#7b4397"));
+            view.GetChart1.AddLegend("Doanh Thu", ColorTranslator.FromHtml("#e65c00"));
+            view.GetChart1.AddLegend("Lợi Nhuận", ColorTranslator.FromHtml("#0099F7"));
+            view.GetChart2.AddLegend("Vốn", ColorTranslator.FromHtml("#7b4397"));
+            view.GetChart2.AddLegend("Doanh Thu", ColorTranslator.FromHtml("#e65c00"));
+            view.GetChart2.AddLegend("Lợi Nhuận", ColorTranslator.FromHtml("#0099F7"));
+            view.GetChart3.AddLegend("Vốn", ColorTranslator.FromHtml("#7b4397"));
+            view.GetChart3.AddLegend("Doanh Thu", ColorTranslator.FromHtml("#e65c00"));
+            view.GetChart3.AddLegend("Lợi Nhuận", ColorTranslator.FromHtml("#0099F7"));
             Genneral();
         }
 
@@ -42,17 +53,168 @@ namespace BachHoaXanh.Presenters
 
         private void ByMonth()
         {
-            throw new NotImplementedException();
+            currentMonth = DateTime.Now.Month;
+            currentYear = DateTime.Now.Year;
+            expenses = new List<double>();
+            amount = new List<double>();
+            int x = 200, y = 150;
+            for (int i = 0; i < 12; i++)
+            {
+                x += 150;
+                expenses.Add(x);
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                y += 200;
+                amount.Add(y);
+            }
+
+
+            //labelText[2].Text = "THỐNG KÊ THEO THÁNG TRONG NĂM " + currentYear;
+            //statisticDay.Controls.Add(labelText[2], BorderLayout.NORTH);
+
+            //for (int i = 1; i <= currentMonth; i++)
+            //{
+            //    try
+            //    {
+            //        List<List<string>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`import`.total) " +
+            //            "FROM `import` " +
+            //            "WHERE YEAR(`import`.received_date) = " + currentYear + " AND MONTH(`import`.received_date) = " + i);
+            //        expenses.Add(double.Parse(inventory[0][0].Split('.')[0]));
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        throw new RuntimeException(ex);
+            //    }
+
+            //    try
+            //    {
+            //        List<List<string>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`receipt`.total) " +
+            //            "FROM `receipt` " +
+            //            "WHERE YEAR(`receipt`.invoice_date) = " + currentYear + " AND MONTH(`receipt`.invoice_date) = " + i);
+            //        amount.Add(double.Parse(inventory[0][0].Split('.')[0]));
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        throw new RuntimeException(ex);
+            //    }
+            //}
+
+            view.GetChart3.Clear();
+            view.GetChart3.AddData(new ModelChart("January", new double[] { expenses[0], amount[0], amount[0] - expenses[0] }));
+            view.GetChart3.AddData(new ModelChart("February", new double[] { expenses[1], amount[1], amount[1] - expenses[1] }));
+            view.GetChart3.AddData(new ModelChart("March", new double[] { expenses[2], amount[2], amount[2] - expenses[2] }));
+            view.GetChart3.AddData(new ModelChart("April", new double[] { expenses[3], amount[3], amount[3] - expenses[3] }));
+            view.GetChart3.AddData(new ModelChart("May", new double[] { expenses[4], amount[4], amount[4] - expenses[4] }));
+            view.GetChart3.AddData(new ModelChart("June", new double[] { expenses[5], amount[5], amount[5] - expenses[5] }));
+            view.GetChart3.AddData(new ModelChart("July", new double[] { expenses[6], amount[6], amount[6] - expenses[6] }));
+            view.GetChart3.AddData(new ModelChart("August", new double[] { expenses[7], amount[7], amount[7] - expenses[7] }));
+            view.GetChart3.AddData(new ModelChart("September", new double[] { expenses[8], amount[8], amount[8] - expenses[8] }));
+            view.GetChart3.AddData(new ModelChart("October", new double[] { expenses[9], amount[9], amount[9] - expenses[9] }));
+            view.GetChart3.AddData(new ModelChart("November", new double[] { expenses[10], amount[10], amount[10] - expenses[10] }));
+            view.GetChart3.AddData(new ModelChart("December", new double[] { expenses[11], amount[11], amount[11] - expenses[11] }));
+            view.GetChart3.Start();
         }
 
         private void ByQuater()
         {
-            throw new NotImplementedException();
+            //addChart(statisticMonth);
+            currentMonth = DateTime.Now.Month;
+            currentYear = DateTime.Now.Year;
+            expenses = new List<double>();
+            amount = new List<double>();
+            currentQuarter = (currentMonth - 1) / 3 + 1;
+            int x = 200, y = 150;
+            for (int i = 0; i < 12; i++)
+            {
+                x += 150;
+                expenses.Add(x);
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                y += 200;
+                amount.Add(y);
+            }
+
+            //labelText[1].setText("THỐNG KÊ THEO QUÝ TRONG NĂM " + currentYear);
+            //statisticMonth.add(labelText[1], BorderLayout.NORTH);
+            //for (int i = 1; i <= currentQuarter; i++)
+            //{
+            //    XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+            //    series1.setName("Quý " + i);
+            //    try
+            //    {
+            //        List<List<String>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`import`.total) " +
+            //            "FROM `import` " +
+            //            "WHERE YEAR(`import`.received_date) = " + currentYear + " AND QUARTER(`import`.received_date) = " + i);
+            //        expenses.add(Double.parseDouble(inventory.get(0).get(0).split("\\.")[0]));
+
+
+            //    }
+            //    catch (SQLException | IOException ex) {
+            //    throw new RuntimeException(ex);
+            //}
+
+            //try
+            //{
+            //    List<List<String>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`receipt`.total) " +
+            //        "FROM `receipt` " +
+            //        "WHERE YEAR(`receipt`.invoice_date) = " + currentYear + " AND QUARTER(`receipt`.invoice_date) = " + i);
+            //    amount.add(Double.parseDouble(inventory.get(0).get(0).split("\\.")[0]));
+
+            //}
+            //catch (SQLException | IOException ex) {
+            //    throw new RuntimeException(ex);
+            //}
+            view.GetChart2.Clear();
+            view.GetChart2.AddData(new ModelChart("The First Quarter", new double[] { expenses[0], amount[0], amount[0] - expenses[0] }));
+            view.GetChart2.AddData(new ModelChart("Second Quarter", new double[] { expenses[1], amount[1], amount[1] - expenses[1] }));
+            view.GetChart2.AddData(new ModelChart("Third Quarter", new double[] { expenses[2], amount[2], amount[2] - expenses[2] }));
+            view.GetChart2.AddData(new ModelChart("Fourth Quarter", new double[] { expenses[3], amount[3], amount[3] - expenses[3] }));
+            view.GetChart2.Start();
         }
+
+        private int currentMonth, currentYear, currentQuarter;
+        private List<Double> expenses, amount;
 
         private void ByYear()
         {
-            throw new NotImplementedException();
+            expenses = new List<double>();
+            amount = new List<double>();
+            //labelText[0].setText("THỐNG KÊ THEO 3 NĂM GẦN NHẤT ");
+            //statisticYear.add(labelText[0], BorderLayout.NORTH);
+            view.GetChart1.Clear();
+            currentYear = DateTime.Now.Year;
+            //for (int i = currentYear - 2; i <= currentYear; i++)
+            //{
+            //    XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+            //    series1.setName("Năm " + i);
+            //    try
+            //    {
+            //        List<List<String>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`import`.total) " +
+            //            "FROM `import` " +
+            //            "WHERE YEAR(`import`.received_date) = " + i);
+            //        expenses.add(Double.parseDouble(inventory.get(0).get(0).split("\\.")[0]));
+
+            //    }
+            //    catch (SQLException | IOException ex) {
+            //    throw new RuntimeException(ex);
+            //}
+
+            //try
+            //{
+            //    List<List<String>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`receipt`.total) " +
+            //        "FROM `receipt` " +
+            //        "WHERE YEAR(`receipt`.invoice_date) = " + i);
+            //    amount.add(Double.parseDouble(inventory.get(0).get(0).split("\\.")[0]));
+
+            //}
+            //catch (SQLException | IOException ex) {
+            //    throw new RuntimeException(ex);
+            //}
+            //view.GetChart1.AddData(new ModelChart(String.valueOf(i), new double[] { expenses.get(expenses.size() - 1), amount.get(expenses.size() - 1), amount.get(expenses.size() - 1) - expenses.get(expenses.size() - 1) }));
+            //}
+            //view.GetChart1.start();
         }
 
         private void Genneral()
@@ -143,9 +305,9 @@ namespace BachHoaXanh.Presenters
                 }
             }
 
-            double expenses = Convert.ToDouble(view.guna2HtmlLabelExpenses.Text.Split(" ")[0]);
-            double amount = Convert.ToDouble(view.guna2HtmlLabelAmount.Text.Split(" ")[0]);
-            view.guna2HtmlLabelProfit.Text = (amount - expenses).ToString() + " VNĐ";
+            //double expenses = Convert.ToDouble(view.guna2HtmlLabelExpenses.Text.Split(" ")[0]);
+            //double amount = Convert.ToDouble(view.guna2HtmlLabelAmount.Text.Split(" ")[0]);
+            //view.guna2HtmlLabelProfit.Text = (amount - expenses).ToString() + " VNĐ";
         }
     }
 }
