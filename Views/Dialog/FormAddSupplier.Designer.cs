@@ -49,10 +49,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             lbTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnExit = new Guna.UI2.WinForms.Guna2Button();
@@ -69,8 +69,8 @@
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnCancel = new Guna.UI2.WinForms.Guna2Button();
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            btnCancel = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             jpanel.SuspendLayout();
@@ -234,7 +234,6 @@
             guna2TextBox7.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox7.Enabled = false;
             guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox7.ForeColor = Color.Black;
@@ -243,7 +242,6 @@
             guna2TextBox7.Name = "guna2TextBox7";
             guna2TextBox7.PasswordChar = '\0';
             guna2TextBox7.PlaceholderText = "";
-            guna2TextBox7.ReadOnly = true;
             guna2TextBox7.SelectedText = "";
             guna2TextBox7.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2TextBox7.Size = new Size(397, 45);
@@ -268,7 +266,6 @@
             guna2TextBox8.Name = "guna2TextBox8";
             guna2TextBox8.PasswordChar = '\0';
             guna2TextBox8.PlaceholderText = "";
-            guna2TextBox8.ReadOnly = true;
             guna2TextBox8.SelectedText = "";
             guna2TextBox8.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2TextBox8.Size = new Size(397, 45);
@@ -309,7 +306,7 @@
             guna2TextBox10.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox10.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox10.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox10.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox10.FocusedState.BorderColor = Color.Black;
             guna2TextBox10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox10.ForeColor = Color.Black;
             guna2TextBox10.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -403,25 +400,6 @@
             guna2HtmlLabel6.TabIndex = 28;
             guna2HtmlLabel6.Text = "Mã nhà cung cấp:";
             // 
-            // btnCancel
-            // 
-            btnCancel.BackColor = Color.Silver;
-            btnCancel.BorderRadius = 20;
-            btnCancel.CustomizableEdges = customizableEdges19;
-            btnCancel.DisabledState.BorderColor = Color.DarkGray;
-            btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCancel.FillColor = Color.FromArgb(95, 132, 162);
-            btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(155, 545);
-            btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnCancel.Size = new Size(140, 56);
-            btnCancel.TabIndex = 26;
-            btnCancel.Text = "Hủy";
-            // 
             // btnAdd
             // 
             btnAdd.BackColor = Color.Silver;
@@ -440,6 +418,25 @@
             btnAdd.Size = new Size(140, 56);
             btnAdd.TabIndex = 27;
             btnAdd.Text = "Thêm";
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.Silver;
+            btnCancel.BorderRadius = 20;
+            btnCancel.CustomizableEdges = customizableEdges19;
+            btnCancel.DisabledState.BorderColor = Color.DarkGray;
+            btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancel.FillColor = Color.FromArgb(95, 132, 162);
+            btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(155, 545);
+            btnCancel.Name = "btnCancel";
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnCancel.Size = new Size(140, 56);
+            btnCancel.TabIndex = 26;
+            btnCancel.Text = "Hủy";
             // 
             // FormAddSupplier
             // 
