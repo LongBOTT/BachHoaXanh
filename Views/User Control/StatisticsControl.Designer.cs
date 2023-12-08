@@ -76,6 +76,12 @@ namespace BachHoaXanh
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
@@ -91,12 +97,6 @@ namespace BachHoaXanh
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
@@ -170,17 +170,17 @@ namespace BachHoaXanh
             guna2DateTimePicker5 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker6 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             chart1 = new Charts();
-            chart2 = new Charts();
-            chart3 = new Charts();
             tabPage3 = new TabPage();
             guna2GradientPanel10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2DateTimePicker3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker4 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            gunaChart2 = new Guna.Charts.WinForms.GunaChart();
+            chart2 = new Charts();
             tabPage4 = new TabPage();
             guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            chart3 = new Charts();
+            gunaChart2 = new Guna.Charts.WinForms.GunaChart();
             gunaChart3 = new Guna.Charts.WinForms.GunaChart();
             newBlank = new BlankPlotChart();
             gunaChart1 = new Guna.Charts.WinForms.GunaChart();
@@ -189,6 +189,9 @@ namespace BachHoaXanh
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
+            Title1 = new Label();
+            Title2 = new Label();
+            Title3 = new Label();
             guna2TabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             guna2GradientPanel5.SuspendLayout();
@@ -780,6 +783,7 @@ namespace BachHoaXanh
             // tabPage2
             // 
             tabPage2.BackColor = Color.FromArgb(189, 210, 219);
+            tabPage2.Controls.Add(Title1);
             tabPage2.Controls.Add(guna2GradientPanel11);
             tabPage2.Controls.Add(guna2DateTimePicker5);
             tabPage2.Controls.Add(guna2DateTimePicker6);
@@ -833,36 +837,21 @@ namespace BachHoaXanh
             guna2DateTimePicker6.TabIndex = 5;
             guna2DateTimePicker6.Value = new DateTime(2023, 12, 6, 1, 54, 17, 200);
             // 
-            // charts
+            // chart1
             // 
             chart1.BackColor = Color.White;
             chart1.ForeColor = Color.FromArgb(100, 100, 100);
-            chart1.Location = new Point(6, 120);
+            chart1.Location = new Point(6, 166);
             chart1.Name = "chart1";
             chart1.Padding = new Padding(20, 10, 10, 10);
-            chart1.Size = new Size(1359, 779);
+            chart1.Size = new Size(1359, 733);
             chart1.TabIndex = 8;
             chart1.Paint += charts_Paint;
-
-            chart2.BackColor = Color.White;
-            chart2.ForeColor = Color.FromArgb(100, 100, 100);
-            chart2.Location = new Point(6, 120);
-            chart2.Name = "chart2";
-            chart2.Padding = new Padding(20, 10, 10, 10);
-            chart2.Size = new Size(1359, 779);
-            chart2.TabIndex = 8;
-
-            chart3.BackColor = Color.White;
-            chart3.ForeColor = Color.FromArgb(100, 100, 100);
-            chart3.Location = new Point(6, 120);
-            chart3.Name = "chart3";
-            chart3.Padding = new Padding(20, 10, 10, 10);
-            chart3.Size = new Size(1359, 779);
-            chart3.TabIndex = 8;
             // 
             // tabPage3
             // 
             tabPage3.BackColor = Color.FromArgb(189, 210, 219);
+            tabPage3.Controls.Add(Title2);
             tabPage3.Controls.Add(guna2GradientPanel10);
             tabPage3.Controls.Add(guna2DateTimePicker3);
             tabPage3.Controls.Add(guna2DateTimePicker4);
@@ -915,43 +904,20 @@ namespace BachHoaXanh
             guna2DateTimePicker4.TabIndex = 5;
             guna2DateTimePicker4.Value = new DateTime(2023, 12, 6, 1, 54, 17, 200);
             // 
-            // gunaChart2
+            // chart2
             // 
-            chartFont1.FontName = "Arial";
-            gunaChart2.Legend.LabelFont = chartFont1;
-            gunaChart2.Location = new Point(56, 113);
-            gunaChart2.Name = "gunaChart2";
-            gunaChart2.Size = new Size(1258, 739);
-            gunaChart2.TabIndex = 4;
-            chartFont2.FontName = "Arial";
-            chartFont2.Size = 12;
-            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart2.Title.Font = chartFont2;
-            chartFont3.FontName = "Arial";
-            gunaChart2.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Arial";
-            chartFont4.Size = 9;
-            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart2.Tooltips.TitleFont = chartFont4;
-            gunaChart2.XAxes.GridLines = grid1;
-            chartFont5.FontName = "Arial";
-            tick1.Font = chartFont5;
-            gunaChart2.XAxes.Ticks = tick1;
-            gunaChart2.YAxes.GridLines = grid2;
-            chartFont6.FontName = "Arial";
-            tick2.Font = chartFont6;
-            gunaChart2.YAxes.Ticks = tick2;
-            gunaChart2.ZAxes.GridLines = grid3;
-            chartFont7.FontName = "Arial";
-            pointLabel1.Font = chartFont7;
-            gunaChart2.ZAxes.PointLabels = pointLabel1;
-            chartFont8.FontName = "Arial";
-            tick3.Font = chartFont8;
-            gunaChart2.ZAxes.Ticks = tick3;
+            chart2.BackColor = Color.White;
+            chart2.ForeColor = Color.FromArgb(100, 100, 100);
+            chart2.Location = new Point(6, 171);
+            chart2.Name = "chart2";
+            chart2.Padding = new Padding(20, 10, 10, 10);
+            chart2.Size = new Size(1359, 728);
+            chart2.TabIndex = 8;
             // 
             // tabPage4
             // 
             tabPage4.BackColor = Color.FromArgb(189, 210, 219);
+            tabPage4.Controls.Add(Title3);
             tabPage4.Controls.Add(guna2GradientPanel9);
             tabPage4.Controls.Add(guna2DateTimePicker2);
             tabPage4.Controls.Add(guna2DateTimePicker1);
@@ -1003,6 +969,50 @@ namespace BachHoaXanh
             guna2DateTimePicker1.Size = new Size(270, 45);
             guna2DateTimePicker1.TabIndex = 5;
             guna2DateTimePicker1.Value = new DateTime(2023, 12, 6, 1, 54, 17, 200);
+            // 
+            // chart3
+            // 
+            chart3.BackColor = Color.White;
+            chart3.ForeColor = Color.FromArgb(100, 100, 100);
+            chart3.Location = new Point(6, 171);
+            chart3.Name = "chart3";
+            chart3.Padding = new Padding(20, 10, 10, 10);
+            chart3.Size = new Size(1359, 728);
+            chart3.TabIndex = 8;
+            // 
+            // gunaChart2
+            // 
+            chartFont1.FontName = "Arial";
+            gunaChart2.Legend.LabelFont = chartFont1;
+            gunaChart2.Location = new Point(56, 113);
+            gunaChart2.Name = "gunaChart2";
+            gunaChart2.Size = new Size(1258, 739);
+            gunaChart2.TabIndex = 4;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaChart2.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            gunaChart2.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaChart2.Tooltips.TitleFont = chartFont4;
+            gunaChart2.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            gunaChart2.XAxes.Ticks = tick1;
+            gunaChart2.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            gunaChart2.YAxes.Ticks = tick2;
+            gunaChart2.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            gunaChart2.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            gunaChart2.ZAxes.Ticks = tick3;
             // 
             // gunaChart3
             // 
@@ -1144,6 +1154,36 @@ namespace BachHoaXanh
             gunaAreaDataset1.FillColor = Color.Empty;
             gunaAreaDataset1.Label = "Area1";
             // 
+            // Title1
+            // 
+            Title1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Title1.Location = new Point(424, 114);
+            Title1.Name = "Title1";
+            Title1.Size = new Size(505, 37);
+            Title1.TabIndex = 9;
+            Title1.Text = "label1";
+            Title1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Title2
+            // 
+            Title2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Title2.Location = new Point(413, 117);
+            Title2.Name = "Title2";
+            Title2.Size = new Size(505, 37);
+            Title2.TabIndex = 10;
+            Title2.Text = "label1";
+            Title2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Title3
+            // 
+            Title3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Title3.Location = new Point(427, 113);
+            Title3.Name = "Title3";
+            Title3.Size = new Size(505, 37);
+            Title3.TabIndex = 11;
+            Title3.Text = "label1";
+            Title3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // StatisticsControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1239,6 +1279,8 @@ namespace BachHoaXanh
         private Charts chart1;
         private Charts chart2;
         private Charts chart3;
-
+        private Label Title1;
+        private Label Title2;
+        private Label Title3;
     }
 }

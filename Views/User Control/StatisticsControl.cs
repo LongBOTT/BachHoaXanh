@@ -26,6 +26,10 @@ namespace BachHoaXanh
 
         public Charts GetChart3 { get { return chart3; } }
 
+        public Label GetTitle1 { get { return Title1; } }
+        public Label GetTitle2 { get { return Title2; } }
+        public Label GetTitle3 { get { return Title3; } }
+
         public TabPage TabPageGenneral { get { return tabPage1; } }
 
         public TabPage TabPageByYear { get { return tabPage2; } }
