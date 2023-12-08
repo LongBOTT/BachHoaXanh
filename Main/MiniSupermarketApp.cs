@@ -1,4 +1,5 @@
-﻿using BachHoaXanh._Repositories;
+﻿using Bachhoaxanh;
+using BachHoaXanh._Repositories;
 using BachHoaXanh.Models;
 using BachHoaXanh.Presenters;
 using BachHoaXanh.Views;
@@ -14,7 +15,7 @@ namespace BachHoaXanh.Main
     internal static class MiniSupermarketApp
     {
         public static Menu menu = new Menu();
-        /// <summary>
+        public static FormLogin login = new FormLogin();       /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
@@ -29,7 +30,7 @@ namespace BachHoaXanh.Main
             //    Console.WriteLine(account.ToString());
             //}
             ApplicationConfiguration.Initialize();
-            Application.Run(menu);
+            Application.Run(login);
 
         }
         [DllImport("kernel32.dll", SetLastError = true)]
