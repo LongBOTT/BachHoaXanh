@@ -96,8 +96,10 @@ namespace BachHoaXanh
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            ExportControl exportControl = new ExportControl();
-            addUserControl(exportControl);
+            IExportView view = new ExportControl();
+            IExportRepository repository = new ExportRepository();
+            new ExportPresenter(view, repository);
+            addUserControl((UserControl)view);
         }
 
         private void btnImport_Click(object sender, EventArgs e)
