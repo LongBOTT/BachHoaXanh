@@ -41,17 +41,17 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `username`, `password`, `role_id`, `staff_id`, `last_signed_in`) VALUES
-(1, 'admin', '$2a$12$s4TMkIcc10CTHaIwgfiQo.1VcQJt6dt0QnLfdlfspIpWJB8u.hkLu', 1, 1, '1000-01-01 00:00:00.000000'),
-(2, 'dungboi', '$2a$12$rBbvwRj7q1dtvEvD0tJvCuqlhk/J1gSaBsabbv.dXd4c5G8ZFY3Ze', 2, 2, '1000-01-01 00:00:00.000000'),
-(3, 'quangduy', '$2a$12$/odLRxEA.cA/TMTEejMlFeHTIIVw9YKocn4VQnt4H1oKVbDOXFEsa', 2, 3, '1000-01-01 00:00:00.000000'),
-(4, 'longbott', '$2a$12$Ullzt8ORJVZ3gsBuO/T0OuAuqGZQZmCGea9qXwA/OVUFjACGUP24m', 2, 4, '1000-01-01 00:00:00.000000'),
-(5, 'hoangminh', '$2a$12$JphZRAF58LOd/7K3jB.TM.3lCSweMY.JmPzB9nOF48UEhM4pUt.cy', 2, 5, '1000-01-01 00:00:00.000000'),
-(6, 'phuocsang', '$2a$12$/XftwDJ4LBTxO03ZEhyUOeD7v90LkjfyHf7RfuLn0HH3zF9umdc5y', 2, 6, '1000-01-01 00:00:00.000000'),
-(7, 'xuanmai', '$2a$12$rbUiS15k4wRYcH3DEzGg0uRf4KC/CdgRpammGZ6qKP0u8kXeLW6wO', 3, 7, '1000-01-01 00:00:00.000000'),
-(8, 'legiang', '$2a$12$9lo.GzVz7m4PMv3EXp5Wle/3Ei0hFVytw.hjZkM5lnSNUJ2lqN.UW', 3, 8, '1000-01-01 00:00:00.000000'),
-(9, 'vanlam', '$2a$12$/xxTbESg0iUyyGN9GNZCjOXXyZ0i.NjYSHdD0WvFJjycvGKRCJmz6', 4, 9, '1000-01-01 00:00:00.000000'),
-(10, 'xuanphuc', '$2a$12$zWUvS25bGEvEFCPPzlrADekPNg.garXS1IxasgmPWxPV2tcezl4uG', 4, 10, '1000-01-01 00:00:00.000000'),
-(12, '2222', '222', 4, 1, '2023-12-01 11:31:33.000000');
+(1, 'admin', 'Admin123', 1, 1, '1753-01-01 00:00:00.000000'),
+(2, 'dungboi', 'Dung123', 2, 2, '1753-01-01 00:00:00.000000'),
+(3, 'quangduy', 'Duy123', 2, 3, '1753-01-01 00:00:00.000000'),
+(4, 'longbott', 'Long123', 2, 4, '1753-01-01 00:00:00.000000'),
+(5, 'hoavi', 'Hoa123', 2, 5, '1753-01-01 00:00:00.000000'),
+(6, 'xuanhoang', 'Hoang123', 2, 6, '1753-01-01 00:00:00.000000'),
+(7, 'yenvy', 'Vy123', 2, 7, '1753-01-01 00:00:00.000000'),
+(8, 'xuanmai', 'Mai123', 3, 8, '1753-01-01 00:00:00.000000'),
+(9, 'legiang', 'Giang123', 3, 9, '1753-01-01 00:00:00.000000'),
+(10, 'vanlam', 'Lam123', 4, 10, '1753-01-01 00:00:00.000000'),
+(11, 'xuanphuc', 'Phuc123', 4, 11, '1753-01-01 00:00:00.000000');
 
 -- --------------------------------------------------------
 
@@ -138,16 +138,16 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `name`, `gender`, `birthdate`, `phone`, `membership`, `signed_up_date`, `point`, `deleted`) VALUES
-(1, 'VÃNG LAI', b'0', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
+(1, 'VÃNG LAI', b'0', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
 (2, 'NGUYỄN VĂN NAM', b'1', '2000-12-01', '0862994282', b'1', '2020-09-08', 1000, b'0'),
 (3, 'HOÀNG XUÂN BẮC', b'1', '2001-09-03', '0967563268', b'1', '2021-02-07', 123, b'0'),
 (4, 'NGUYỄN THỊ THU HIỀN', b'0', '2004-05-04', '0981485618', b'1', '2021-05-06', 500, b'0'),
 (5, 'NGUYỄN VĂN THẮNG', b'1', '1999-08-10', '0861149539', b'1', '2021-08-03', 2300, b'0'),
-(6, 'NGUYỄN THỊ YẾN NHI', b'0', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
-(7, 'ĐẶNG NGUYỄN GIA HUY', b'1', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
+(6, 'NGUYỄN THỊ YẾN NHI', b'0', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
+(7, 'ĐẶNG NGUYỄN GIA HUY', b'1', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
 (8, 'NGUYỄN THI DIỆU CHI', b'0', '2000-04-09', '0378367833', b'1', '2022-05-05', 450, b'0'),
 (9, 'NGUYỄN THỊ THANH NHÀN', b'0', '2001-08-03', '0323373316', b'1', '2022-09-08', 3000, b'0'),
-(10, 'NGUYỄN TRUNG TÍN', b'1', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
+(10, 'NGUYỄN TRUNG TÍN', b'1', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
 (11, 'ĐINH XUÂN HOÀI', b'1', '2004-07-06', '0964745278', b'1', '2023-03-07', 200, b'0');
 
 -- --------------------------------------------------------
@@ -791,15 +791,13 @@ INSERT INTO `staff` (`id`, `name`, `gender`, `birthdate`, `phone`, `address`, `e
 (2, 'NGUYỄN TIẾN DŨNG', b'1', '2003-12-19', '0834527892', '531 Nguyễn Oanh, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'dungboi@gmail.com', '1753-01-01', b'0'),
 (3, 'ĐINH QUANG DUY', b'1', '2003-01-20', '0359872569', '1A Lê Đức Thọ, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'quangduy@gmail.com', '1753-01-01', b'0'),
 (4, 'NGUYỄN HOÀNG LONG', b'1', '2003-08-30', '0970352875', '514/26 Lê Đức Thọ, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'longbot@gmail.com', '1753-01-01', b'0'),
-(5, 'NGUYỄN HOÀNG MINH', b'1', '2003-03-06', '0367834257', '153 Lê Hoàng Phái, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'hoangminh@gmail.com', '1753-01-01', b'0'),
-(6, 'PHẠM ĐẶNG PHƯỚC SANG', b'1', '2002-09-20', '0898881394', '242 Nguyễn Văn Lượng, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'psg.exorcist@gmail.com', '1753-01-01', b'0'),
-(7, 'NGUYỄN THỊ XUÂN MAI', b'0', '2002-06-19', '0825367498', '168 Lê Đức Thọ, Phường 15, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanmai@gmail.com', '2023-09-15', b'0'),
-(8, 'NGUYỄN THỊ LỆ GIANG', b'0', '2000-05-27', '0963527895', '190 Quang Trung, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'legiang@gmail.com', '2023-09-28', b'0'),
-(9, 'ĐẶNG VĂN LÂM', b'1', '2001-02-18', '0340734629', '7 Phan Văn Trị, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'vanlam@gmail.com', '2023-06-27', b'0'),
-(10, 'HOÀNG XUÂN PHÚC', b'1', '2001-04-11', '0812535278', '526 Lê Quang Định, Phường 1, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanphuc@gmail.com', '2023-08-17', b'0'),
-(11, '2', b'0', '2023-12-02', '2', '2', '2', '2023-12-02', b'1'),
-(12, '333333', b'0', '2023-12-02', '3', '3', '3', '2023-12-02', b'1'),
-(13, 'sssssss', b'0', '2023-12-02', 's', 's', 's', '2023-12-02', b'0');
+(5, 'VI THỊ HOA', b'1', '2003-03-06', '0367834257', '153 Lê Hoàng Phái, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'hoangminh@gmail.com', '1753-01-01', b'0'),
+(6, 'ĐỖ NGỌC XUÂN HOÀNG', b'1', '2002-09-20', '0898881394', '242 Nguyễn Văn Lượng, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'psg.exorcist@gmail.com', '1753-01-01', b'0'),
+(7, 'NGUYỄN YẾN VY', b'0', '2002-06-26', '0825367498', '168 Lê Đức Thọ, Phường 15, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanmai@gmail.com', '2023-09-15', b'0'),
+(8, 'NGUYỄN THỊ XUÂN MAI', b'0', '2002-06-19', '0825367498', '168 Lê Đức Thọ, Phường 15, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanmai@gmail.com', '2023-09-15', b'0'),
+(9, 'NGUYỄN THỊ LỆ GIANG', b'0', '2000-05-27', '0963527895', '190 Quang Trung, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'legiang@gmail.com', '2023-09-28', b'0'),
+(10, 'ĐẶNG VĂN LÂM', b'1', '2001-02-18', '0340734629', '7 Phan Văn Trị, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'vanlam@gmail.com', '2023-06-27', b'0'),
+(11, 'HOÀNG XUÂN PHÚC', b'1', '2001-04-11', '0812535278', '526 Lê Quang Định, Phường 1, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanphuc@gmail.com', '2023-08-17', b'0');
 
 -- --------------------------------------------------------
 
@@ -1008,7 +1006,7 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `brand`
@@ -1092,7 +1090,7 @@ ALTER TABLE `shipment`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `statistic`

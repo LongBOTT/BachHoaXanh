@@ -11,7 +11,7 @@ namespace BachHoaXanh.Utils
     {
         public static MySqlConnection GetConnection()
         {
-            string myConnectionString = "server=localhost;database=mini-supermarket;uid=root;pwd=;";
+            string myConnectionString = "server=localhost;database=mini_supermarkets;uid=root;pwd=;";
             MySqlConnection cnn = new MySqlConnection(myConnectionString);
             try
             {

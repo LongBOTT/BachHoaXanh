@@ -3,7 +3,7 @@ using BachHoaXanh.Models;
 
 namespace BachHoaXanh
 {
-    partial class Menu
+    partial class ManagerMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -95,8 +95,8 @@ namespace BachHoaXanh
             btnProduct = new Guna.UI2.WinForms.Guna2Button();
             btnSupplier = new Guna.UI2.WinForms.Guna2Button();
             btnStaff = new Guna.UI2.WinForms.Guna2Button();
-            btnAccount = new Guna.UI2.WinForms.Guna2Button();
-            btnDecentralization = new Guna.UI2.WinForms.Guna2Button();
+            //btnAccount = new Guna.UI2.WinForms.Guna2Button();
+            //btnDecentralization = new Guna.UI2.WinForms.Guna2Button();
             guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
             panelTop = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -255,8 +255,8 @@ namespace BachHoaXanh
             flowLayoutPanel2.Controls.Add(btnProduct);
             flowLayoutPanel2.Controls.Add(btnSupplier);
             flowLayoutPanel2.Controls.Add(btnStaff);
-            flowLayoutPanel2.Controls.Add(btnAccount);
-            flowLayoutPanel2.Controls.Add(btnDecentralization);
+            //flowLayoutPanel2.Controls.Add(btnAccount);
+            //flowLayoutPanel2.Controls.Add(btnDecentralization);
             flowLayoutPanel2.Location = new Point(3, 10);
             flowLayoutPanel2.Margin = new Padding(10, 10, 3, 3);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -589,64 +589,64 @@ namespace BachHoaXanh
             btnStaff.TabIndex = 14;
             btnStaff.Text = "Nhân viên";
             btnStaff.Click += btnStaff_Click;
-            // 
-            // btnAccount
-            // 
-            btnAccount.BackColor = Color.FromArgb(142, 188, 218);
-            btnAccount.BorderRadius = 20;
-            btnAccount.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnAccount.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
-            btnAccount.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnAccount.CustomizableEdges = customizableEdges27;
-            btnAccount.DisabledState.BorderColor = Color.DarkGray;
-            btnAccount.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAccount.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAccount.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAccount.FillColor = Color.White;
-            btnAccount.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAccount.ForeColor = Color.Black;
-            btnAccount.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
-            btnAccount.HoverState.FillColor = Color.White;
-            btnAccount.Image = (Image)resources.GetObject("btnAccount.Image");
-            btnAccount.ImageAlign = HorizontalAlignment.Left;
-            btnAccount.ImageSize = new Size(40, 40);
-            btnAccount.Location = new Point(10, 889);
-            btnAccount.Margin = new Padding(10, 20, 3, 3);
-            btnAccount.Name = "btnAccount";
-            btnAccount.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            btnAccount.Size = new Size(348, 56);
-            btnAccount.TabIndex = 15;
-            btnAccount.Text = "Tài khoản";
-            btnAccount.Click += btnAccount_Click;
-            // 
-            // btnDecentralization
-            // 
-            btnDecentralization.BackColor = Color.FromArgb(142, 188, 218);
-            btnDecentralization.BorderRadius = 20;
-            btnDecentralization.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            btnDecentralization.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
-            btnDecentralization.CustomBorderThickness = new Padding(0, 0, 0, 6);
-            btnDecentralization.CustomizableEdges = customizableEdges29;
-            btnDecentralization.DisabledState.BorderColor = Color.DarkGray;
-            btnDecentralization.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDecentralization.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDecentralization.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDecentralization.FillColor = Color.White;
-            btnDecentralization.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDecentralization.ForeColor = Color.Black;
-            btnDecentralization.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
-            btnDecentralization.HoverState.FillColor = Color.White;
-            btnDecentralization.Image = (Image)resources.GetObject("btnDecentralization.Image");
-            btnDecentralization.ImageAlign = HorizontalAlignment.Left;
-            btnDecentralization.ImageSize = new Size(40, 40);
-            btnDecentralization.Location = new Point(10, 968);
-            btnDecentralization.Margin = new Padding(10, 20, 3, 3);
-            btnDecentralization.Name = "btnDecentralization";
-            btnDecentralization.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            btnDecentralization.Size = new Size(348, 56);
-            btnDecentralization.TabIndex = 16;
-            btnDecentralization.Text = "Phân quyền";
-            btnDecentralization.Click += btnDecentralization_Click;
+            //// 
+            //// btnAccount
+            //// 
+            //btnAccount.BackColor = Color.FromArgb(142, 188, 218);
+            //btnAccount.BorderRadius = 20;
+            //btnAccount.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            //btnAccount.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
+            //btnAccount.CustomBorderThickness = new Padding(0, 0, 0, 6);
+            //btnAccount.CustomizableEdges = customizableEdges27;
+            //btnAccount.DisabledState.BorderColor = Color.DarkGray;
+            //btnAccount.DisabledState.CustomBorderColor = Color.DarkGray;
+            //btnAccount.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            //btnAccount.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            //btnAccount.FillColor = Color.White;
+            //btnAccount.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            //btnAccount.ForeColor = Color.Black;
+            //btnAccount.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
+            //btnAccount.HoverState.FillColor = Color.White;
+            //btnAccount.Image = (Image)resources.GetObject("btnAccount.Image");
+            //btnAccount.ImageAlign = HorizontalAlignment.Left;
+            //btnAccount.ImageSize = new Size(40, 40);
+            //btnAccount.Location = new Point(10, 889);
+            //btnAccount.Margin = new Padding(10, 20, 3, 3);
+            //btnAccount.Name = "btnAccount";
+            //btnAccount.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            //btnAccount.Size = new Size(348, 56);
+            //btnAccount.TabIndex = 15;
+            //btnAccount.Text = "Tài khoản";
+            //btnAccount.Click += btnAccount_Click;
+            //// 
+            //// btnDecentralization
+            //// 
+            //btnDecentralization.BackColor = Color.FromArgb(142, 188, 218);
+            //btnDecentralization.BorderRadius = 20;
+            //btnDecentralization.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            //btnDecentralization.CheckedState.FillColor = Color.FromArgb(95, 132, 162);
+            //btnDecentralization.CustomBorderThickness = new Padding(0, 0, 0, 6);
+            //btnDecentralization.CustomizableEdges = customizableEdges29;
+            //btnDecentralization.DisabledState.BorderColor = Color.DarkGray;
+            //btnDecentralization.DisabledState.CustomBorderColor = Color.DarkGray;
+            //btnDecentralization.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            //btnDecentralization.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            //btnDecentralization.FillColor = Color.White;
+            //btnDecentralization.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            //btnDecentralization.ForeColor = Color.Black;
+            //btnDecentralization.HoverState.CustomBorderColor = Color.FromArgb(95, 132, 162);
+            //btnDecentralization.HoverState.FillColor = Color.White;
+            //btnDecentralization.Image = (Image)resources.GetObject("btnDecentralization.Image");
+            //btnDecentralization.ImageAlign = HorizontalAlignment.Left;
+            //btnDecentralization.ImageSize = new Size(40, 40);
+            //btnDecentralization.Location = new Point(10, 968);
+            //btnDecentralization.Margin = new Padding(10, 20, 3, 3);
+            //btnDecentralization.Name = "btnDecentralization";
+            //btnDecentralization.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            //btnDecentralization.Size = new Size(348, 56);
+            //btnDecentralization.TabIndex = 16;
+            //btnDecentralization.Text = "Phân quyền";
+            //btnDecentralization.Click += btnDecentralization_Click;
             // 
             // guna2GradientPanel3
             // 
@@ -831,8 +831,8 @@ namespace BachHoaXanh
         private Guna.UI2.WinForms.Guna2Button btnProduct;
         private Guna.UI2.WinForms.Guna2Button btnSupplier;
         private Guna.UI2.WinForms.Guna2Button btnStaff;
-        private Guna.UI2.WinForms.Guna2Button btnAccount;
-        private Guna.UI2.WinForms.Guna2Button btnDecentralization;
+        //private Guna.UI2.WinForms.Guna2Button btnAccount;
+        //private Guna.UI2.WinForms.Guna2Button btnDecentralization;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgInfoStaff;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbDateTime;
         private Guna.UI2.WinForms.Guna2Button btnMinimize;

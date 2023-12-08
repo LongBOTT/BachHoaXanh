@@ -3,7 +3,7 @@ using BachHoaXanh.Models;
 
 namespace BachHoaXanh
 {
-    partial class Menu
+    partial class AdminMenu
     {
         /// <summary>
         /// Required designer variable.
