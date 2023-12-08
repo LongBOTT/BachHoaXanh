@@ -71,12 +71,17 @@ namespace BachHoaXanh.Presenters
             //labelText[2].Text = "THỐNG KÊ THEO THÁNG TRONG NĂM " + currentYear;
             for (int i = 1; i <= currentMonth; i++)
             {
-                List<List<string>> result = repository.ExcuteQuerry("SELECT SUM(`import`.total) " +
-                            "FROM `import` " +
-                            "WHERE YEAR(`import`.received_date) = " + currentYear + " AND MONTH(`import`.received_date) = " + i);
+                List<List<string>> result = repository.ExcuteQuerry("SELECT SUM(`import_note`.total) " +
+                            "FROM `import_note` " +
+                            "WHERE YEAR(`import_note`.received_date) = " + currentYear + " AND MONTH(`import_note`.received_date) = " + i);
                 if (result.Count > 0)
                 {
-                    expenses.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    if (result[0].Count == 0)
+                        return;
+                    if (result[0][0].Contains('.'))
+                        expenses.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    else
+                        expenses.Add(Double.Parse(result[0][0]));
                 }
 
                 result = repository.ExcuteQuerry("SELECT SUM(`receipt`.total) " +
@@ -84,7 +89,12 @@ namespace BachHoaXanh.Presenters
                             "WHERE YEAR(`receipt`.invoice_date) = " + currentYear + " AND MONTH(`receipt`.invoice_date) = " + i);
                 if (result.Count > 0)
                 {
-                    amount.Add(Double.Parse(result[0][0].Split("\\.")[0])); ;
+                    if (result[0].Count == 0)
+                        return;
+                    if (result[0][0].Contains('.'))
+                        amount.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    else
+                        amount.Add(Double.Parse(result[0][0]));
                 }
             }
 
@@ -128,12 +138,18 @@ namespace BachHoaXanh.Presenters
                 //    XYChart.Series<String, Number> series1 = new XYChart.Series<>();
                 //    series1.setName("Quý " + i);
 
-                List<List<string>> result = repository.ExcuteQuerry("SELECT SUM(`import`.total) " +
-                            "FROM `import` " +
-                            "WHERE YEAR(`import`.received_date) = " + currentYear + " AND QUARTER(`import`.received_date) = " + i);
+                List<List<string>> result = repository.ExcuteQuerry("SELECT SUM(`import_note`.total) " +
+                            "FROM `import_note` " +
+                            "WHERE YEAR(`import_note`.received_date) = " + currentYear + " AND QUARTER(`import_note`.received_date) = " + i);
                 if (result.Count > 0)
                 {
-                    expenses.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    if (result[0].Count > 0)
+                    {
+                        expenses.Add(Double.Parse(result[0][0]));
+                    }
+                    //if (result[0].Count == 0)
+                    //    return;
+                    //expenses.Add(Double.Parse(result[0][0].Split("\\.")[0]));
                 }
 
                 result = repository.ExcuteQuerry("SELECT SUM(`receipt`.total) " +
@@ -141,7 +157,16 @@ namespace BachHoaXanh.Presenters
                         "WHERE YEAR(`receipt`.invoice_date) = " + currentYear + " AND QUARTER(`receipt`.invoice_date) = " + i);
                 if (result.Count > 0)
                 {
-                    amount.Add(Double.Parse(result[0][0].Split("\\.")[0])); ;
+                    if (result[0].Count > 0)
+                    {
+                        amount.Add(Double.Parse(result[0][0]));
+                    }
+                    //if (result[0].Count == 0)
+                    //    return;
+                    //if (result[0][0].Contains('.'))
+                    //    amount.Add(Double.Parse(result[0][0].Split("\\.")[0])); 
+                    //else
+                    //    amount.Add(Double.Parse(result[0][0])); 
                 }
             }
             view.GetChart2.Clear();
@@ -164,12 +189,21 @@ namespace BachHoaXanh.Presenters
             currentYear = DateTime.Now.Year;
             for (int i = currentYear - 2; i <= currentYear; i++)
             {
-                List<List<string>> result = repository.ExcuteQuerry("SELECT SUM(`import`.total) " +
-                    "FROM `import` " +
-                    "WHERE YEAR(`import`.received_date) = " + i);
+                List<List<string>> result = repository.ExcuteQuerry("SELECT SUM(`import_note`.total) " +
+                    "FROM `import_note` " +
+                    "WHERE YEAR(`import_note`.received_date) = " + i);
                 if (result.Count > 0)
                 {
-                    expenses.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    if (result[0].Count > 0)
+                    {
+                        expenses.Add(Double.Parse(result[0][0]));
+                    }
+                    //if (result[0].Count == 0)
+                    //    return;
+                    //if (result[0][0].Contains('.'))
+                    //    expenses.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    //else
+                    //    expenses.Add(Double.Parse(result[0][0]));
                 }
 
                 result = repository.ExcuteQuerry("SELECT SUM(`receipt`.total) " +
@@ -177,7 +211,16 @@ namespace BachHoaXanh.Presenters
                     "WHERE YEAR(`receipt`.invoice_date) = " + i);
                 if (result.Count > 0)
                 {
-                    amount.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    if (result[0].Count > 0)
+                    {
+                        amount.Add(Double.Parse(result[0][0]));
+                    }
+                    //    if (result[0].Count == 0)
+                    //    return;
+                    //if (result[0][0].Contains('.'))
+                    //    amount.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                    //else
+                    //    );
                 }
                 view.GetChart1.AddData(new ModelChart( i + "", new double[] { expenses[expenses.Count - 1], amount[expenses.Count - 1], amount[expenses.Count - 1] - expenses[expenses.Count - 1]}));
             }
@@ -272,9 +315,9 @@ namespace BachHoaXanh.Presenters
                 }
             }
 
-            //double expenses = Convert.ToDouble(view.guna2HtmlLabelExpenses.Text.Split(" ")[0]);
-            //double amount = Convert.ToDouble(view.guna2HtmlLabelAmount.Text.Split(" ")[0]);
-            //view.guna2HtmlLabelProfit.Text = (amount - expenses).ToString() + " VNĐ";
+            double expenses = Convert.ToDouble(view.guna2HtmlLabelExpenses.Text.Split(" ")[0]);
+            double amount = Convert.ToDouble(view.guna2HtmlLabelAmount.Text.Split(" ")[0]);
+            view.guna2HtmlLabelProfit.Text = (amount - expenses).ToString() + " VNĐ";
         }
     }
 }

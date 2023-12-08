@@ -1,6 +1,6 @@
 ﻿namespace BachHoaXanh.Dialog
 {
-    partial class FormDetailExxport
+    partial class FormDetailExport
     {
         /// <summary>
         /// Required designer variable.
@@ -226,7 +226,6 @@
             guna2TextBox7.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox7.Enabled = false;
             guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox7.ForeColor = Color.Black;
@@ -285,6 +284,7 @@
             guna2TextBox9.Name = "guna2TextBox9";
             guna2TextBox9.PasswordChar = '\0';
             guna2TextBox9.PlaceholderText = "";
+            guna2TextBox9.ReadOnly = true;
             guna2TextBox9.SelectedText = "";
             guna2TextBox9.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2TextBox9.Size = new Size(397, 45);
@@ -309,6 +309,7 @@
             guna2TextBox10.Name = "guna2TextBox10";
             guna2TextBox10.PasswordChar = '\0';
             guna2TextBox10.PlaceholderText = "";
+            guna2TextBox10.ReadOnly = true;
             guna2TextBox10.SelectedText = "";
             guna2TextBox10.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2TextBox10.Size = new Size(397, 45);
@@ -325,7 +326,6 @@
             guna2TextBox11.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox11.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox11.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox11.Enabled = false;
             guna2TextBox11.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox11.ForeColor = Color.Black;
