@@ -39,7 +39,7 @@ namespace Bachhoaxanh
 
         private void Login()
         {
-            AccountRepository  accountRepository = new AccountRepository();
+            AccountRepository accountRepository = new AccountRepository();
             string username = tbAccount.Text;
             string password = tbPass.Text;
             if (username == null)
@@ -60,10 +60,10 @@ namespace Bachhoaxanh
                 return;
 
             }
-            else 
+            else
             {
                 Account account = accounts[0];
-                if (account.Password != password) 
+                if (account.Password != password)
                 {
                     MessageDialog.Show(MiniSupermarketApp.menu, "Mật khẩu không trùng khớp!", "Thông báo", MessageDialogButtons.OK, MessageDialogIcon.Information);
                     return;
@@ -72,9 +72,26 @@ namespace Bachhoaxanh
                 {
                     MiniSupermarketApp.menu.Show();
                     Menu.Account = account;
-                    MiniSupermarketApp.login.Enabled = false;
+                    MiniSupermarketApp.login.Visible = false;
                 }
             }
+        }
+
+        private void tbAccount_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+                Login();
+        }
+
+        private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+                Login();
+        }
+
+        private void tbPass_TextChanged(object sender, EventArgs e)
+        {
+            tbPass.PasswordChar = '*';
         }
     }
 }
