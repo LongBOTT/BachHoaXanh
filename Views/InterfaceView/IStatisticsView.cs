@@ -16,6 +16,9 @@ namespace BachHoaXanh.Views.InterfaceView
         BachHoaXanh.Views.Chart.Charts GetChart1 { get; }
         BachHoaXanh.Views.Chart.Charts GetChart2 { get; }
         BachHoaXanh.Views.Chart.Charts GetChart3 { get; }
+        Label GetTitle1 { get; }
+        Label GetTitle2 { get; }
+        Label GetTitle3 { get; }
         Guna2HtmlLabel guna2HtmlLabelNumofStaff { get; }
         Guna2HtmlLabel guna2HtmlLabelBestSeller { get; }
         Guna2HtmlLabel guna2HtmlLabelNameBestSeller { get; }
