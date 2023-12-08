@@ -1,0 +1,15 @@
+﻿<project>
+	<!-- ... Các cấu hình khác ... -->
+
+	<dependencies>
+		<!-- Thêm dependency cho timingframework -->
+		<dependency>
+			<groupId>net.java.dev.timingframework</groupId>
+			<artifactId>timingframework</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- Các dependencies khác có thể có -->
+	</dependencies>
+
+	<!-- ... Cấu hình khác ... -->
+</project>

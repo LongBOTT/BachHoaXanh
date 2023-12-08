@@ -1,4 +1,5 @@
-﻿using BachHoaXanh.Views.InterfaceView;
+﻿using BachHoaXanh.Views.Chart;
+using BachHoaXanh.Views.InterfaceView;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,12 @@ namespace BachHoaXanh
         {
             InitializeComponent();
         }
+
+        public Charts GetChart1 { get { return chart1; } }
+
+        public Charts GetChart2 { get { return chart2; } }
+
+        public Charts GetChart3 { get { return chart3; } }
 
         public TabPage TabPageGenneral { get { return tabPage1; } }
 
@@ -58,5 +65,10 @@ namespace BachHoaXanh
         public Guna2PictureBox guna2PictureBoxPoduct { get { return imageShipment; } }
 
         public Guna2TabControl guna2TabControl { get { return guna2TabControl1; } }
+
+        private void charts_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

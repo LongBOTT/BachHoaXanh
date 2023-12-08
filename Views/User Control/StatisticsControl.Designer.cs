@@ -1,4 +1,7 @@
-﻿namespace BachHoaXanh
+﻿using BachHoaXanh.Views.Chart;
+using BachHoaXanh.Views.Chart.BlankChart;
+
+namespace BachHoaXanh
 {
     partial class StatisticsControl
     {
@@ -67,6 +70,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
@@ -82,12 +91,12 @@
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
@@ -103,12 +112,6 @@
             Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.Charts.WinForms.ChartFont chartFont17 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont18 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont19 = new Guna.Charts.WinForms.ChartFont();
@@ -166,7 +169,9 @@
             guna2GradientPanel11 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2DateTimePicker5 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker6 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            chart1 = new Charts();
+            chart2 = new Charts();
+            chart3 = new Charts();
             tabPage3 = new TabPage();
             guna2GradientPanel10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2DateTimePicker3 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -177,6 +182,8 @@
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             gunaChart3 = new Guna.Charts.WinForms.GunaChart();
+            newBlank = new BlankPlotChart();
+            gunaChart1 = new Guna.Charts.WinForms.GunaChart();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -276,7 +283,7 @@
             labelBenefit.Anchor = AnchorStyles.None;
             labelBenefit.AutoSize = false;
             labelBenefit.BackColor = Color.Transparent;
-            labelBenefit.Font = new Font("Segoe UI Variable Text Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            labelBenefit.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             labelBenefit.ForeColor = Color.FromArgb(46, 44, 49);
             labelBenefit.Location = new Point(3, 177);
             labelBenefit.Name = "labelBenefit";
@@ -290,7 +297,7 @@
             guna2HtmlLabel9.Anchor = AnchorStyles.None;
             guna2HtmlLabel9.AutoSize = false;
             guna2HtmlLabel9.BackColor = Color.Transparent;
-            guna2HtmlLabel9.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel9.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel9.Location = new Point(3, 297);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
@@ -335,7 +342,7 @@
             labelBestStaffName.Anchor = AnchorStyles.None;
             labelBestStaffName.AutoSize = false;
             labelBestStaffName.BackColor = Color.Transparent;
-            labelBestStaffName.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelBestStaffName.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             labelBestStaffName.ForeColor = Color.FromArgb(46, 44, 49);
             labelBestStaffName.Location = new Point(3, 323);
             labelBestStaffName.Name = "labelBestStaffName";
@@ -349,7 +356,7 @@
             guna2HtmlLabel5.Anchor = AnchorStyles.None;
             guna2HtmlLabel5.AutoSize = false;
             guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel5.Location = new Point(3, 260);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
@@ -406,7 +413,7 @@
             labelAmount.Anchor = AnchorStyles.None;
             labelAmount.AutoSize = false;
             labelAmount.BackColor = Color.Transparent;
-            labelAmount.Font = new Font("Segoe UI Variable Text Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            labelAmount.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             labelAmount.ForeColor = Color.FromArgb(46, 44, 49);
             labelAmount.Location = new Point(3, 177);
             labelAmount.Name = "labelAmount";
@@ -420,7 +427,7 @@
             guna2HtmlLabel8.Anchor = AnchorStyles.None;
             guna2HtmlLabel8.AutoSize = false;
             guna2HtmlLabel8.BackColor = Color.Transparent;
-            guna2HtmlLabel8.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel8.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel8.Location = new Point(3, 297);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
@@ -465,7 +472,7 @@
             labelBadSellerName.Anchor = AnchorStyles.None;
             labelBadSellerName.AutoSize = false;
             labelBadSellerName.BackColor = Color.Transparent;
-            labelBadSellerName.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelBadSellerName.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             labelBadSellerName.ForeColor = Color.FromArgb(46, 44, 49);
             labelBadSellerName.Location = new Point(3, 323);
             labelBadSellerName.Name = "labelBadSellerName";
@@ -479,7 +486,7 @@
             guna2HtmlLabel6.Anchor = AnchorStyles.None;
             guna2HtmlLabel6.AutoSize = false;
             guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel6.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel6.Location = new Point(3, 260);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
@@ -535,7 +542,7 @@
             labelExpenses.Anchor = AnchorStyles.None;
             labelExpenses.AutoSize = false;
             labelExpenses.BackColor = Color.Transparent;
-            labelExpenses.Font = new Font("Segoe UI Variable Text Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            labelExpenses.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             labelExpenses.ForeColor = Color.FromArgb(46, 44, 49);
             labelExpenses.Location = new Point(3, 177);
             labelExpenses.Name = "labelExpenses";
@@ -563,7 +570,7 @@
             guna2HtmlLabel7.Anchor = AnchorStyles.None;
             guna2HtmlLabel7.AutoSize = false;
             guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel7.Location = new Point(3, 297);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
@@ -594,7 +601,7 @@
             labelNamePoduct.Anchor = AnchorStyles.None;
             labelNamePoduct.AutoSize = false;
             labelNamePoduct.BackColor = Color.Transparent;
-            labelNamePoduct.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelNamePoduct.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             labelNamePoduct.ForeColor = Color.FromArgb(46, 44, 49);
             labelNamePoduct.Location = new Point(3, 321);
             labelNamePoduct.Name = "labelNamePoduct";
@@ -608,7 +615,7 @@
             guna2HtmlLabel4.Anchor = AnchorStyles.None;
             guna2HtmlLabel4.AutoSize = false;
             guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel4.Location = new Point(3, 258);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
@@ -665,7 +672,7 @@
             labelBestSellerName.Anchor = AnchorStyles.None;
             labelBestSellerName.AutoSize = false;
             labelBestSellerName.BackColor = Color.Transparent;
-            labelBestSellerName.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelBestSellerName.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             labelBestSellerName.ForeColor = Color.FromArgb(46, 44, 49);
             labelBestSellerName.Location = new Point(3, 323);
             labelBestSellerName.Name = "labelBestSellerName";
@@ -692,7 +699,7 @@
             guna2HtmlLabel3.Anchor = AnchorStyles.None;
             guna2HtmlLabel3.AutoSize = false;
             guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel3.Location = new Point(3, 260);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
@@ -734,7 +741,7 @@
             // 
             guna2HtmlLabel2.AutoSize = false;
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel2.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel2.Location = new Point(3, 260);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
@@ -776,7 +783,7 @@
             tabPage2.Controls.Add(guna2GradientPanel11);
             tabPage2.Controls.Add(guna2DateTimePicker5);
             tabPage2.Controls.Add(guna2DateTimePicker6);
-            tabPage2.Controls.Add(gunaChart1);
+            tabPage2.Controls.Add(chart1);
             tabPage2.Location = new Point(4, 44);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -826,39 +833,32 @@
             guna2DateTimePicker6.TabIndex = 5;
             guna2DateTimePicker6.Value = new DateTime(2023, 12, 6, 1, 54, 17, 200);
             // 
-            // gunaChart1
+            // charts
             // 
-            chartFont1.FontName = "Arial";
-            gunaChart1.Legend.LabelFont = chartFont1;
-            gunaChart1.Location = new Point(56, 113);
-            gunaChart1.Name = "gunaChart1";
-            gunaChart1.Size = new Size(1258, 739);
-            gunaChart1.TabIndex = 4;
-            chartFont2.FontName = "Arial";
-            chartFont2.Size = 12;
-            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Title.Font = chartFont2;
-            chartFont3.FontName = "Arial";
-            gunaChart1.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Arial";
-            chartFont4.Size = 9;
-            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Tooltips.TitleFont = chartFont4;
-            gunaChart1.XAxes.GridLines = grid1;
-            chartFont5.FontName = "Arial";
-            tick1.Font = chartFont5;
-            gunaChart1.XAxes.Ticks = tick1;
-            gunaChart1.YAxes.GridLines = grid2;
-            chartFont6.FontName = "Arial";
-            tick2.Font = chartFont6;
-            gunaChart1.YAxes.Ticks = tick2;
-            gunaChart1.ZAxes.GridLines = grid3;
-            chartFont7.FontName = "Arial";
-            pointLabel1.Font = chartFont7;
-            gunaChart1.ZAxes.PointLabels = pointLabel1;
-            chartFont8.FontName = "Arial";
-            tick3.Font = chartFont8;
-            gunaChart1.ZAxes.Ticks = tick3;
+            chart1.BackColor = Color.White;
+            chart1.ForeColor = Color.FromArgb(100, 100, 100);
+            chart1.Location = new Point(6, 120);
+            chart1.Name = "chart1";
+            chart1.Padding = new Padding(20, 10, 10, 10);
+            chart1.Size = new Size(1359, 779);
+            chart1.TabIndex = 8;
+            chart1.Paint += charts_Paint;
+
+            chart2.BackColor = Color.White;
+            chart2.ForeColor = Color.FromArgb(100, 100, 100);
+            chart2.Location = new Point(6, 120);
+            chart2.Name = "chart2";
+            chart2.Padding = new Padding(20, 10, 10, 10);
+            chart2.Size = new Size(1359, 779);
+            chart2.TabIndex = 8;
+
+            chart3.BackColor = Color.White;
+            chart3.ForeColor = Color.FromArgb(100, 100, 100);
+            chart3.Location = new Point(6, 120);
+            chart3.Name = "chart3";
+            chart3.Padding = new Padding(20, 10, 10, 10);
+            chart3.Size = new Size(1359, 779);
+            chart3.TabIndex = 8;
             // 
             // tabPage3
             // 
@@ -866,7 +866,7 @@
             tabPage3.Controls.Add(guna2GradientPanel10);
             tabPage3.Controls.Add(guna2DateTimePicker3);
             tabPage3.Controls.Add(guna2DateTimePicker4);
-            tabPage3.Controls.Add(gunaChart2);
+            tabPage3.Controls.Add(chart2);
             tabPage3.Location = new Point(4, 44);
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(1371, 902);
@@ -917,37 +917,37 @@
             // 
             // gunaChart2
             // 
-            chartFont9.FontName = "Arial";
-            gunaChart2.Legend.LabelFont = chartFont9;
+            chartFont1.FontName = "Arial";
+            gunaChart2.Legend.LabelFont = chartFont1;
             gunaChart2.Location = new Point(56, 113);
             gunaChart2.Name = "gunaChart2";
             gunaChart2.Size = new Size(1258, 739);
             gunaChart2.TabIndex = 4;
-            chartFont10.FontName = "Arial";
-            chartFont10.Size = 12;
-            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart2.Title.Font = chartFont10;
-            chartFont11.FontName = "Arial";
-            gunaChart2.Tooltips.BodyFont = chartFont11;
-            chartFont12.FontName = "Arial";
-            chartFont12.Size = 9;
-            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart2.Tooltips.TitleFont = chartFont12;
-            gunaChart2.XAxes.GridLines = grid4;
-            chartFont13.FontName = "Arial";
-            tick4.Font = chartFont13;
-            gunaChart2.XAxes.Ticks = tick4;
-            gunaChart2.YAxes.GridLines = grid5;
-            chartFont14.FontName = "Arial";
-            tick5.Font = chartFont14;
-            gunaChart2.YAxes.Ticks = tick5;
-            gunaChart2.ZAxes.GridLines = grid6;
-            chartFont15.FontName = "Arial";
-            pointLabel2.Font = chartFont15;
-            gunaChart2.ZAxes.PointLabels = pointLabel2;
-            chartFont16.FontName = "Arial";
-            tick6.Font = chartFont16;
-            gunaChart2.ZAxes.Ticks = tick6;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaChart2.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            gunaChart2.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaChart2.Tooltips.TitleFont = chartFont4;
+            gunaChart2.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            gunaChart2.XAxes.Ticks = tick1;
+            gunaChart2.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            gunaChart2.YAxes.Ticks = tick2;
+            gunaChart2.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            gunaChart2.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            gunaChart2.ZAxes.Ticks = tick3;
             // 
             // tabPage4
             // 
@@ -955,7 +955,7 @@
             tabPage4.Controls.Add(guna2GradientPanel9);
             tabPage4.Controls.Add(guna2DateTimePicker2);
             tabPage4.Controls.Add(guna2DateTimePicker1);
-            tabPage4.Controls.Add(gunaChart3);
+            tabPage4.Controls.Add(chart3);
             tabPage4.Location = new Point(4, 44);
             tabPage4.Name = "tabPage4";
             tabPage4.Size = new Size(1371, 902);
@@ -1006,37 +1006,85 @@
             // 
             // gunaChart3
             // 
-            chartFont17.FontName = "Arial";
-            gunaChart3.Legend.LabelFont = chartFont17;
+            chartFont9.FontName = "Arial";
+            gunaChart3.Legend.LabelFont = chartFont9;
             gunaChart3.Location = new Point(56, 113);
             gunaChart3.Name = "gunaChart3";
             gunaChart3.Size = new Size(1258, 739);
             gunaChart3.TabIndex = 4;
+            chartFont10.FontName = "Arial";
+            chartFont10.Size = 12;
+            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaChart3.Title.Font = chartFont10;
+            chartFont11.FontName = "Arial";
+            gunaChart3.Tooltips.BodyFont = chartFont11;
+            chartFont12.FontName = "Arial";
+            chartFont12.Size = 9;
+            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaChart3.Tooltips.TitleFont = chartFont12;
+            gunaChart3.XAxes.GridLines = grid4;
+            chartFont13.FontName = "Arial";
+            tick4.Font = chartFont13;
+            gunaChart3.XAxes.Ticks = tick4;
+            gunaChart3.YAxes.GridLines = grid5;
+            chartFont14.FontName = "Arial";
+            tick5.Font = chartFont14;
+            gunaChart3.YAxes.Ticks = tick5;
+            gunaChart3.ZAxes.GridLines = grid6;
+            chartFont15.FontName = "Arial";
+            pointLabel2.Font = chartFont15;
+            gunaChart3.ZAxes.PointLabels = pointLabel2;
+            chartFont16.FontName = "Arial";
+            tick6.Font = chartFont16;
+            gunaChart3.ZAxes.Ticks = tick6;
+            // 
+            // newBlank
+            // 
+            newBlank.BackColor = Color.White;
+            newBlank.BlankPlotChatRender = null;
+            newBlank.ForeColor = Color.FromArgb(100, 100, 100);
+            newBlank.LabelCount = 0;
+            newBlank.Location = new Point(0, 0);
+            newBlank.MaxValues = 10D;
+            newBlank.Name = "newBlank";
+            newBlank.Padding = new Padding(20, 10, 10, 10);
+            newBlank.Size = new Size(150, 150);
+            newBlank.TabIndex = 0;
+            newBlank.ValuesFormat = "#,##0.##";
+            // 
+            // gunaChart1
+            // 
+            chartFont17.FontName = "Arial";
+            gunaChart1.Legend.LabelFont = chartFont17;
+            gunaChart1.Location = new Point(56, 113);
+            gunaChart1.Name = "gunaChart1";
+            gunaChart1.Size = new Size(1258, 739);
+            gunaChart1.TabIndex = 4;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
             chartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart3.Title.Font = chartFont18;
+            gunaChart1.Title.Font = chartFont18;
             chartFont19.FontName = "Arial";
-            gunaChart3.Tooltips.BodyFont = chartFont19;
+            gunaChart1.Tooltips.BodyFont = chartFont19;
             chartFont20.FontName = "Arial";
             chartFont20.Size = 9;
             chartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart3.Tooltips.TitleFont = chartFont20;
-            gunaChart3.XAxes.GridLines = grid7;
+            gunaChart1.Tooltips.TitleFont = chartFont20;
+            gunaChart1.XAxes.GridLines = grid7;
             chartFont21.FontName = "Arial";
             tick7.Font = chartFont21;
-            gunaChart3.XAxes.Ticks = tick7;
-            gunaChart3.YAxes.GridLines = grid8;
+            gunaChart1.XAxes.Ticks = tick7;
+            gunaChart1.YAxes.GridLines = grid8;
             chartFont22.FontName = "Arial";
             tick8.Font = chartFont22;
-            gunaChart3.YAxes.Ticks = tick8;
-            gunaChart3.ZAxes.GridLines = grid9;
+            gunaChart1.YAxes.Ticks = tick8;
+            gunaChart1.ZAxes.GridLines = grid9;
             chartFont23.FontName = "Arial";
             pointLabel3.Font = chartFont23;
-            gunaChart3.ZAxes.PointLabels = pointLabel3;
+            gunaChart1.ZAxes.PointLabels = pointLabel3;
             chartFont24.FontName = "Arial";
             tick9.Font = chartFont24;
-            gunaChart3.ZAxes.Ticks = tick9;
+            gunaChart1.ZAxes.Ticks = tick9;
             // 
             // guna2HtmlLabel12
             // 
@@ -1055,7 +1103,7 @@
             // 
             guna2HtmlLabel11.AutoSize = false;
             guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2HtmlLabel11.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             guna2HtmlLabel11.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel11.Location = new Point(3, 258);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
@@ -1081,7 +1129,7 @@
             // 
             guna2HtmlLabel13.AutoSize = false;
             guna2HtmlLabel13.BackColor = Color.Transparent;
-            guna2HtmlLabel13.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2HtmlLabel13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             guna2HtmlLabel13.ForeColor = Color.FromArgb(46, 44, 49);
             guna2HtmlLabel13.Location = new Point(3, 258);
             guna2HtmlLabel13.Name = "guna2HtmlLabel13";
@@ -1187,5 +1235,10 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.Charts.WinForms.GunaChart gunaChart3;
+        private BlankPlotChart newBlank;
+        private Charts chart1;
+        private Charts chart2;
+        private Charts chart3;
+
     }
 }
