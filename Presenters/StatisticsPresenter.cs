@@ -68,8 +68,6 @@ namespace BachHoaXanh.Presenters
                 y += 200;
                 amount.Add(y);
             }
-
-
             //labelText[2].Text = "THỐNG KÊ THEO THÁNG TRONG NĂM " + currentYear;
             //statisticDay.Controls.Add(labelText[2], BorderLayout.NORTH);
 
@@ -118,7 +116,6 @@ namespace BachHoaXanh.Presenters
 
         private void ByQuater()
         {
-            //addChart(statisticMonth);
             currentMonth = DateTime.Now.Month;
             currentYear = DateTime.Now.Year;
             expenses = new List<double>();
@@ -135,7 +132,6 @@ namespace BachHoaXanh.Presenters
                 y += 200;
                 amount.Add(y);
             }
-
             //labelText[1].setText("THỐNG KÊ THEO QUÝ TRONG NĂM " + currentYear);
             //statisticMonth.add(labelText[1], BorderLayout.NORTH);
             //for (int i = 1; i <= currentQuarter; i++)
@@ -185,36 +181,26 @@ namespace BachHoaXanh.Presenters
             //statisticYear.add(labelText[0], BorderLayout.NORTH);
             view.GetChart1.Clear();
             currentYear = DateTime.Now.Year;
-            //for (int i = currentYear - 2; i <= currentYear; i++)
-            //{
-            //    XYChart.Series<String, Number> series1 = new XYChart.Series<>();
-            //    series1.setName("Năm " + i);
-            //    try
-            //    {
-            //        List<List<String>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`import`.total) " +
-            //            "FROM `import` " +
-            //            "WHERE YEAR(`import`.received_date) = " + i);
-            //        expenses.add(Double.parseDouble(inventory.get(0).get(0).split("\\.")[0]));
+            for (int i = currentYear - 2; i <= currentYear; i++)
+            {
+                List<List<string>> result = repository.ExcuteQuerry("SELECT SUM(`import`.total) " +
+                    "FROM `import` " +
+                    "WHERE YEAR(`import`.received_date) = " + i);
+                if (result.Count > 0)
+                {
+                    expenses.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                }
 
-            //    }
-            //    catch (SQLException | IOException ex) {
-            //    throw new RuntimeException(ex);
-            //}
-
-            //try
-            //{
-            //    List<List<String>> inventory = MySQL.executeQueryStatistic("SELECT SUM(`receipt`.total) " +
-            //        "FROM `receipt` " +
-            //        "WHERE YEAR(`receipt`.invoice_date) = " + i);
-            //    amount.add(Double.parseDouble(inventory.get(0).get(0).split("\\.")[0]));
-
-            //}
-            //catch (SQLException | IOException ex) {
-            //    throw new RuntimeException(ex);
-            //}
-            //view.GetChart1.AddData(new ModelChart(String.valueOf(i), new double[] { expenses.get(expenses.size() - 1), amount.get(expenses.size() - 1), amount.get(expenses.size() - 1) - expenses.get(expenses.size() - 1) }));
-            //}
-            //view.GetChart1.start();
+                result = repository.ExcuteQuerry("SELECT SUM(`receipt`.total) " +
+                    "FROM `receipt` " +
+                    "WHERE YEAR(`receipt`.invoice_date) = " + i);
+                if (result.Count > 0)
+                {
+                    amount.Add(Double.Parse(result[0][0].Split("\\.")[0]));
+                }
+                view.GetChart1.AddData(new ModelChart( i + "", new double[] { expenses[expenses.Count - 1], amount[expenses.Count - 1], amount[expenses.Count - 1] - expenses[expenses.Count - 1]}));
+            }
+            view.GetChart1.Start();
         }
 
         private void Genneral()
