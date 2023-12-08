@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2023 at 06:12 PM
+-- Generation Time: Dec 08, 2023 at 03:44 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -41,17 +41,16 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `username`, `password`, `role_id`, `staff_id`, `last_signed_in`) VALUES
-(1, 'admin', 'Admin123', 1, 1, '1753-01-01 00:00:00.000000'),
-(2, 'dungboi', 'Dung123', 2, 2, '1753-01-01 00:00:00.000000'),
-(3, 'quangduy', 'Duy123', 2, 3, '1753-01-01 00:00:00.000000'),
-(4, 'longbott', 'Long123', 2, 4, '1753-01-01 00:00:00.000000'),
-(5, 'hoavi', 'Hoa123', 2, 5, '1753-01-01 00:00:00.000000'),
-(6, 'xuanhoang', 'Hoang123', 2, 6, '1753-01-01 00:00:00.000000'),
-(7, 'yenvy', 'Vy123', 2, 7, '1753-01-01 00:00:00.000000'),
-(8, 'xuanmai', 'Mai123', 3, 8, '1753-01-01 00:00:00.000000'),
-(9, 'legiang', 'Giang123', 3, 9, '1753-01-01 00:00:00.000000'),
-(10, 'vanlam', 'Lam123', 4, 10, '1753-01-01 00:00:00.000000'),
-(11, 'xuanphuc', 'Phuc123', 4, 11, '1753-01-01 00:00:00.000000');
+(1, 'admin', 'Admin123', 1, 1, '1000-01-01 00:00:00.000000'),
+(2, 'dungboi', '1234', 2, 2, '1000-01-01 00:00:00.000000'),
+(3, 'quangduy', '1234', 2, 3, '1000-01-01 00:00:00.000000'),
+(4, 'longbott', '1234', 2, 4, '1000-01-01 00:00:00.000000'),
+(5, 'hoangminh', '1234', 2, 5, '1000-01-01 00:00:00.000000'),
+(6, 'phuocsang', '1234', 2, 6, '1000-01-01 00:00:00.000000'),
+(7, 'xuanmai', '1234', 3, 7, '1000-01-01 00:00:00.000000'),
+(8, 'legiang', '1234', 3, 8, '1000-01-01 00:00:00.000000'),
+(9, 'vanlam', '1234', 4, 9, '1000-01-01 00:00:00.000000'),
+(10, 'xuanphuc', '1234', 4, 10, '1000-01-01 00:00:00.000000');
 
 -- --------------------------------------------------------
 
@@ -138,16 +137,16 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `name`, `gender`, `birthdate`, `phone`, `membership`, `signed_up_date`, `point`, `deleted`) VALUES
-(1, 'VÃNG LAI', b'0', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
+(1, 'VÃNG LAI', b'0', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
 (2, 'NGUYỄN VĂN NAM', b'1', '2000-12-01', '0862994282', b'1', '2020-09-08', 1000, b'0'),
 (3, 'HOÀNG XUÂN BẮC', b'1', '2001-09-03', '0967563268', b'1', '2021-02-07', 123, b'0'),
 (4, 'NGUYỄN THỊ THU HIỀN', b'0', '2004-05-04', '0981485618', b'1', '2021-05-06', 500, b'0'),
 (5, 'NGUYỄN VĂN THẮNG', b'1', '1999-08-10', '0861149539', b'1', '2021-08-03', 2300, b'0'),
-(6, 'NGUYỄN THỊ YẾN NHI', b'0', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
-(7, 'ĐẶNG NGUYỄN GIA HUY', b'1', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
+(6, 'NGUYỄN THỊ YẾN NHI', b'0', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
+(7, 'ĐẶNG NGUYỄN GIA HUY', b'1', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
 (8, 'NGUYỄN THI DIỆU CHI', b'0', '2000-04-09', '0378367833', b'1', '2022-05-05', 450, b'0'),
 (9, 'NGUYỄN THỊ THANH NHÀN', b'0', '2001-08-03', '0323373316', b'1', '2022-09-08', 3000, b'0'),
-(10, 'NGUYỄN TRUNG TÍN', b'1', '1000-01-01', '', b'0', '1753-01-01', 0, b'0'),
+(10, 'NGUYỄN TRUNG TÍN', b'1', '1000-01-01', '', b'0', '1000-01-01', 0, b'0'),
 (11, 'ĐINH XUÂN HOÀI', b'1', '2004-07-06', '0964745278', b'1', '2023-03-07', 200, b'0');
 
 -- --------------------------------------------------------
@@ -285,7 +284,8 @@ INSERT INTO `discount` (`id`, `percent`, `start_date`, `end_date`, `status`) VAL
 (2, 15, '2023-09-20', '2023-09-26', b'1'),
 (3, 30, '2023-11-16', '2023-11-18', b'1'),
 (4, 15, '2023-11-15', '2023-11-30', b'1'),
-(5, 50, '2023-11-22', '2023-12-29', b'0');
+(5, 50, '2023-11-22', '2023-12-29', b'1'),
+(6, 50, '2023-12-04', '2024-01-25', b'0');
 
 -- --------------------------------------------------------
 
@@ -314,8 +314,12 @@ INSERT INTO `discount_detail` (`discount_id`, `product_id`, `status`) VALUES
 (3, 12, b'1'),
 (4, 5, b'1'),
 (4, 6, b'1'),
-(5, 5, b'0'),
-(5, 6, b'0');
+(5, 5, b'1'),
+(5, 6, b'1'),
+(6, 1, b'0'),
+(6, 6, b'0'),
+(6, 7, b'0'),
+(6, 8, b'0');
 
 -- --------------------------------------------------------
 
@@ -330,6 +334,17 @@ CREATE TABLE `export_detail` (
   `total` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `export_detail`
+--
+
+INSERT INTO `export_detail` (`export_note_id`, `shipment_id`, `quantity`, `total`) VALUES
+(1, 1, 2, 1690000),
+(2, 2, 3, 615000),
+(3, 2, 3, 660000),
+(4, 1, 2, 400000),
+(5, 2, 3, 900000);
+
 -- --------------------------------------------------------
 
 --
@@ -343,6 +358,24 @@ CREATE TABLE `export_note` (
   `total` double DEFAULT NULL,
   `reason` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `export_note`
+--
+
+INSERT INTO `export_note` (`id`, `staff_id`, `invoice_date`, `total`, `reason`) VALUES
+(1, 1, '2023-01-01 00:00:00.000000', 150, 'Bán'),
+(2, 2, '2023-01-02 00:00:00.000000', 200, 'Huỷ'),
+(3, 3, '2023-01-03 00:00:00.000000', 300, 'Bán'),
+(4, 4, '2023-01-04 00:00:00.000000', 180, 'Huỷ'),
+(5, 5, '2023-01-05 00:00:00.000000', 250, 'Bán'),
+(6, 6, '2023-01-06 00:00:00.000000', 120, 'Huỷ'),
+(7, 7, '2023-01-07 00:00:00.000000', 350, 'Bán'),
+(8, 8, '2023-01-08 00:00:00.000000', 170, 'Huỷ'),
+(9, 9, '2023-01-09 00:00:00.000000', 280, 'Bán'),
+(10, 10, '2023-01-10 00:00:00.000000', 200, 'Huỷ'),
+(11, 1, '2023-11-27 00:00:00.000000', 3, 'Bán'),
+(12, 1, '2023-11-27 00:00:00.000000', 300000, 'Bán');
 
 -- --------------------------------------------------------
 
@@ -417,8 +450,8 @@ INSERT INTO `import_note` (`id`, `staff_id`, `received_date`, `total`, `supplier
 (31, 1, '2023-09-25 00:00:00.000000', 200000, 2),
 (32, 3, '2023-09-23 00:00:00.000000', 200000, 3),
 (33, 2, '2023-09-21 00:00:00.000000', 200000, 1),
-(34, 1, '2023-12-27 00:00:00.000000', 14, 3),
-(35, 1, '2023-12-27 00:00:00.000000', 14, 3);
+(45, 1, '2023-12-08 00:00:00.000000', 102, 1),
+(46, 1, '2023-12-08 00:00:00.000000', 999, 1);
 
 -- --------------------------------------------------------
 
@@ -476,46 +509,53 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `brand_id`, `category_id`, `unit`, `cost`, `quantity`, `image`, `barcode`, `deleted`) VALUES
-(1, 'Lốc 4 hộp sữa tươi 110ml Vinamilk có đường', 3, 1, 'Lốc', 21500, 0, 'Pro1', '', b'0'),
-(2, 'Lốc 4 hộp sữa tươi 110ml Vinamilk ít đường', 3, 1, 'Lốc', 21500, 0, 'Pro2', '', b'0'),
-(3, 'Lốc 4 hộp sữa tươi 110ml Vinamilk không đường', 3, 1, 'Lốc', 21500, 0, 'Pro3', '', b'0'),
-(4, 'Lốc 4 hộp sữa tươi 180ml Vinamilk có đường', 3, 1, 'Lốc', 29900, 0, 'Pro4', '', b'0'),
-(5, 'Lốc 4 hộp sữa tươi 180ml Vinamilk ít đường', 3, 1, 'Lốc', 29900, 0, 'Pro5', '', b'0'),
-(6, 'Lốc 4 hộp sữa tươi 180ml Vinamilk không đường', 3, 1, 'Lốc', 29900, 0, 'Pro6', '', b'0'),
-(7, 'Sữa bột Vinamilk Sure Prevent Gold lon 900g', 2, 5, 'Lon', 625000, 4, 'Pro7', '', b'0'),
-(8, '6 chai sữa pha sẵn Sure Prevent Gold 200ml', 2, 5, 'Lốc', 168000, 0, 'Pro8', '', b'0'),
-(9, 'Nước ép cam Vfresh 1 lít', 1, 6, 'Hộp', 50000, 0, 'Pro9', '', b'0'),
-(10, 'Nước ép cam không đường Vfresh 1 lít', 1, 6, 'Hộp', 50000, 0, 'Pro10', '', b'0'),
-(11, 'Nước ép đào Vfresh 1 lít', 1, 6, 'Hộp', 42000, 0, 'Pro11', '', b'0'),
-(12, 'Nước ép đào không đường Vfresh 1 lít', 1, 6, 'Hộp', 42000, 0, 'Pro12', '', b'0'),
-(13, 'Trà Atiso Vfresh 1 lít', 1, 6, 'Hộp', 20000, 0, 'Pro1', '', b'0'),
-(14, 'Trà Atiso ít đường Vfresh 1 lít', 1, 6, 'Hộp', 20000, 0, 'Pro1', '', b'0'),
-(15, 'Lốc 4 hộp sữa tươi 110ml TH true Milk có đường ', 4, 1, 'Lốc', 24000, 0, 'Pro1', '', b'0'),
-(16, 'Lốc 4 hộp sữa tươi 110ml TH true Milk ít đường ', 4, 1, 'Lốc', 24000, 0, 'Pro1', '', b'0'),
-(17, 'Lốc 4 hộp sữa tươi 110ml TH true Milk không đường ', 4, 1, 'Lốc', 24000, 0, 'Pro1', '', b'0'),
-(18, 'Lốc 4 hộp sữa tươi 180ml TH true Milk có đường ', 4, 1, 'Lốc', 36000, 0, 'Pro1', '', b'0'),
-(19, 'Lốc 4 hộp sữa tươi 180ml TH true Milk ít đường ', 4, 1, 'Lốc', 36000, 0, 'Pro1', '', b'0'),
-(20, 'Lốc 4 hộp sữa tươi 180ml TH true Milk không đường ', 4, 1, 'Lốc', 36000, 0, 'Pro1', '', b'0'),
-(21, 'Lốc 4 hộp sữa tươi 180ml TH true Milk dâu', 4, 1, 'Lốc', 36000, 0, 'Pro1', '', b'0'),
-(22, 'Lốc 4 hộp sữa tươi 180ml TH true Milk socola', 4, 1, 'Lốc', 36000, 0, 'Pro1', '', b'0'),
-(23, 'Sữa tươi TH true Milk có đường hộp 1 lít', 4, 1, 'Hộp', 37000, 0, 'Pro1', '', b'0'),
-(24, 'Sữa tười TH true Milk ít đường hộp 1 lít ', 4, 1, 'Hộp', 37000, 0, 'Pro1', '', b'0'),
-(25, 'Lốc 4 hộp sữa chua 180ml TH true Yogurt việt quất', 5, 4, 'Lốc', 32500, 0, 'Pro1', '', b'0'),
-(26, 'Lốc 4 hộp sữa chua 180ml TH true Yogurt cam', 5, 4, 'Lốc', 32500, 0, 'Pro1', '', b'0'),
-(27, 'Lốc 4 hộp sữa chua 180ml TH true Yogurt dâu', 5, 4, 'Lốc', 32500, 0, 'Pro1', '', b'0'),
-(28, 'Lốc 4 chai sữa chua 180ml TH true Yogourt việt quất', 5, 4, 'Lốc', 31000, 0, 'Pro1', '', b'0'),
-(29, 'Lốc 4 chai sữa chua 180ml TH true Yogurt cam', 5, 4, 'Lốc', 31000, 0, 'Pro1', '', b'0'),
-(30, 'Lốc 4 chai sữa chua 180ml TH true Yogurt dâu', 5, 4, 'Lốc', 31000, 0, 'Pro1', '', b'0'),
-(31, 'Nước ngọt Coca Cola lon 320ml', 6, 3, 'Lon', 10600, 0, 'Pro1', '', b'0'),
-(32, 'Nước ngọt Coca Cola chai 390ml', 6, 3, 'Chai', 7800, 0, 'Pro1', '', b'0'),
-(33, 'Nước ngọt Coca Cola chai 1.5 lít', 6, 3, 'Chai', 20200, 0, 'Pro1', '', b'0'),
-(34, 'Nước ngọt Coca Cola Zero lon 320ml', 6, 3, 'Lon', 10600, 0, 'Pro1', '', b'0'),
-(35, 'Nước ngọt Coca Cola Zero chai 390ml', 6, 3, 'Chai', 7800, 0, 'Pro1', '', b'0'),
-(36, 'Nước ngọt Coca Cola Zero chai 1.5 lít', 6, 3, 'Chai', 20200, 0, 'Pro1', '', b'0'),
-(37, 'Nước ngọt Fanta cam chai 390ml', 7, 3, 'Chai', 7800, 0, 'Pro1', '', b'0'),
-(38, 'Nước ngọt Fanta xá xị chai 390ml', 7, 3, 'Chai', 7800, 0, 'Pro1', '', b'0'),
-(39, 'Mì Hảo Hảo tôm chua cay gói 75g', 13, 2, 'Gói', 4400, 0, 'Pro1', '', b'0'),
-(40, 'Mì Handy Hảo Hảo tôm chua cay ly 67g', 13, 2, 'Ly', 9500, 0, 'Pro1', '', b'0');
+(1, 'Lốc 4 hộp sữa tươi 110ml Vinamilk có đường', 3, 1, 'Lốc', 21500, 50, 'Pro1', '', b'0'),
+(2, 'Lốc 4 hộp sữa tươi 110ml Vinamilk ít đường', 3, 1, 'Lốc', 21500, 50, 'Pro2', '', b'0'),
+(3, 'Lốc 4 hộp sữa tươi 110ml Vinamilk không đường', 3, 1, 'Lốc', 21500, 17, 'Pro3', '', b'0'),
+(4, 'Lốc 4 hộp sữa tươi 180ml Vinamilk có đường', 3, 1, 'Lốc', 29900, 17, 'Pro4', '', b'0'),
+(5, 'Lốc 4 hộp sữa tươi 180ml Vinamilk ít đường', 3, 1, 'Lốc', 29900, 17, 'Pro5', '', b'0'),
+(6, 'Lốc 4 hộp sữa tươi 180ml Vinamilk không đường', 3, 1, 'Lốc', 29900, 17, 'Pro6', '', b'0'),
+(7, 'Sữa bột Vinamilk Sure Prevent Gold lon 900g', 2, 5, 'Lon', 625000, 17, 'Pro7', '', b'0'),
+(8, '6 chai sữa pha sẵn Sure Prevent Gold 200ml', 2, 5, 'Lốc', 168000, 17, 'Pro8', '', b'0'),
+(9, 'Nước ép cam Vfresh 1 lít', 1, 6, 'Hộp', 50000, 50, 'Pro9', '', b'0'),
+(10, 'Nước ép cam không đường Vfresh 1 lít', 1, 6, 'Hộp', 50000, 50, 'Pro10', '', b'0'),
+(11, 'Nước ép đào Vfresh 1 lít', 1, 6, 'Hộp', 42000, 50, 'Pro11', '', b'0'),
+(12, 'Nước ép đào không đường Vfresh 1 lít', 1, 6, 'Hộp', 42000, 50, 'Pro12', '', b'0'),
+(13, 'Trà Atiso Vfresh 1 lít', 1, 6, 'Hộp', 20000, 10, 'Pro1', '', b'0'),
+(14, 'Trà Atiso ít đường Vfresh 1 lít', 1, 6, 'Hộp', 20000, 10, 'Pro1', '', b'0'),
+(15, 'Lốc 4 hộp sữa tươi 110ml TH true Milk có đường ', 4, 1, 'Lốc', 24000, 10, 'Pro1', '', b'0'),
+(16, 'Lốc 4 hộp sữa tươi 110ml TH true Milk ít đường ', 4, 1, 'Lốc', 24000, 10, 'Pro1', '', b'0'),
+(17, 'Lốc 4 hộp sữa tươi 110ml TH true Milk không đường ', 4, 1, 'Lốc', 24000, 10, 'Pro1', '', b'0'),
+(18, 'Lốc 4 hộp sữa tươi 180ml TH true Milk có đường ', 4, 1, 'Lốc', 36000, 50, 'Pro1', '', b'0'),
+(19, 'Lốc 4 hộp sữa tươi 180ml TH true Milk ít đường ', 4, 1, 'Lốc', 36000, 50, 'Pro1', '', b'0'),
+(20, 'Lốc 4 hộp sữa tươi 180ml TH true Milk không đường ', 4, 1, 'Lốc', 36000, 50, 'Pro1', '', b'0'),
+(21, 'Lốc 4 hộp sữa tươi 180ml TH true Milk dâu', 4, 1, 'Lốc', 36000, 50, 'Pro1', '', b'0'),
+(22, 'Lốc 4 hộp sữa tươi 180ml TH true Milk socola', 4, 1, 'Lốc', 36000, 50, 'Pro1', '', b'0'),
+(23, 'Sữa tươi TH true Milk có đường hộp 1 lít', 4, 1, 'Hộp', 37000, 50, 'Pro1', '', b'0'),
+(24, 'Sữa tười TH true Milk ít đường hộp 1 lít ', 4, 1, 'Hộp', 37000, 50, 'Pro1', '', b'0'),
+(25, 'Lốc 4 hộp sữa chua 180ml TH true Yogurt việt quất', 5, 4, 'Lốc', 32500, 50, 'Pro1', '', b'0'),
+(26, 'Lốc 4 hộp sữa chua 180ml TH true Yogurt cam', 5, 4, 'Lốc', 32500, 50, 'Pro1', '', b'0'),
+(27, 'Lốc 4 hộp sữa chua 180ml TH true Yogurt dâu', 5, 4, 'Lốc', 32500, 50, 'Pro1', '', b'0'),
+(28, 'Lốc 4 chai sữa chua 180ml TH true Yogourt việt quất', 5, 4, 'Lốc', 31000, 14, 'Pro1', '', b'0'),
+(29, 'Lốc 4 chai sữa chua 180ml TH true Yogurt cam', 5, 4, 'Lốc', 31000, 14, 'Pro1', '', b'0'),
+(30, 'Lốc 4 chai sữa chua 180ml TH true Yogurt dâu', 5, 4, 'Lốc', 31000, 14, 'Pro1', '', b'0'),
+(31, 'Nước ngọt Coca Cola lon 320ml', 6, 3, 'Lon', 10600, 14, 'Pro1', '', b'0'),
+(32, 'Nước ngọt Coca Cola chai 390ml', 6, 3, 'Chai', 7800, 14, 'Pro1', '', b'0'),
+(33, 'Nước ngọt Coca Cola chai 1.5 lít', 6, 3, 'Chai', 20200, 14, 'Pro1', '', b'0'),
+(34, 'Nước ngọt Coca Cola Zero lon 320ml', 6, 3, 'Lon', 10600, 50, 'Pro1', '', b'0'),
+(35, 'Nước ngọt Coca Cola Zero chai 390ml', 6, 3, 'Chai', 7800, 50, 'Pro1', '', b'0'),
+(36, 'Nước ngọt Coca Cola Zero chai 1.5 lít', 6, 3, 'Chai', 20200, 50, 'Pro1', '', b'0'),
+(37, 'Nước ngọt Fanta cam chai 390ml', 7, 3, 'Chai', 7800, 50, 'Pro1', '', b'0'),
+(38, 'Nước ngọt Fanta xá xị chai 390ml', 7, 3, 'Chai', 7800, 50, 'Pro1', '', b'0'),
+(39, 'Mì Hảo Hảo tôm chua cay gói 75g', 13, 2, 'Gói', 4400, 50, 'Pro1', '', b'0'),
+(40, 'Mì Handy Hảo Hảo tôm chua cay ly 67g', 13, 2, 'Ly', 9500, 50, 'Pro1', '', b'0'),
+(41, 'ádasda', 7, 5, 'Lốc', 3, 3, 'Pro1', '3333', b'0'),
+(42, '1', 3, 1, 'Ly', 2, 2, 'Pro1', '2', b'0'),
+(43, 's', 3, 5, 'Ly', 2, 2, 'Pro1', '2', b'0'),
+(44, 'a', 3, 1, 'Lốc', 2, 2, 'Pro1', '2', b'0'),
+(45, 's', 1, 1, 'Ly', 33, 333, 'Pro1', '333', b'0'),
+(46, 'a', 1, 1, 'Ly', 2, 2, 'Pro1', '2', b'0'),
+(47, 'ádasd', 1, 1, 'Lốc', 24, 343, 'Pro1', '43', b'0');
 
 -- --------------------------------------------------------
 
@@ -753,7 +793,7 @@ CREATE TABLE `shipment` (
 --
 
 INSERT INTO `shipment` (`id`, `product_id`, `unit_price`, `quantity`, `remain`, `mfg`, `exp`, `sku`, `import_note_id`) VALUES
-(1, 1, 10000, 50, 40, '2023-01-01', '2023-12-31', '', 11),
+(1, 1, 10000, 50, 40, '2023-01-01', '2024-02-01', '', 11),
 (2, 2, 10000, 30, 10, '2023-02-01', '2023-11-08', '', 12),
 (3, 3, 10000, 75, 75, '2023-03-01', '2023-10-31', '', 13),
 (4, 4, 10000, 40, 40, '2023-04-01', '2023-09-30', '', 4),
@@ -791,13 +831,15 @@ INSERT INTO `staff` (`id`, `name`, `gender`, `birthdate`, `phone`, `address`, `e
 (2, 'NGUYỄN TIẾN DŨNG', b'1', '2003-12-19', '0834527892', '531 Nguyễn Oanh, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'dungboi@gmail.com', '1753-01-01', b'0'),
 (3, 'ĐINH QUANG DUY', b'1', '2003-01-20', '0359872569', '1A Lê Đức Thọ, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'quangduy@gmail.com', '1753-01-01', b'0'),
 (4, 'NGUYỄN HOÀNG LONG', b'1', '2003-08-30', '0970352875', '514/26 Lê Đức Thọ, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'longbot@gmail.com', '1753-01-01', b'0'),
-(5, 'VI THỊ HOA', b'1', '2003-03-06', '0367834257', '153 Lê Hoàng Phái, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'hoangminh@gmail.com', '1753-01-01', b'0'),
-(6, 'ĐỖ NGỌC XUÂN HOÀNG', b'1', '2002-09-20', '0898881394', '242 Nguyễn Văn Lượng, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'psg.exorcist@gmail.com', '1753-01-01', b'0'),
-(7, 'NGUYỄN YẾN VY', b'0', '2002-06-26', '0825367498', '168 Lê Đức Thọ, Phường 15, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanmai@gmail.com', '2023-09-15', b'0'),
-(8, 'NGUYỄN THỊ XUÂN MAI', b'0', '2002-06-19', '0825367498', '168 Lê Đức Thọ, Phường 15, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanmai@gmail.com', '2023-09-15', b'0'),
-(9, 'NGUYỄN THỊ LỆ GIANG', b'0', '2000-05-27', '0963527895', '190 Quang Trung, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'legiang@gmail.com', '2023-09-28', b'0'),
-(10, 'ĐẶNG VĂN LÂM', b'1', '2001-02-18', '0340734629', '7 Phan Văn Trị, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'vanlam@gmail.com', '2023-06-27', b'0'),
-(11, 'HOÀNG XUÂN PHÚC', b'1', '2001-04-11', '0812535278', '526 Lê Quang Định, Phường 1, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanphuc@gmail.com', '2023-08-17', b'0');
+(5, 'NGUYỄN HOÀNG MINH', b'1', '2003-03-06', '0367834257', '153 Lê Hoàng Phái, Phường 17, Gò Vấp, Thành phố Hồ Chí Minh', 'hoangminh@gmail.com', '1753-01-01', b'0'),
+(6, 'PHẠM ĐẶNG PHƯỚC SANG', b'1', '2002-09-20', '0898881394', '242 Nguyễn Văn Lượng, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'psg.exorcist@gmail.com', '1753-01-01', b'0'),
+(7, 'NGUYỄN THỊ XUÂN MAI', b'0', '2002-06-19', '0825367498', '168 Lê Đức Thọ, Phường 15, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanmai@gmail.com', '2023-09-15', b'0'),
+(8, 'NGUYỄN THỊ LỆ GIANG', b'0', '2000-05-27', '0963527895', '190 Quang Trung, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'legiang@gmail.com', '2023-09-28', b'0'),
+(9, 'ĐẶNG VĂN LÂM', b'1', '2001-02-18', '0340734629', '7 Phan Văn Trị, Phường 10, Gò Vấp, Thành phố Hồ Chí Minh', 'vanlam@gmail.com', '2023-06-27', b'0'),
+(10, 'HOÀNG XUÂN PHÚC', b'1', '2001-04-11', '0812535278', '526 Lê Quang Định, Phường 1, Gò Vấp, Thành phố Hồ Chí Minh', 'xuanphuc@gmail.com', '2023-08-17', b'0'),
+(11, '2', b'0', '2023-12-02', '2', '2', '2', '2023-12-02', b'1'),
+(12, '333333', b'0', '2023-12-02', '3', '3', '3', '2023-12-02', b'1'),
+(13, 'sssssss', b'0', '2023-12-02', 's', 's', 's', '2023-12-02', b'0');
 
 -- --------------------------------------------------------
 
@@ -1006,19 +1048,19 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `brand`
 --
 ALTER TABLE `brand`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -1036,7 +1078,7 @@ ALTER TABLE `discount`
 -- AUTO_INCREMENT for table `export_note`
 --
 ALTER TABLE `export_note`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `function`
@@ -1048,7 +1090,7 @@ ALTER TABLE `function`
 -- AUTO_INCREMENT for table `import_note`
 --
 ALTER TABLE `import_note`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `module`
@@ -1060,7 +1102,7 @@ ALTER TABLE `module`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `promotion`
@@ -1072,7 +1114,7 @@ ALTER TABLE `promotion`
 -- AUTO_INCREMENT for table `receipt`
 --
 ALTER TABLE `receipt`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -1084,13 +1126,13 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `shipment`
 --
 ALTER TABLE `shipment`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `statistic`
