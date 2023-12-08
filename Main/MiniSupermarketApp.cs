@@ -15,6 +15,10 @@ namespace BachHoaXanh.Main
     internal static class MiniSupermarketApp
     {
         public static Menu menu = new Menu();
+        public static AdminMenu adminMenu = new AdminMenu();
+        public static ManagerMenu managerMenu = new ManagerMenu();
+        public static NVBanHangMenu nvBanHangMenu = new NVBanHangMenu();
+        public static NVNhapHangMenu nvNhapHangMenu = new NVNhapHangMenu();
         public static FormLogin login = new FormLogin();       /// <summary>
         /// The main entry point for the application.
         /// </summary>

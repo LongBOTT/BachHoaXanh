@@ -22,9 +22,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\NVNhapHangMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\NVBanHangMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Dialog\FormAddProduct.cs" />
     <Compile Update="Views\Dialog\FormAddImport.cs" />
     <Compile Update="Views\Dialog\FormAddShipment.cs" />
+    <Compile Update="Views\AdminMenu.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -70,8 +70,26 @@ namespace Bachhoaxanh
                 }
                 else
                 {
-                    MiniSupermarketApp.menu.Show();
-                    Menu.Account = account;
+                    if (account.RoleID == 1)
+                    {
+                        MiniSupermarketApp.adminMenu.Show();
+                        AdminMenu.Account = account;
+                    }
+                    else if (account.RoleID == 2)
+                    {
+                        MiniSupermarketApp.managerMenu.Show();
+                        ManagerMenu.Account = account;
+                    }
+                    else if (account.RoleID == 3)
+                    {
+                        MiniSupermarketApp.nvBanHangMenu.Show();
+                        NVBanHangMenu.Account = account;
+                    }
+                    else
+                    {
+                        MiniSupermarketApp.nvNhapHangMenu.Show();
+                        NVNhapHangMenu.Account = account;
+                    }
                     MiniSupermarketApp.login.Visible = false;
                 }
             }
